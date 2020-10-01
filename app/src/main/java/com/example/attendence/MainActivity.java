@@ -45,7 +45,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        new LinearLayoutManager(MainActivity.this){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
+
+        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
+        recyclerView.setLayoutFrozen(false);
 
         loadData();
 
@@ -84,7 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(studentName ));
+                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            studentName));
                     if (id!=-1){
                         Toast.makeText(MainActivity.this, "insert Success", Toast.LENGTH_SHORT).show();
                         loadData();
