@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+   <Button
+       android:textSize="30sp"
+       android:text="Add"
+       android:id="@+id/addButtonId"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <TextView
+          android:layout_marginLeft="10dp"
+          android:layout_gravity="center"
+          android:id="@+id/nameTextVIewId"
+          android:text="Abdullah"
+          android:textSize="30sp"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"/>
+
+
+      <HorizontalScrollView
+          android:scrollbarSize="20dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="3/2"
+                android:layout_margin="20dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+
+
+         </LinearLayout>
+      </HorizontalScrollView>
+
+   </LinearLayout>
+
+   <HorizontalScrollView
+       android:scrollbarSize="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <androidx.recyclerview.widget.RecyclerView
+          android:scrollbars="none"
+          android:isScrollContainer="false"
+          app:fastScrollEnabled="false"
+          android:nestedScrollingEnabled="false"
+          android:id="@+id/recyclerViewId"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+   </HorizontalScrollView>
+
+
+
+</LinearLayout>
