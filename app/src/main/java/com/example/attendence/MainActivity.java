@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     CustomAdapter  customAdapter;
 
+
     Button saveButton,cancelButton;
     EditText nameEditText;
     DataBaseHelper dataBaseHelper;
@@ -45,22 +46,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        new LinearLayoutManager(MainActivity.this){
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        };
 
-        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView.setLayoutFrozen(false);
+
+//        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
+//            @Override
+//            public boolean canScrollVertically() {
+//                return false;
+//            }
+//        });
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loadData();
+
+
 
 
     }
@@ -78,8 +77,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void CustomAdapter(){
 
+
+    public void CustomAdapter(){
 
         final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity.this);
         bottomSheetDialog.setContentView(R.layout.input);
