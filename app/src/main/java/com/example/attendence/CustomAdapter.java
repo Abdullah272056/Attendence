@@ -1,27 +1,29 @@
 package com.example.attendence;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
+
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Switch;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-import static android.content.Context.ALARM_SERVICE;
-
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>{
+    Button saveButton,cancelButton;
+    EditText nameEditText;
 
     Context context;
     private List<Notes> allNotes;
@@ -47,11 +49,66 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.item,parent,false);
+
+        databaseHelper=new DataBaseHelper(context);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position){
+
+        holder.nameTextView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
+                View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_operation,null);
+
+                builder.setView(view);
+
+                final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
+
+
+                TextView updateTextView=view.findViewById(R.id.updateTextViewId);
+                TextView deleteTextView=view.findViewById(R.id.deleteTextViewId);
+                TextView cancelTextView=view.findViewById(R.id.cancelTextViewId);
+
+                updateTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        customDialog(position);
+                        alertDialog.dismiss();
+
+                    }
+                });
+
+                deleteTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int status = databaseHelper.deleteData(allNotes.get(position).getId());
+                        if (status == 1){
+                            allNotes.remove(allNotes.get(position));
+                            alertDialog.dismiss();
+                            notifyDataSetChanged();
+                        }else {
+                        }
+                    }
+                });
+
+                cancelTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+
+                    }
+                });
+
+                alertDialog.show();
+
+                return false;
+            }
+        });
+
+
 
         holder.nameTextView.setText(allNotes.get(position).getStudentName());
         checkBox1=allNotes.get(position).getCheckBox1();
@@ -298,6 +355,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         if (checkBox30==0){
             holder.checkBox30.setChecked(false);
         }
+
+
+
 
 
 
@@ -1455,5 +1515,63 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
 
+    private void customDialog(final int position) {androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.input,null);
 
+        builder.setView(view);
+
+        final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
+
+
+        saveButton=view.findViewById(R.id.saveButtonId);
+        cancelButton=view.findViewById(R.id.cancelButtonId);
+        nameEditText=view.findViewById(R.id.nameEditTextId);
+
+        nameEditText.setText(allNotes.get(position).getStudentName());
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (nameEditText.getText().toString().isEmpty()){
+                    nameEditText.setError("Enter a Name");
+                }
+                else {
+                    String studentName=nameEditText.getText().toString();
+                    int id=databaseHelper.updateData(new Notes(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),studentName));
+                    if (id==1){
+                        Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
+                        allNotes.clear();
+                        allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
+                        notifyDataSetChanged();
+                        alertDialog.dismiss();
+
+                    }else {
+                        Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
+                        alertDialog.dismiss();
+                    }
+                }
+
+            }
+        });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
+
+    }
 }

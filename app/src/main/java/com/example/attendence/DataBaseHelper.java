@@ -162,5 +162,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return status;
     }
 
+    public int deleteData(int id){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        int status = sqLiteDatabase.delete(Constant.TABLE_NAME,"id=?",new String[]{String.valueOf(id)});
+        return status;
 
+    }
 }

@@ -49,9 +49,6 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        Toolbar toolbar = new Toolbar(FirstActivity.this);
-        toolbar.setTitle("Hello");
-
 
 
         // dateRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
@@ -105,13 +102,6 @@ public class FirstActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
         loadDateList();
-
-
-
-
-
-
-
 
 
     }
@@ -190,7 +180,6 @@ public class FirstActivity extends AppCompatActivity {
         bottomSheetDialog.show();
     }
     public void dateCustomAdapter(){
-
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
