@@ -25,6 +25,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     Context context;
     private List<Notes> allNotes;
+
     List<Notes> copyAllNotes;
     private DataBaseHelper databaseHelper;
 

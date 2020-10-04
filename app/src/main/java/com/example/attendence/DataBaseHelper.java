@@ -15,14 +15,15 @@ import java.util.List;
 public class DataBaseHelper extends SQLiteOpenHelper {
     Context context;
 
-    public DataBaseHelper(@Nullable Context context) {
+    public DataBaseHelper(@Nullable Context context){
         super(context, Constant.TABLE_NAME, null, Constant.DATABASE_Version);
         this.context=context;
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Constant.CREATE_TABLE);
-        Toast.makeText(context, "OnCreate is Called", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(context, "OnCreate is Called", Toast.LENGTH_SHORT).show();
     }
 
     @Override
