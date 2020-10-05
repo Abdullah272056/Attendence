@@ -1,4 +1,4 @@
-package com.example.attendence.first_class_date;
+package com.example.attendence.third_class_date;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,13 +12,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.attendence.common.DateNote;
 import com.example.attendence.R;
+import com.example.attendence.common.DateNote;
 
 import java.util.Collection;
 import java.util.List;
 
-public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.MyViewHolder> {
+public class DateCustomAdapter3 extends RecyclerView.Adapter<DateCustomAdapter3.MyViewHolder> {
     Button saveButton,cancelButton;
 
     EditText dateEditText;
@@ -26,12 +26,12 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
 
     Context context;
     private List<DateNote> allDate;
-    DateDataBaseHelper dateDataBaseHelper;
+    DateDataBaseHelper3 dateDataBaseHelper;
 
-    public DateCustomAdapter(Context context, List<DateNote> allDate) {
+    public DateCustomAdapter3(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new DateDataBaseHelper(context);
+        dateDataBaseHelper=new DateDataBaseHelper3(context);
     }
 
     @NonNull
@@ -39,8 +39,8 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.date_box,parent,false);
-        dateDataBaseHelper=new DateDataBaseHelper(context);
-        return new DateCustomAdapter.MyViewHolder(view);
+        dateDataBaseHelper=new DateDataBaseHelper3(context);
+        return new DateCustomAdapter3.MyViewHolder(view);
     }
 
     @Override
@@ -64,6 +64,7 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
                 updateTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
                       customDialog(position);
                         alertDialog.dismiss();
 
@@ -74,8 +75,8 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
                     @Override
                     public void onClick(View v) {
 
-                        //int status=dateDataBaseHelper.deleteDate(position);
-                       int status = dateDataBaseHelper.deleteDate(allDate.get(position).getId());
+                        int status = dateDataBaseHelper.deleteDate(allDate.get(position).getId());
+
                         if (status == 1){
                             allDate.remove(allDate.get(position));
                             alertDialog.dismiss();

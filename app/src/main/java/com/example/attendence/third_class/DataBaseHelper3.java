@@ -1,4 +1,4 @@
-package com.example.attendence.second_class;
+package com.example.attendence.third_class;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -15,11 +15,11 @@ import com.example.attendence.first_class.Constant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBaseHelper2 extends SQLiteOpenHelper {
-    Constant2 constant;
+public class DataBaseHelper3 extends SQLiteOpenHelper {
+    Constant3 constant;
     Context context;
-    public DataBaseHelper2(@Nullable Context context) {
-        super(context, Constant2.TABLE_NAME, null, Constant2.DATABASE_Version);
+    public DataBaseHelper3(@Nullable Context context) {
+        super(context, Constant3.TABLE_NAME, null, Constant3.DATABASE_Version);
         this.context=context;
     }
     @Override

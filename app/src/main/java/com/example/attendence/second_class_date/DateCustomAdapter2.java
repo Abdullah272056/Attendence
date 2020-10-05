@@ -140,14 +140,14 @@ public class DateCustomAdapter2 extends RecyclerView.Adapter<DateCustomAdapter2.
                     String date=dateEditText.getText().toString();
                  int id =dateDataBaseHelper.updateData(new DateNote(allDate.get(position).getId(),date));
                     if (id==1){
-                        Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allDate.clear();
                         allDate.addAll((Collection<? extends DateNote>) dateDataBaseHelper.getAllNotes());
                         notifyDataSetChanged();
                         alertDialog.dismiss();
 
                     }else {
-                        Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "update fail", Toast.LENGTH_SHORT).show();
                         alertDialog.dismiss();
                     }
                 }
