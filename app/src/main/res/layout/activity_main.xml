@@ -28,6 +28,12 @@
        android:id="@+id/addButtonId3"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
+   <Button
+       android:textSize="30sp"
+       android:text="Next4"
+       android:id="@+id/addButtonId4"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
 
 
