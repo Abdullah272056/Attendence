@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fifth_Class"></activity>
+        <activity android:name=".Sixth_Class"></activity>
+        <activity android:name=".Fifth_Class" />
         <activity android:name=".Fourth_Class" />
         <activity android:name=".ThirdClass" />
         <activity android:name=".FirstActivity" />

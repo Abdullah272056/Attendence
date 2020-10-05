@@ -35,9 +35,16 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
    <Button
+    android:textSize="30sp"
+    android:text="Next5"
+    android:id="@+id/addButtonId5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+   <Button
        android:textSize="30sp"
-       android:text="Next5"
-       android:id="@+id/addButtonId5"
+       android:text="Next6"
+       android:id="@+id/addButtonId6"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
 
