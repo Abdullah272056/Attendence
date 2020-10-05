@@ -1,4 +1,4 @@
-package com.example.attendence;
+package com.example.attendence.first_class;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.example.attendence.Notes;
 
 import java.util.ArrayList;
 import java.util.List;

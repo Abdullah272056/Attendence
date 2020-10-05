@@ -14,11 +14,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.example.attendence.date.DateCustomAdapter;
-import com.example.attendence.date.DateDataBaseHelper;
-import com.example.attendence.date.DateNote;
+import com.example.attendence.first_class_date.DateCustomAdapter;
+import com.example.attendence.first_class_date.DateDataBaseHelper;
+import com.example.attendence.first_class_date.DateNote;
+import com.example.attendence.first_class.CustomAdapter;
+import com.example.attendence.first_class.DataBaseHelper;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,7 +30,7 @@ public class FirstActivity extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
-    CustomAdapter  customAdapter;
+    CustomAdapter customAdapter;
 
     Button saveButton,cancelButton;
     EditText nameEditText;

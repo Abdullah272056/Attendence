@@ -1,4 +1,4 @@
-package com.example.attendence.date;
+package com.example.attendence.first_class_date;
 
 public class DateNote {
     int id;

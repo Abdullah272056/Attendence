@@ -1,4 +1,4 @@
-package com.example.attendence;
+package com.example.attendence.first_class;
 
 
 import android.content.Context;
@@ -15,7 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.example.attendence.Notes;
+import com.example.attendence.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

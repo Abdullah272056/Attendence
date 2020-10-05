@@ -1,4 +1,4 @@
-package com.example.attendence.date;
+package com.example.attendence.first_class_date;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.example.attendence.Constant;
+import com.example.attendence.first_class.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,5 +61,23 @@ public class DateDataBaseHelper extends SQLiteOpenHelper {
         }
         return dateList;
     }
+
+
+    public int updateData(DateNote notes){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+
+        contentValues.put(Constant.COLUMN_DATE,notes.getDate());
+        int status = sqLiteDatabase.update(Constant.DATE_TABLE_NAME,contentValues," date_id=? ",new String[]{String.valueOf(notes.getId())});
+        return status;
+    }
+
+    public int deleteDate(int id){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        int status = sqLiteDatabase.delete(Constant.DATE_TABLE_NAME,"date_id=?",new String[]{String.valueOf(id)});
+        return status;
+
+    }
+
 
 }
