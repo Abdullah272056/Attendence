@@ -4,6 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SecondClass">
+    <Button
+        android:textSize="30sp"
+        android:text="Add"
+        android:id="@+id/addButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <HorizontalScrollView
+        android:scrollbarSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/item_backgraound"
+                    android:id="@+id/nameTextVIewId"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="Name"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dateRecyclerViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:src="@drawable/add"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/dateFloatingButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:scrollbars="none"
+                android:isScrollContainer="false"
+                app:fastScrollEnabled="false"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recyclerViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </LinearLayout>

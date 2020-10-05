@@ -15,9 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.first_class_date.DateCustomAdapter;
 import com.example.attendence.first_class_date.DateDataBaseHelper;
-import com.example.attendence.first_class_date.DateNote;
 import com.example.attendence.first_class.CustomAdapter;
 import com.example.attendence.first_class.DataBaseHelper;
 import com.google.android.material.bottomsheet.BottomSheetDialog;

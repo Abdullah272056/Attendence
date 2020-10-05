@@ -1,11 +1,12 @@
-package com.example.attendence.first_class;
+package com.example.attendence.second_class;
 
-public class Constant{
-    public  static final String DATABASE_NAME="Reminder.db";
+public class Constant2 {
+    public  static final String DATABASE_NAME="Reminder.db2";
     public  static final int DATABASE_Version=1;
-    public  static final String TABLE_NAME="MosQueInFormation";
-    public  static final String COLUMN_ID="id";
+    public  static final String TABLE_NAME="MosQueInFormation2";
+    public  static final String DATE_TABLE_NAME="DATE2";
 
+    public  static final String COLUMN_ID="id";
     public  static final String COLUMN_STUDENT_NAME="STUDENT_NAME";
     public  static final String COLUMN_CHECKBOX1="COLUMN_CHECKBOX1";
     public  static final String COLUMN_CHECKBOX2="COLUMN_CHECKBOX2";
@@ -76,7 +77,7 @@ public class Constant{
             +")";
 
 
-    public  static final String DATE_TABLE_NAME="DATE";
+
     public  static final String COLUMN_DATE_ID="date_id";
     public  static final String COLUMN_DATE="DATE";
     public static final String CREATE_DATE_TABLE  = " CREATE TABLE "+DATE_TABLE_NAME+"("

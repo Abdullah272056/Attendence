@@ -1,4 +1,4 @@
-package com.example.attendence.first_class_date;
+package com.example.attendence.second_class_date;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,11 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.R;
+import com.example.attendence.first_class_date.DateDataBaseHelper;
 
 import java.util.Collection;
 import java.util.List;
 
-public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.MyViewHolder> {
+public class DateCustomAdapter2 extends RecyclerView.Adapter<DateCustomAdapter2.MyViewHolder> {
     Button saveButton,cancelButton;
 
     EditText dateEditText;
@@ -26,12 +27,12 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
 
     Context context;
     private List<DateNote> allDate;
-    DateDataBaseHelper dateDataBaseHelper;
+    DateDataBaseHelper2 dateDataBaseHelper;
 
-    public DateCustomAdapter(Context context, List<DateNote> allDate) {
+    public DateCustomAdapter2(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new DateDataBaseHelper(context);
+        dateDataBaseHelper=new DateDataBaseHelper2(context);
     }
 
     @NonNull
@@ -39,8 +40,8 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.date_box,parent,false);
-        dateDataBaseHelper=new DateDataBaseHelper(context);
-        return new DateCustomAdapter.MyViewHolder(view);
+        dateDataBaseHelper=new DateDataBaseHelper2(context);
+        return new DateCustomAdapter2.MyViewHolder(view);
     }
 
     @Override
