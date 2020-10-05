@@ -15,10 +15,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.first_class.CustomAdapter;
-import com.example.attendence.first_class.DataBaseHelper;
-import com.example.attendence.first_class_date.DateCustomAdapter;
-import com.example.attendence.first_class_date.DateDataBaseHelper;
 import com.example.attendence.second_class.CustomAdapter2;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class_date.DateCustomAdapter2;
@@ -41,8 +37,8 @@ public class SecondClass extends AppCompatActivity {
 
     DateDataBaseHelper2 dateDataBaseHelper;
 
-    private List<Notes> dataList;
-    private List<DateNote> dateList;
+    private List<Notes> studentInformationDataList;
+    private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
     DateCustomAdapter2 dateCustomAdapter;
@@ -53,10 +49,6 @@ public class SecondClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_class);
 
-
-        // dateRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-//        dateCustomAdapter = new DateCustomAdapter(MainActivity.this,dateList);
-//        dateRecyclerView .setAdapter(dateCustomAdapter);
 
         context=SecondClass.this;
 
@@ -90,7 +82,7 @@ public class SecondClass extends AppCompatActivity {
 //            }
 //        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        loadData();
+        loadStudentInformationData();
 
 
 
@@ -98,45 +90,45 @@ public class SecondClass extends AppCompatActivity {
         addDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dateCustomAdapter();
+                DateCustomAdapter();
             }
         });
+
         //for Horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
-        loadDateList();
+        loadDateListData();
 
 
 
     }
 
-    private void loadData(){
-        dataList  = new ArrayList<>();
-        dataList = dataBaseHelper.getAllNotes();
-        if (dataList.size() > 0){
-            customAdapter = new CustomAdapter2(context,dataList);
+    private void loadStudentInformationData(){
+        studentInformationDataList= new ArrayList<>();
+        studentInformationDataList = dataBaseHelper.getAllNotes();
+        if (studentInformationDataList.size() > 0){
+            customAdapter = new CustomAdapter2(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No student name found", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void loadDateList(){
-        dateList  = new ArrayList<>();
-        dateList = dateDataBaseHelper.getAllNotes();
-        if (dateList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter2(context,dateList);
+    private void loadDateListData(){
+        dateDataList  = new ArrayList<>();
+        dateDataList = dateDataBaseHelper.getAllNotes();
+        if (dateDataList.size() > 0){
+            dateCustomAdapter = new DateCustomAdapter2(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
 
 
     public void CustomAdapter(){
-
         final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(context);
         bottomSheetDialog.setContentView(R.layout.input);
         bottomSheetDialog.setCanceledOnTouchOutside(false);
@@ -161,7 +153,7 @@ public class SecondClass extends AppCompatActivity {
                             studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
-                        loadData();
+                        loadStudentInformationData();
                         bottomSheetDialog.dismiss();
 
                     }else {
@@ -183,7 +175,7 @@ public class SecondClass extends AppCompatActivity {
     }
 
 
-    public void dateCustomAdapter(){
+    public void DateCustomAdapter(){
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
@@ -205,7 +197,7 @@ public class SecondClass extends AppCompatActivity {
                     int id =dateDataBaseHelper.insertData(new DateNote(dateEditText.getText().toString()));
                     if (id!=-1){
                         Toast.makeText(context, id+"Success", Toast.LENGTH_SHORT).show();
-                        loadDateList();
+                        loadDateListData();
                         alertDialog.dismiss();
                     }
                     else {

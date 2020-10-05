@@ -39,8 +39,8 @@ public class FirstActivity extends AppCompatActivity {
 
     DateDataBaseHelper dateDataBaseHelper;
 
-    private List<Notes> dataList;
-    private List<DateNote> dateList;
+    private List<Notes> studentInformationDataList;
+    private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
     DateCustomAdapter dateCustomAdapter;
@@ -52,10 +52,6 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-
-        // dateRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-//        dateCustomAdapter = new DateCustomAdapter(MainActivity.this,dateList);
-//        dateRecyclerView .setAdapter(dateCustomAdapter);
 
             context=FirstActivity.this;
 
@@ -89,7 +85,7 @@ public class FirstActivity extends AppCompatActivity {
 //            }
 //        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        loadData();
+        LoadStudentInformationData();
 
 
 
@@ -97,7 +93,7 @@ public class FirstActivity extends AppCompatActivity {
         addDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dateCustomAdapter();
+                DateCustomAdapter();
             }
         });
         //for Horizontal
@@ -109,27 +105,27 @@ public class FirstActivity extends AppCompatActivity {
     }
 
 
-    private void loadData(){
-        dataList  = new ArrayList<>();
-        dataList = dataBaseHelper.getAllNotes();
-        if (dataList.size() > 0){
-            customAdapter = new CustomAdapter(context,dataList);
+    private void LoadStudentInformationData(){
+        studentInformationDataList  = new ArrayList<>();
+        studentInformationDataList = dataBaseHelper.getAllNotes();
+        if (studentInformationDataList.size() > 0){
+            customAdapter = new CustomAdapter(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No student name  found", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void loadDateList(){
-        dateList  = new ArrayList<>();
-        dateList = dateDataBaseHelper.getAllNotes();
-        if (dateList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter(context,dateList);
+        dateDataList  = new ArrayList<>();
+        dateDataList = dateDataBaseHelper.getAllNotes();
+        if (dateDataList.size() > 0){
+            dateCustomAdapter = new DateCustomAdapter(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {
-            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -161,7 +157,7 @@ public class FirstActivity extends AppCompatActivity {
                             studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
-                        loadData();
+                        LoadStudentInformationData();
                         bottomSheetDialog.dismiss();
 
                     }else {
@@ -181,7 +177,7 @@ public class FirstActivity extends AppCompatActivity {
         });
         bottomSheetDialog.show();
     }
-    public void dateCustomAdapter(){
+    public void DateCustomAdapter(){
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
@@ -224,7 +220,5 @@ public class FirstActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
-
-
 
 }

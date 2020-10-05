@@ -74,8 +74,8 @@ public class DateCustomAdapter extends RecyclerView.Adapter<DateCustomAdapter.My
                     @Override
                     public void onClick(View v) {
 
-                        int status=dateDataBaseHelper.deleteDate(position);
-                       // int status = databaseHelper.deleteData(allNotes.get(position).getId());
+                        //int status=dateDataBaseHelper.deleteDate(position);
+                       int status = dateDataBaseHelper.deleteDate(allDate.get(position).getId());
                         if (status == 1){
                             allDate.remove(allDate.get(position));
                             alertDialog.dismiss();

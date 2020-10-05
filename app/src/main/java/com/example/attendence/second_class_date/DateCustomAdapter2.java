@@ -65,6 +65,7 @@ public class DateCustomAdapter2 extends RecyclerView.Adapter<DateCustomAdapter2.
                 updateTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
                       customDialog(position);
                         alertDialog.dismiss();
 
@@ -75,8 +76,8 @@ public class DateCustomAdapter2 extends RecyclerView.Adapter<DateCustomAdapter2.
                     @Override
                     public void onClick(View v) {
 
-                        int status=dateDataBaseHelper.deleteDate(position);
-                       // int status = databaseHelper.deleteData(allNotes.get(position).getId());
+                        int status = dateDataBaseHelper.deleteDate(allDate.get(position).getId());
+
                         if (status == 1){
                             allDate.remove(allDate.get(position));
                             alertDialog.dismiss();

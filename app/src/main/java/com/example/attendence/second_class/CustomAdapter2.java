@@ -110,7 +110,6 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.MyViewHo
         });
 
 
-
         holder.nameTextView.setText(allNotes.get(position).getStudentName());
         checkBox1=allNotes.get(position).getCheckBox1();
         checkBox2=allNotes.get(position).getCheckBox2();
