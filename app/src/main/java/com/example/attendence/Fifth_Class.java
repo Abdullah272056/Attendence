@@ -15,53 +15,52 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.fifth_class.CustomAdapter5;
+import com.example.attendence.fifth_class.DataBaseHelper5;
+import com.example.attendence.fifth_class_date.DateCustomAdapter5;
+import com.example.attendence.fifth_class_date.DateDataBaseHelper5;
 import com.example.attendence.fourth_class.CustomAdapter4;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateCustomAdapter4;
 import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
-import com.example.attendence.second_class.CustomAdapter2;
-import com.example.attendence.second_class.DataBaseHelper2;
-import com.example.attendence.second_class_date.DateCustomAdapter2;
-import com.example.attendence.second_class_date.DateDataBaseHelper2;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fourth_Class extends AppCompatActivity {
+public class Fifth_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
-    CustomAdapter4 customAdapter;
+    CustomAdapter5 customAdapter;
 
     Button saveButton,cancelButton;
     EditText nameEditText;
 
-    DataBaseHelper4 dataBaseHelper;
-    DateDataBaseHelper4 dateDataBaseHelper;
+    DataBaseHelper5 dataBaseHelper;
+    DateDataBaseHelper5 dateDataBaseHelper;
 
     private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
-    DateCustomAdapter4 dateCustomAdapter;
+    DateCustomAdapter5 dateCustomAdapter;
 
     Context context;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourth__class);
+        setContentView(R.layout.activity_fifth__class);
 
-        context=Fourth_Class.this;
+        context=Fifth_Class.this;
 
-        dataBaseHelper=new DataBaseHelper4(context);
+        dataBaseHelper=new DataBaseHelper5(context);
         dataBaseHelper.getWritableDatabase();
 
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
-        dateDataBaseHelper=new DateDataBaseHelper4(context);
+        dateDataBaseHelper=new DateDataBaseHelper5(context);
         dateDataBaseHelper.getWritableDatabase();
 
 
@@ -111,7 +110,7 @@ public class Fourth_Class extends AppCompatActivity {
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){
-            customAdapter = new CustomAdapter4(context,studentInformationDataList);
+            customAdapter = new CustomAdapter5(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
@@ -123,7 +122,7 @@ public class Fourth_Class extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter4(context,dateDataList);
+            dateCustomAdapter = new DateCustomAdapter5(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {

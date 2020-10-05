@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button addButton,addButton2,addButton3,addButton4;
+    Button addButton,addButton2,addButton3,addButton4,addButton5,addButton6,addButton7,addButton8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -20,46 +20,45 @@ public class MainActivity extends AppCompatActivity {
         addButton2=findViewById(R.id.addButtonId2);
         addButton3=findViewById(R.id.addButtonId3);
         addButton4=findViewById(R.id.addButtonId4);
+        addButton5=findViewById(R.id.addButtonId5);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
                 Intent intent=new Intent(MainActivity.this,FirstActivity.class);
                 startActivity(intent);
-                //CustomAdapter();
-
             }
         });
 
         addButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
                 Intent intent=new Intent(MainActivity.this,SecondClass.class);
                 startActivity(intent);
-                //CustomAdapter();
-
             }
         });
+
         addButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
                 Intent intent=new Intent(MainActivity.this,ThirdClass.class);
                 startActivity(intent);
-                //CustomAdapter();
-
             }
         });
+
         addButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
                 Intent intent=new Intent(MainActivity.this,Fourth_Class.class);
                 startActivity(intent);
-                //CustomAdapter();
+            }
+        });
 
+        addButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(MainActivity.this,Fifth_Class.class);
+                startActivity(intent);
             }
         });
 
