@@ -20,7 +20,7 @@ public class Notes {
                  int checkBox19, int checkBox20, int checkBox21, int checkBox22,
                  int checkBox23, int checkBox24, int checkBox25, int checkBox26,
                  int checkBox27, int checkBox28, int checkBox29, int checkBox30,
-                 String studentName) {
+                 String studentName){
         this.checkBox1 = checkBox1;
         this.checkBox2 = checkBox2;
         this.checkBox3 = checkBox3;

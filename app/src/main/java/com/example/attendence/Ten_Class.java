@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.sixth_class.CustomAdapter6;
-import com.example.attendence.sixth_class_date.DateCustomAdapter6;
-import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
+import com.example.attendence.ten_class.CustomAdapter10;
 import com.example.attendence.ten_class.DataBaseHelper10;
+import com.example.attendence.ten_class_date.DateCustomAdapter10;
+import com.example.attendence.ten_class_date.DateDataBaseHelper10;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,19 +29,19 @@ public class Ten_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
-    CustomAdapter6 customAdapter;
+    CustomAdapter10 customAdapter;
 
     Button saveButton,cancelButton;
     EditText nameEditText;
 
     DataBaseHelper10 dataBaseHelper;
-    DateDataBaseHelper6 dateDataBaseHelper;
+    DateDataBaseHelper10 dateDataBaseHelper;
 
     private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
-    DateCustomAdapter6 dateCustomAdapter;
+    DateCustomAdapter10 dateCustomAdapter;
 
     Context context;
     @Override
@@ -56,7 +56,7 @@ public class Ten_Class extends AppCompatActivity {
 
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
-        dateDataBaseHelper=new DateDataBaseHelper6(context);
+        dateDataBaseHelper=new DateDataBaseHelper10(context);
         dateDataBaseHelper.getWritableDatabase();
 
 
@@ -106,7 +106,7 @@ public class Ten_Class extends AppCompatActivity {
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){
-            customAdapter = new CustomAdapter6(context,studentInformationDataList);
+            customAdapter = new CustomAdapter10(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
@@ -118,7 +118,7 @@ public class Ten_Class extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter6(context,dateDataList);
+            dateCustomAdapter = new DateCustomAdapter10(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {
