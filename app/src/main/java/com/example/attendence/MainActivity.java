@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         addButton5=findViewById(R.id.addButtonId5);
         addButton6=findViewById(R.id.addButtonId6);
         addButton7=findViewById(R.id.addButtonId7);
+        addButton8=findViewById(R.id.addButtonId8);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(MainActivity.this,Seventh_Class.class);
+                startActivity(intent);
+            }
+        });
+
+        addButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(MainActivity.this,Eight_Class.class);
                 startActivity(intent);
             }
         });
