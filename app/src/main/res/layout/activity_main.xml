@@ -60,6 +60,12 @@
        android:id="@+id/addButtonId8"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
+   <Button
+       android:textSize="30sp"
+       android:text="Next9"
+       android:id="@+id/addButtonId9"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
 
 
