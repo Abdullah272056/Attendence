@@ -19,15 +19,15 @@ import com.example.attendence.sixth_class.CustomAdapter6;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class_date.DateCustomAdapter10;
 import com.example.attendence.sixth_class_date.DateDataBaseHelper10;
-import com.example.attendence.ten_class_date.DateCustomAdapter6;
-import com.example.attendence.ten_class_date.DateDataBaseHelper6;
+import com.example.attendence.ten_class.DataBaseHelper10;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sixth_Class extends AppCompatActivity {
+public class Ten_Activity extends AppCompatActivity {
+
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
@@ -36,32 +36,29 @@ public class Sixth_Class extends AppCompatActivity {
     Button saveButton,cancelButton;
     EditText nameEditText;
 
-    DataBaseHelper6 dataBaseHelper;
-    DateDataBaseHelper6 dateDataBaseHelper;
+    DataBaseHelper10 dataBaseHelper;
+    DateDataBaseHelper10 dateDataBaseHelper;
 
     private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
-    DateCustomAdapter6 dateCustomAdapter;
+    DateCustomAdapter10 dateCustomAdapter;
 
     Context context;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sixth__class);
+        setContentView(R.layout.activity_ten_);
 
+        context=Ten_Activity.this;
 
-        context=Sixth_Class.this;
-
-        dataBaseHelper=new DataBaseHelper6(context);
+        dataBaseHelper=new DataBaseHelper10(context);
         dataBaseHelper.getWritableDatabase();
 
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
-        dateDataBaseHelper=new DateDataBaseHelper6(context);
+        dateDataBaseHelper=new DateDataBaseHelper10(context);
         dateDataBaseHelper.getWritableDatabase();
 
 
@@ -123,7 +120,7 @@ public class Sixth_Class extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter6(context,dateDataList);
+            dateCustomAdapter = new DateCustomAdapter10(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {

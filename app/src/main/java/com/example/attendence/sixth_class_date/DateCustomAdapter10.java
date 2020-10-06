@@ -18,7 +18,7 @@ import com.example.attendence.common.DateNote;
 import java.util.Collection;
 import java.util.List;
 
-public class DateCustomAdapter6 extends RecyclerView.Adapter<DateCustomAdapter6.MyViewHolder> {
+public class DateCustomAdapter10 extends RecyclerView.Adapter<DateCustomAdapter10.MyViewHolder> {
     Button saveButton,cancelButton;
 
     EditText dateEditText;
@@ -26,12 +26,12 @@ public class DateCustomAdapter6 extends RecyclerView.Adapter<DateCustomAdapter6.
 
     Context context;
     private List<DateNote> allDate;
-    DateDataBaseHelper6 dateDataBaseHelper;
+    DateDataBaseHelper10 dateDataBaseHelper;
 
-    public DateCustomAdapter6(Context context, List<DateNote> allDate) {
+    public DateCustomAdapter10(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new DateDataBaseHelper6(context);
+        dateDataBaseHelper=new DateDataBaseHelper10(context);
     }
 
     @NonNull
@@ -39,8 +39,8 @@ public class DateCustomAdapter6 extends RecyclerView.Adapter<DateCustomAdapter6.
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.date_box,parent,false);
-        dateDataBaseHelper=new DateDataBaseHelper6(context);
-        return new DateCustomAdapter6.MyViewHolder(view);
+        dateDataBaseHelper=new DateDataBaseHelper10(context);
+        return new DateCustomAdapter10.MyViewHolder(view);
     }
 
     @Override

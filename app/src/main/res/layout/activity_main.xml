@@ -9,6 +9,17 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+
 
    <Button
        android:textSize="30sp"
@@ -66,8 +77,16 @@
        android:id="@+id/addButtonId9"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
+   <Button
+       android:textSize="30sp"
+       android:text="Next10"
+       android:id="@+id/addButtonId10"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
 
 
+      </LinearLayout>
+   </ScrollView>
 
 </LinearLayout>
