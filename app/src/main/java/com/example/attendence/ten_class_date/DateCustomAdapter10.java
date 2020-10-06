@@ -1,4 +1,4 @@
-package com.example.attendence.sixth_class_date;
+package com.example.attendence.ten_class_date;
 
 import android.content.Context;
 import android.view.LayoutInflater;

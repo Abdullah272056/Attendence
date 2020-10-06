@@ -16,9 +16,8 @@ import android.widget.Toast;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
 import com.example.attendence.sixth_class.CustomAdapter6;
-import com.example.attendence.sixth_class.DataBaseHelper6;
-import com.example.attendence.sixth_class_date.DateCustomAdapter10;
-import com.example.attendence.sixth_class_date.DateDataBaseHelper10;
+import com.example.attendence.sixth_class_date.DateCustomAdapter6;
+import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,13 +36,13 @@ public class Ten_Activity extends AppCompatActivity {
     EditText nameEditText;
 
     DataBaseHelper10 dataBaseHelper;
-    DateDataBaseHelper10 dateDataBaseHelper;
+    DateDataBaseHelper6 dateDataBaseHelper;
 
     private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
-    DateCustomAdapter10 dateCustomAdapter;
+    DateCustomAdapter6 dateCustomAdapter;
 
     Context context;
     @Override
@@ -58,7 +57,7 @@ public class Ten_Activity extends AppCompatActivity {
 
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
-        dateDataBaseHelper=new DateDataBaseHelper10(context);
+        dateDataBaseHelper=new DateDataBaseHelper6(context);
         dateDataBaseHelper.getWritableDatabase();
 
 
@@ -120,7 +119,7 @@ public class Ten_Activity extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new DateCustomAdapter10(context,dateDataList);
+            dateCustomAdapter = new DateCustomAdapter6(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {
