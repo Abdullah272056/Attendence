@@ -84,6 +84,13 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
 
+         <Button
+             android:textSize="30sp"
+             android:text="NextTest"
+             android:id="@+id/addButtonId11"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
 
 
       </LinearLayout>
