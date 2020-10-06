@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstActivity"
     android:orientation="vertical"
-    >
-
+    tools:context=".Ten_Class">
     <Button
         android:textSize="30sp"
         android:text="Add"
@@ -54,7 +52,7 @@
                         android:layout_height="wrap_content"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                      android:src="@drawable/add"
+                        android:src="@drawable/add"
                         android:layout_marginLeft="30dp"
                         android:layout_gravity="center_vertical"
                         android:id="@+id/dateFloatingButtonId"
@@ -75,9 +73,6 @@
                 android:layout_height="match_parent"/>
 
         </LinearLayout>
-
     </HorizontalScrollView>
-
-
 
 </LinearLayout>

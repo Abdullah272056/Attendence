@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ten_Activity"></activity>
+        <activity android:name=".Ten_Class"></activity>
         <activity android:name=".Nine_Class" />
         <activity android:name=".Eight_Class" />
         <activity android:name=".Seventh_Class" />
@@ -17,7 +17,7 @@
         <activity android:name=".Fifth_Class" />
         <activity android:name=".Fourth_Class" />
         <activity android:name=".ThirdClass" />
-        <activity android:name=".FirstActivity" />
+        <activity android:name=".First_Class" />
         <activity android:name=".SecondClass" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -27,7 +27,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstActivity extends AppCompatActivity {
+public class First_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
@@ -50,10 +50,10 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_first_class);
 
 
-            context=FirstActivity.this;
+            context= First_Class.this;
 
         dataBaseHelper=new DataBaseHelper(context);
         dataBaseHelper.getWritableDatabase();
