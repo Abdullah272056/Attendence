@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.eight_class.Constant8;
-import com.example.attendence.fifth_class.Constant5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +39,6 @@ public class DateDataBaseHelper8 extends SQLiteOpenHelper {
     public int insertData(DateNote dateNote){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-
 
         contentValues.put(constant.COLUMN_DATE,dateNote.getDate());
         int id= (int) sqLiteDatabase.insert(constant.DATE_TABLE_NAME,null,contentValues);

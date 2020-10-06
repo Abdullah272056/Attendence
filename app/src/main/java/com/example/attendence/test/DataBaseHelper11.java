@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.example.attendence.common.Notes11;
+import com.example.attendence.common.Notes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,13 +34,13 @@ public class DataBaseHelper11 extends SQLiteOpenHelper {
         Toast.makeText(context, "onUpgrade is Called",Toast.LENGTH_SHORT).show();
     }
 
-    public List<Notes11> getAllNotes(){
+    public List<Notes> getAllNotes(){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-        List<Notes11> dataList = new ArrayList<>();
+        List<Notes> dataList = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+constant.TABLE_NAME,null);
         if (cursor.moveToFirst()){
             do {
-                Notes11 note = new Notes11(
+                Notes note = new Notes(
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_ID)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX1)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX2)),
@@ -82,7 +82,7 @@ public class DataBaseHelper11 extends SQLiteOpenHelper {
         return dataList;
     }
 
-    public int insertData(Notes11 notes){
+    public int insertData(Notes notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
@@ -126,7 +126,7 @@ public class DataBaseHelper11 extends SQLiteOpenHelper {
         return id;
     }
 
-    public int updateData(Notes11 notes){
+    public int updateData(Notes notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put(constant.COLUMN_CHECKBOX1,notes.getCheckBox1());

@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.attendence.common.Notes;
-import com.example.attendence.first_class.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +72,7 @@ public class DataBaseHelper3 extends SQLiteOpenHelper {
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX28)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX29)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX30)),
+                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX_COUNT)),
                         cursor.getString(cursor.getColumnIndex(constant.COLUMN_STUDENT_NAME))
                 );
 
@@ -118,8 +118,10 @@ public class DataBaseHelper3 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_CHECKBOX28,notes.getCheckBox28());
         contentValues.put(constant.COLUMN_CHECKBOX29,notes.getCheckBox29());
         contentValues.put(constant.COLUMN_CHECKBOX30,notes.getCheckBox30());
+        contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
 
         contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
+
         int id= (int) sqLiteDatabase.insert(constant.TABLE_NAME,null,contentValues);
         return id;
     }
@@ -159,6 +161,7 @@ public class DataBaseHelper3 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_CHECKBOX28,notes.getCheckBox28());
         contentValues.put(constant.COLUMN_CHECKBOX29,notes.getCheckBox29());
         contentValues.put(constant.COLUMN_CHECKBOX30,notes.getCheckBox30());
+        contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
         contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
         int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
         return status;
@@ -170,5 +173,7 @@ public class DataBaseHelper3 extends SQLiteOpenHelper {
         return status;
 
     }
+
+
 }
 

@@ -15,10 +15,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.fourth_class.CustomAdapter4;
-import com.example.attendence.fourth_class.DataBaseHelper4;
-import com.example.attendence.fourth_class_date.DateCustomAdapter4;
-import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
 import com.example.attendence.nine_class.CustomAdapter9;
 import com.example.attendence.nine_class.DataBaseHelper9;
 import com.example.attendence.nine_class_date.DateCustomAdapter9;
@@ -152,7 +148,7 @@ public class Nine_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            studentName));
+                            0,studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

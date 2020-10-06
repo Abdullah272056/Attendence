@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.second_class.Constant2;
 import com.example.attendence.third_class.Constant3;
 
 import java.util.ArrayList;

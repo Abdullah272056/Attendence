@@ -1,26 +1,18 @@
 package com.example.attendence.common;
 
-import android.widget.CheckBox;
-
 public class Notes {
     int id;
     int checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
             checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
             checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
             checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30;
+    int checkBoxCount;
     String studentName;
 
     public Notes() {
     }
 
-    public Notes(int checkBox1, int checkBox2, int checkBox3, int checkBox4, int checkBox5,
-                 int checkBox6, int checkBox7, int checkBox8, int checkBox9, int checkBox10,
-                 int checkBox11, int checkBox12, int checkBox13, int checkBox14,
-                 int checkBox15, int checkBox16, int checkBox17, int checkBox18,
-                 int checkBox19, int checkBox20, int checkBox21, int checkBox22,
-                 int checkBox23, int checkBox24, int checkBox25, int checkBox26,
-                 int checkBox27, int checkBox28, int checkBox29, int checkBox30,
-                 String studentName){
+    public Notes(int checkBox1, int checkBox2, int checkBox3, int checkBox4, int checkBox5, int checkBox6, int checkBox7, int checkBox8, int checkBox9, int checkBox10, int checkBox11, int checkBox12, int checkBox13, int checkBox14, int checkBox15, int checkBox16, int checkBox17, int checkBox18, int checkBox19, int checkBox20, int checkBox21, int checkBox22, int checkBox23, int checkBox24, int checkBox25, int checkBox26, int checkBox27, int checkBox28, int checkBox29, int checkBox30, int checkBoxCount, String studentName) {
         this.checkBox1 = checkBox1;
         this.checkBox2 = checkBox2;
         this.checkBox3 = checkBox3;
@@ -51,10 +43,11 @@ public class Notes {
         this.checkBox28 = checkBox28;
         this.checkBox29 = checkBox29;
         this.checkBox30 = checkBox30;
+        this.checkBoxCount = checkBoxCount;
         this.studentName = studentName;
     }
 
-    public Notes(int id, int checkBox1, int checkBox2, int checkBox3, int checkBox4, int checkBox5, int checkBox6, int checkBox7, int checkBox8, int checkBox9, int checkBox10, int checkBox11, int checkBox12, int checkBox13, int checkBox14, int checkBox15, int checkBox16, int checkBox17, int checkBox18, int checkBox19, int checkBox20, int checkBox21, int checkBox22, int checkBox23, int checkBox24, int checkBox25, int checkBox26, int checkBox27, int checkBox28, int checkBox29, int checkBox30, String studentName) {
+    public Notes(int id, int checkBox1, int checkBox2, int checkBox3, int checkBox4, int checkBox5, int checkBox6, int checkBox7, int checkBox8, int checkBox9, int checkBox10, int checkBox11, int checkBox12, int checkBox13, int checkBox14, int checkBox15, int checkBox16, int checkBox17, int checkBox18, int checkBox19, int checkBox20, int checkBox21, int checkBox22, int checkBox23, int checkBox24, int checkBox25, int checkBox26, int checkBox27, int checkBox28, int checkBox29, int checkBox30, int checkBoxCount, String studentName) {
         this.id = id;
         this.checkBox1 = checkBox1;
         this.checkBox2 = checkBox2;
@@ -86,6 +79,7 @@ public class Notes {
         this.checkBox28 = checkBox28;
         this.checkBox29 = checkBox29;
         this.checkBox30 = checkBox30;
+        this.checkBoxCount = checkBoxCount;
         this.studentName = studentName;
     }
 
@@ -335,6 +329,14 @@ public class Notes {
 
     public void setCheckBox30(int checkBox30) {
         this.checkBox30 = checkBox30;
+    }
+
+    public int getCheckBoxCount() {
+        return checkBoxCount;
+    }
+
+    public void setCheckBoxCount(int checkBoxCount) {
+        this.checkBoxCount = checkBoxCount;
     }
 
     public String getStudentName() {

@@ -19,10 +19,6 @@ import com.example.attendence.eight_class.CustomAdapter8;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class_date.DateCustomAdapter8;
 import com.example.attendence.eight_class_date.DateDataBaseHelper8;
-import com.example.attendence.fifth_class.CustomAdapter5;
-import com.example.attendence.fifth_class.DataBaseHelper5;
-import com.example.attendence.fifth_class_date.DateCustomAdapter5;
-import com.example.attendence.fifth_class_date.DateDataBaseHelper5;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -152,7 +148,7 @@ public class Eight_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            studentName));
+                            0,studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

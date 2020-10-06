@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes11;
+import com.example.attendence.common.Notes;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,9 +26,9 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
     EditText nameEditText;
 
     Context context;
-    private List<Notes11> allNotes;
+    private List<Notes> allNotes;
 
-    List<Notes11> copyAllNotes;
+    List<Notes> copyAllNotes;
     private DataBaseHelper11 databaseHelper;
 
     int checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
@@ -37,7 +37,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
             checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30;
     int checkBoxCount;
 
-    public CustomAdapter11(Context context, List<Notes11> allNotes){
+    public CustomAdapter11(Context context, List<Notes> allNotes){
         this.context = context;
         this.allNotes = allNotes;
         databaseHelper=new DataBaseHelper11(context);
@@ -1560,7 +1560,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                         int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
                         int checkBoxCount,String name){
 
-        int status = databaseHelper.updateData(new Notes11(id,
+        int status = databaseHelper.updateData(new Notes(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
@@ -1568,7 +1568,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
         ));
         if (status==1){
             allNotes.clear();
-            allNotes.addAll((Collection<? extends Notes11>) databaseHelper.getAllNotes());
+            allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
             //notifyDataSetChanged();
             Toast.makeText(context, "uncheck successful", Toast.LENGTH_SHORT).show();
         }else {
@@ -1585,7 +1585,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
             int checkBox21,int checkBox22,int checkBox23,int checkBox24,int checkBox25,
             int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
             int checkBoxCount,String name){
-        int status = databaseHelper.updateData(new Notes11(id,
+        int status = databaseHelper.updateData(new Notes(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
@@ -1625,7 +1625,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=databaseHelper.updateData(new Notes11(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                    int id=databaseHelper.updateData(new Notes(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
                             allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
                             allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
@@ -1639,7 +1639,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                     if (id==1){
                         Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allNotes.clear();
-                        allNotes.addAll((Collection<? extends Notes11>) databaseHelper.getAllNotes());
+                        allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
                         notifyDataSetChanged();
                         alertDialog.dismiss();
 

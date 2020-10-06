@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.fourth_class.Constant4;
-import com.example.attendence.third_class.Constant3;
 
 import java.util.ArrayList;
 import java.util.List;

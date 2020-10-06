@@ -15,10 +15,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.second_class.CustomAdapter2;
-import com.example.attendence.second_class.DataBaseHelper2;
-import com.example.attendence.second_class_date.DateCustomAdapter2;
-import com.example.attendence.second_class_date.DateDataBaseHelper2;
 import com.example.attendence.seventh_class.CustomAdapter7;
 import com.example.attendence.seventh_class.DataBaseHelper7;
 import com.example.attendence.seventh_class_date.DateCustomAdapter7;
@@ -152,7 +148,7 @@ public class Seventh_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            studentName));
+                            0,studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

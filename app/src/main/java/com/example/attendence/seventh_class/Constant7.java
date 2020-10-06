@@ -38,6 +38,7 @@ public class Constant7 {
     public  static final String COLUMN_CHECKBOX28="COLUMN_CHECKBOX28";
     public  static final String COLUMN_CHECKBOX29="COLUMN_CHECKBOX29";
     public  static final String COLUMN_CHECKBOX30="COLUMN_CHECKBOX30";
+    public  static final String COLUMN_CHECKBOX_COUNT="COLUMN_CHECKBOX_COUNT";
 
 
 
@@ -73,6 +74,7 @@ public class Constant7 {
             +COLUMN_CHECKBOX28+" INTEGER, "
             +COLUMN_CHECKBOX29+" INTEGER, "
             +COLUMN_CHECKBOX30+" INTEGER, "
+            +COLUMN_CHECKBOX_COUNT+" INTEGER, "
             +COLUMN_STUDENT_NAME+" TEXT "
             +")";
 

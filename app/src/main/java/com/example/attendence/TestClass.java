@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.test.CustomAdapter11;
 import com.example.attendence.test.DataBaseHelper11;
-import com.example.attendence.common.Notes11;
+import com.example.attendence.common.Notes;
 import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -37,7 +37,7 @@ public class TestClass extends AppCompatActivity {
     DataBaseHelper11 dataBaseHelper;
     DateDataBaseHelper11 dateDataBaseHelper;
 
-    private List<Notes11> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -143,7 +143,7 @@ public class TestClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes11(0,0,0,0,0,0,0,
+                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,

@@ -19,10 +19,6 @@ import com.example.attendence.fourth_class.CustomAdapter4;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateCustomAdapter4;
 import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
-import com.example.attendence.second_class.CustomAdapter2;
-import com.example.attendence.second_class.DataBaseHelper2;
-import com.example.attendence.second_class_date.DateCustomAdapter2;
-import com.example.attendence.second_class_date.DateDataBaseHelper2;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -154,7 +150,7 @@ public class Fourth_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            studentName));
+                            0,studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

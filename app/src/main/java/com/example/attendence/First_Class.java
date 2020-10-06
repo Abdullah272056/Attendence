@@ -17,10 +17,10 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.first_class_date.DateCustomAdapter;
-import com.example.attendence.first_class_date.DateDataBaseHelper;
 import com.example.attendence.first_class.CustomAdapter;
 import com.example.attendence.first_class.DataBaseHelper;
+import com.example.attendence.first_class_date.DateCustomAdapter;
+import com.example.attendence.first_class_date.DateDataBaseHelper;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -154,7 +154,7 @@ public class First_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            studentName));
+                            0,studentName));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         LoadStudentInformationData();
