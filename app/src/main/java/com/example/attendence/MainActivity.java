@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadClassNameListData();
-
-
     }
     private void loadClassNameListData(){
         classNameList  = new ArrayList<>();

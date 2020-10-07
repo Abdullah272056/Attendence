@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
 
 import java.util.ArrayList;
@@ -67,6 +68,13 @@ public class NameDataBaseHelperName extends SQLiteOpenHelper {
         return dataList;
     }
 
+    public int updateData(NoteClass notes){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
 
+        contentValues.put(constantName.COLUMN_CLASS_NAME,notes.getClassName());
+        int status = sqLiteDatabase.update(constantName.TABLE_NAME,contentValues,"id=?",new String[]{String.valueOf(notes.getId())});
+        return status;
+    }
 
 }

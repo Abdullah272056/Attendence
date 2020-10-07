@@ -8,99 +8,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical">
+   <TextView
+       android:textColor="#FFFFFF"
+       android:background="#2196F3"
+       android:textSize="25sp"
+       android:textAlignment="center"
+       android:text="Class Name List"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal" />
    <androidx.recyclerview.widget.RecyclerView
        android:layout_marginTop="30dp"
        android:id="@+id/classNameRecyclerViewId"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
-
-
-
-
-   <Button
-       android:textSize="30sp"
-       android:text="Next"
-       android:id="@+id/addButtonId"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next2"
-       android:id="@+id/addButtonId2"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next3"
-       android:id="@+id/addButtonId3"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next4"
-       android:id="@+id/addButtonId4"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-    android:textSize="30sp"
-    android:text="Next5"
-    android:id="@+id/addButtonId5"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
-
-   <Button
-       android:textSize="30sp"
-       android:text="Next6"
-       android:id="@+id/addButtonId6"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next7"
-       android:id="@+id/addButtonId7"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-
-   <Button
-       android:textSize="30sp"
-       android:text="Next8"
-       android:id="@+id/addButtonId8"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next9"
-       android:id="@+id/addButtonId9"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-   <Button
-       android:textSize="30sp"
-       android:text="Next10"
-       android:id="@+id/addButtonId10"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
-
-         <Button
-             android:textSize="30sp"
-             android:text="NextTest"
-             android:id="@+id/addButtonId11"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"/>
-
-
-
-      </LinearLayout>
-   </ScrollView>
-
-
-
+       android:layout_height="match_parent"/>
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,17 +35,17 @@ import java.util.List;
 public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.MyViewHolder> {
     Button saveButton,cancelButton;
 
-    EditText dateEditText;
+    EditText classNameEditText;
 
 
     Context context;
     private List<NoteClass> allClassName;
-    NameDataBaseHelperName dateDataBaseHelper;
+    NameDataBaseHelperName nameDataBaseHelperName;
 
     public NameCustomAdapter(Context context, List<NoteClass> allClassName) {
         this.context = context;
         this.allClassName = allClassName;
-        dateDataBaseHelper=new NameDataBaseHelperName(context);
+        nameDataBaseHelperName=new NameDataBaseHelperName(context);
     }
 
     @NonNull
@@ -52,7 +53,7 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.class_name_item,parent,false);
-        dateDataBaseHelper=new NameDataBaseHelperName(context);
+        nameDataBaseHelperName=new NameDataBaseHelperName(context);
         return new NameCustomAdapter.MyViewHolder(view);
     }
 
@@ -103,61 +104,20 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
             }
         });
 
+        holder.editImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customDialog(position);
+            }
+        });
 
 
-//        holder.dateTextView.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//                androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
-//                View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_operation,null);
-//
-//                builder.setView(view);
-//
-//                final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
-//
-//                TextView updateTextView=view.findViewById(R.id.updateTextViewId);
-//                TextView deleteTextView=view.findViewById(R.id.deleteTextViewId);
-//                TextView cancelTextView=view.findViewById(R.id.cancelTextViewId);
-//
-//                updateTextView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
-//                      customDialog(position);
-//                        alertDialog.dismiss();
-//
-//                    }
-//                });
-//
-//                deleteTextView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//
-//                        int status = dateDataBaseHelper.deleteDate(allDate.get(position).getId());
-//
-//                        if (status == 1){
-//                            allDate.remove(allDate.get(position));
-//                            alertDialog.dismiss();
-//                            notifyDataSetChanged();
-//                        }else {
-//                        }
-//                    }
-//                });
-//
-//                cancelTextView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        alertDialog.dismiss();
-//
-//                    }
-//                });
-//
-//
-//
-//                alertDialog.show();
-//                return false;
-//            }
-//        });
+
+
+
+
+
+
     }
 
     @Override
@@ -167,60 +127,61 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;
+        ImageView editImageView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView=itemView.findViewById(R.id.classNameTextViewId);
+            editImageView=itemView.findViewById(R.id.editImageViewId);
         }
     }
 //
-//    private void customDialog(final int position) {androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
-//        View view = LayoutInflater.from(context).inflate(R.layout.date_input,null);
-//
-//        builder.setView(view);
-//
-//        final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
-//
-//
-//        saveButton=view.findViewById(R.id.saveButtonId);
-//        cancelButton=view.findViewById(R.id.cancelButtonId);
-//        dateEditText=view.findViewById(R.id.dateEditTextId);
-//
-//        dateEditText.setText(allDate.get(position).getDate());
-//
-//        saveButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (dateEditText.getText().toString().isEmpty()){
-//                    dateEditText.setError("Enter a Name");
-//                }
-//                else {
-//                    String date=dateEditText.getText().toString();
-//                 int id =dateDataBaseHelper.updateData(new DateNote(allDate.get(position).getId(),date));
-//                    if (id==1){
-//                        Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
-//                        allDate.clear();
-//                        allDate.addAll((Collection<? extends DateNote>) dateDataBaseHelper.getAllNotes());
-//                        notifyDataSetChanged();
-//                        alertDialog.dismiss();
-//
-//                    }else {
-//                        Toast.makeText(context, "update fail", Toast.LENGTH_SHORT).show();
-//                        alertDialog.dismiss();
-//                    }
-//                }
-//
-//            }
-//        });
-//
-//        cancelButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                alertDialog.dismiss();
-//            }
-//        });
-//        alertDialog.show();
-//
-//
-//    }
+    private void customDialog(final int position) {
+        androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.class_name_input_box,null);
+
+        builder.setView(view);
+
+        final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
+
+
+        saveButton=view.findViewById(R.id.saveButtonId);
+        cancelButton=view.findViewById(R.id.cancelButtonId);
+        classNameEditText=view.findViewById(R.id.dateEditTextId);
+
+        classNameEditText.setText(allClassName.get(position).getClassName());
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (classNameEditText.getText().toString().isEmpty()){
+                    classNameEditText.setError("Enter a Name");
+                }
+                else {
+                    String className=classNameEditText.getText().toString();
+                 int id =nameDataBaseHelperName.updateData(new NoteClass(allClassName.get(position).getId(),className));
+                    if (id==1){
+                        Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
+                        allClassName.clear();
+                        allClassName.addAll((Collection<? extends NoteClass>) nameDataBaseHelperName.getAllNotes());
+                        notifyDataSetChanged();
+                        alertDialog.dismiss();
+                    }else {
+                        Toast.makeText(context, "update fail", Toast.LENGTH_SHORT).show();
+                        alertDialog.dismiss();
+                    }
+                }
+            }
+        });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
+
+    }
 
 }
