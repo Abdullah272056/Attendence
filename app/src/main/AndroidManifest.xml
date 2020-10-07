@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestClass"></activity>
+        <activity android:name=".ElevenClass"></activity>
         <activity android:name=".Ten_Class" />
         <activity android:name=".Nine_Class" />
         <activity android:name=".Eight_Class" />

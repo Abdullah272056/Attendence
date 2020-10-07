@@ -1,117 +1,63 @@
 package com.example.attendence;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.attendence.mainpage.NameCustomAdapter;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private List<NoteClass> classNameList;
 
-    Button addButton,addButton2,addButton3,addButton4,addButton5,addButton6,addButton7,addButton8,addButton9,addButton10,addButton11;
+    RecyclerView classNameRecyclerView;
+    NameDataBaseHelperName nameDataBaseHelperName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nameDataBaseHelperName=new NameDataBaseHelperName(MainActivity.this);
+        nameDataBaseHelperName.getWritableDatabase();
 
-        addButton=findViewById(R.id.addButtonId);
-        addButton2=findViewById(R.id.addButtonId2);
-        addButton3=findViewById(R.id.addButtonId3);
-        addButton4=findViewById(R.id.addButtonId4);
-        addButton5=findViewById(R.id.addButtonId5);
-        addButton6=findViewById(R.id.addButtonId6);
-        addButton7=findViewById(R.id.addButtonId7);
-        addButton8=findViewById(R.id.addButtonId8);
-        addButton9=findViewById(R.id.addButtonId9);
-        addButton10=findViewById(R.id.addButtonId10);
-        addButton11=findViewById(R.id.addButtonId11);
+        classNameRecyclerView=findViewById(R.id.classNameRecyclerViewId);
+        classNameList  = new ArrayList<>();
+        classNameList = nameDataBaseHelperName.getAllNotes();
+        if (classNameList.size()<1){
+            for (int i = 1; i <=11; i++) {
+                int id =nameDataBaseHelperName.insertData(new NoteClass("Class No "+String.valueOf(i)));
+                if (id!=0){
+                    Toast.makeText(this, "success "+String.valueOf(i), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this, First_Class.class);
-                startActivity(intent);
-            }
-        });
+        classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        loadClassNameListData();
 
-        addButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,SecondClass.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,ThirdClass.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Fourth_Class.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Fifth_Class.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Sixth_Class.class);
-                startActivity(intent);
-            }
-        });
-        addButton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Seventh_Class.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Eight_Class.class);
-                startActivity(intent);
-            }
-        });
-        addButton9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Nine_Class.class);
-                startActivity(intent);
-            }
-        });
-
-        addButton10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this, Ten_Class.class);
-                startActivity(intent);
-            }
-        });
-        addButton11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this, TestClass.class);
-                startActivity(intent);
-            }
-        });
 
     }
+    private void loadClassNameListData(){
+        classNameList  = new ArrayList<>();
+        classNameList = nameDataBaseHelperName.getAllNotes();
+        if (classNameList.size() > 0){
+            NameCustomAdapter  nameCustomAdapter = new NameCustomAdapter(MainActivity.this,classNameList);
+            classNameRecyclerView.setAdapter(nameCustomAdapter);
+            nameCustomAdapter.notifyDataSetChanged();
+        }else {
+            Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 }

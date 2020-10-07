@@ -25,7 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestClass extends AppCompatActivity {
+public class ElevenClass extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton;
 
@@ -48,7 +48,7 @@ public class TestClass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_class);
-        context= TestClass.this;
+        context= ElevenClass.this;
 
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
