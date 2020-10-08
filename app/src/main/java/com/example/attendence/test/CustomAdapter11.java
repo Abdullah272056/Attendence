@@ -26,9 +26,9 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
     EditText nameEditText;
 
     Context context;
-    private List<Notes> allNotes;
+    private List<Notes2> allNotes;
 
-    List<Notes> copyAllNotes;
+    List<Notes2> copyAllNotes;
     private DataBaseHelper11 databaseHelper;
 
     int checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
@@ -37,7 +37,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
             checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30;
     int checkBoxCount;
 
-    public CustomAdapter11(Context context, List<Notes> allNotes){
+    public CustomAdapter11(Context context, List<Notes2> allNotes){
         this.context = context;
         this.allNotes = allNotes;
         databaseHelper=new DataBaseHelper11(context);
@@ -381,6 +381,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -396,6 +398,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -418,6 +422,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -433,6 +439,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -456,6 +464,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -471,6 +481,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -494,6 +506,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -509,6 +523,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -532,6 +548,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -547,6 +565,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -570,6 +590,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -585,6 +607,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -608,6 +632,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -623,6 +649,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -647,6 +675,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -662,6 +692,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -685,6 +717,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -700,6 +734,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -723,6 +759,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -737,7 +775,9 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName() ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+
                     );
                 }
             }
@@ -761,6 +801,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -776,6 +818,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -799,6 +843,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -814,6 +860,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -837,6 +885,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -852,6 +902,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -875,6 +927,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -890,6 +944,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -913,6 +969,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -928,6 +986,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -951,6 +1011,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -966,6 +1028,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -989,6 +1053,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1004,6 +1070,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1027,6 +1095,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1042,6 +1112,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1065,6 +1137,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1080,6 +1154,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1103,6 +1179,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1118,6 +1196,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1141,6 +1221,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1156,6 +1238,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1179,6 +1263,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1194,6 +1280,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1216,6 +1304,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1231,6 +1321,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1253,6 +1345,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             1,allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1268,6 +1362,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             0,allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1290,6 +1386,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),1,allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1305,6 +1403,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),0,allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1327,6 +1427,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),1,
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1342,6 +1444,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),0,
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1364,6 +1468,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             1,allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1379,6 +1485,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             0,allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1400,6 +1508,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),1,allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1415,6 +1525,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),0,allNotes.get(position).getCheckBox29(),
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1437,6 +1549,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),1,
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1452,6 +1566,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),0,
                             allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1474,6 +1590,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             1,checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
                 else {
@@ -1489,6 +1607,8 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
                             0,checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
@@ -1558,17 +1678,19 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                         int checkBox16,int checkBox17,int checkBox18,int checkBox19,int checkBox20,
                         int checkBox21,int checkBox22,int checkBox23,int checkBox24,int checkBox25,
                         int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
-                        int checkBoxCount,String name){
+                        int checkBoxCount,String name,String examResult1,String examResult2,String examResult3,
+                        String examResult4,String examResult5,String examResult6){
 
-        int status = databaseHelper.updateData(new Notes(id,
+        int status = databaseHelper.updateData(new Notes2(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name
+                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name,
+                examResult1,examResult2,examResult3,examResult4,examResult5,examResult6
         ));
         if (status==1){
             allNotes.clear();
-            allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
+            allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
             //notifyDataSetChanged();
             Toast.makeText(context, "uncheck successful", Toast.LENGTH_SHORT).show();
         }else {
@@ -1584,12 +1706,14 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
             int checkBox16,int checkBox17,int checkBox18,int checkBox19,int checkBox20,
             int checkBox21,int checkBox22,int checkBox23,int checkBox24,int checkBox25,
             int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
-            int checkBoxCount,String name){
-        int status = databaseHelper.updateData(new Notes(id,
+            int checkBoxCount,String name,String examResult1,String examResult2,String examResult3,
+            String examResult4,String examResult5,String examResult6){
+        int status = databaseHelper.updateData(new Notes2(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name
+                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name,
+                examResult1,examResult2,examResult3,examResult4,examResult5,examResult6
         ));
         if (status==1){
             allNotes.clear();
@@ -1625,7 +1749,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=databaseHelper.updateData(new Notes(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                    int id=databaseHelper.updateData(new Notes2(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
                             allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
                             allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
@@ -1635,11 +1759,13 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),allNotes.get(position).getCheckBoxCount(),studentName));
+                            allNotes.get(position).getCheckBox30(),allNotes.get(position).getCheckBoxCount(),studentName
+                    ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()));
                     if (id==1){
                         Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allNotes.clear();
-                        allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
+                        allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
                         notifyDataSetChanged();
                         alertDialog.dismiss();
 

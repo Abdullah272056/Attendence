@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.example.attendence.common.DateNote;
 import com.example.attendence.test.CustomAdapter11;
 import com.example.attendence.test.DataBaseHelper11;
 import com.example.attendence.common.Notes;
+import com.example.attendence.test.Notes2;
 import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -27,7 +29,7 @@ import java.util.List;
 
 public class ElevenClass extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter11 customAdapter;
 
@@ -37,7 +39,7 @@ public class ElevenClass extends AppCompatActivity {
     DataBaseHelper11 dataBaseHelper;
     DateDataBaseHelper11 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -55,6 +57,7 @@ public class ElevenClass extends AppCompatActivity {
 
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
+        examButton=findViewById(R.id.examButtonId);
         dateDataBaseHelper=new DateDataBaseHelper11(context);
         dateDataBaseHelper.getWritableDatabase();
 
@@ -64,7 +67,14 @@ public class ElevenClass extends AppCompatActivity {
         addButton=findViewById(R.id.addButtonId);
 
 
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(ElevenClass.this,TestExamActivity.class);
+                startActivity(intent);
 
+            }
+        });
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,12 +153,13 @@ public class ElevenClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result="";
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result,result,result,result,result,result));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

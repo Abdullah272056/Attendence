@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/nameTextVIewId"
+        android:text="Abdullah"
+        android:textSize="18sp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp" />
+
+
+
+        <EditText
+            android:textColor="#000000"
+            android:background="@drawable/item_backgraound"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/examEditTextVewId1"
+            android:text="result"
+            android:textSize="18sp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp" />
+        <EditText
+            android:textColor="#000000"
+            android:background="@drawable/item_backgraound"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/examEditTextVIewId2"
+            android:text="result"
+            android:textSize="18sp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp" />
+        <EditText
+            android:textColor="#000000"
+            android:background="@drawable/item_backgraound"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/examEditTextVIewId3"
+            android:text="result"
+            android:textSize="18sp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp" />
+        <EditText
+            android:textColor="#000000"
+            android:background="@drawable/item_backgraound"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/examEditTextVIewId4"
+            android:text="result"
+            android:textSize="18sp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp" />
+        <EditText
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:background="@drawable/item_backgraound"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/examEditTextVIewId5"
+            android:text="result"
+            android:textSize="18sp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
