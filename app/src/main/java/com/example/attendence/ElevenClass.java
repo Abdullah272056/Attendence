@@ -153,13 +153,19 @@ public class ElevenClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    String result="";
+                    String result1="1";
+                    String result2="2";
+                    String result3="3";
+                    String result4="4";
+                    String result5="5";
+                    String result6="6";
+
                     int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName, result,result,result,result,result,result));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.attendence.common.Notes;
@@ -15,6 +18,7 @@ import com.example.attendence.test.ExamCustomAdapter;
 import com.example.attendence.test.Notes2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class TestExamActivity extends AppCompatActivity {
@@ -23,6 +27,7 @@ public class TestExamActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ExamCustomAdapter customAdapter;
     Context context;
+    Button saveButton;
 
 
     @Override
@@ -33,12 +38,15 @@ public class TestExamActivity extends AppCompatActivity {
         context=TestExamActivity.this;
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
+        saveButton=findViewById(R.id.saveButtonId);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
-
-
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
@@ -54,4 +62,6 @@ public class TestExamActivity extends AppCompatActivity {
             Toast.makeText(this, "No student name found", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
