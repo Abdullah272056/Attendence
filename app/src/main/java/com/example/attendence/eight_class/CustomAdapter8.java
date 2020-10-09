@@ -369,6 +369,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
                     Check(allNotes.get(position).getId(),1,allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -384,6 +385,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),0,allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -406,6 +408,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),1,
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -421,6 +424,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),0,
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -443,6 +447,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -459,6 +464,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             0,allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -481,6 +487,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -497,6 +504,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),0,allNotes.get(position).getCheckBox5(),
@@ -519,6 +527,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -535,6 +544,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),0,
@@ -557,6 +567,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -573,6 +584,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -595,6 +607,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -611,6 +624,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -634,6 +648,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -650,6 +665,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -672,6 +688,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -688,6 +705,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -710,6 +728,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -726,6 +745,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -748,6 +768,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -764,6 +785,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -786,6 +808,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -802,6 +825,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -824,6 +848,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -840,6 +865,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -862,6 +888,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -878,6 +905,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -900,6 +928,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -916,6 +945,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -938,6 +968,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -954,6 +985,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -976,6 +1008,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -992,6 +1025,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1014,6 +1048,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1030,6 +1065,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1052,6 +1088,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1068,6 +1105,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1090,6 +1128,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1106,6 +1145,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1128,6 +1168,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1144,6 +1185,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1166,6 +1208,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1182,6 +1225,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1203,6 +1247,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1219,6 +1264,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1240,6 +1286,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1256,6 +1303,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1277,6 +1325,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1293,6 +1342,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1314,6 +1364,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1330,6 +1381,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1351,6 +1403,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1367,6 +1420,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1387,6 +1441,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1403,6 +1458,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1424,6 +1480,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1440,6 +1497,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
@@ -1461,6 +1519,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount++;
 
                     Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
@@ -1477,6 +1536,7 @@ public class CustomAdapter8 extends RecyclerView.Adapter<CustomAdapter8.MyViewHo
                     );
                 }
                 else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
                     checkBoxCount--;
                     Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
