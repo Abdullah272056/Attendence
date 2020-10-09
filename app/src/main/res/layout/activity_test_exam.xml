@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
    android:orientation="vertical"
     tools:context=".TestExamActivity">
+    <Button
+        android:textSize="30sp"
+        android:id="@+id/saveButtonId"
+        android:text="Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -13,12 +19,12 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-
                     android:textColor="#000000"
                     android:background="@drawable/item_backgraound"
                     android:gravity="center"
@@ -37,8 +43,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-
-
+                    android:hint="Enter a Date"
                     android:textSize="18sp"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
@@ -49,7 +54,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-
+                    android:hint="Enter a Date"
                     android:textSize="18sp"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
@@ -60,7 +65,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-
+                    android:hint="Enter a Date"
                     android:textSize="18sp"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
@@ -71,7 +76,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-
+                    android:hint="Enter a Date"
                     android:textSize="18sp"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
@@ -82,7 +87,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-
+                    android:hint="Enter a Date"
                     android:textSize="18sp"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
