@@ -20,81 +20,84 @@
         android:layout_marginStart="10dp" />
 
 
-
-        <EditText
-            android:textColor="#000000"
-            android:background="@drawable/item_backgraound"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/examEditTextId1"
-           android:hint="Enter Mark"
-            android:textSize="18sp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp" />
-        <EditText
-            android:textColor="#000000"
-            android:background="@drawable/item_backgraound"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/examEditTextId2"
-            android:hint="Enter Mark"
-            android:textSize="18sp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp" />
-        <EditText
-            android:textColor="#000000"
-            android:background="@drawable/item_backgraound"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/examEditTextId3"
-            android:hint="Enter Mark"
-            android:textSize="18sp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp" />
-        <EditText
-            android:textColor="#000000"
-            android:background="@drawable/item_backgraound"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/examEditTextId4"
-            android:hint="Enter Mark"
-            android:textSize="18sp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp" />
-        <EditText
-            android:layout_marginRight="10dp"
-            android:textColor="#000000"
-            android:background="@drawable/item_backgraound"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/examEditTextId5"
-            android:hint="Enter Mark"
-            android:textSize="18sp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp" />
     <EditText
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
         android:textColor="#000000"
         android:background="@drawable/item_backgraound"
         android:gravity="center"
-        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/examEditTextId1"
+        android:hint="Enter Mark"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        />
+    <EditText
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:layout_gravity="center"
+        android:id="@+id/examEditTextId2"
+        android:hint="Enter Mark"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        />
+    <EditText
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:layout_gravity="center"
+        android:id="@+id/examEditTextId3"
+        android:hint="Enter Mark"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        />
+    <EditText
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:layout_gravity="center"
+        android:id="@+id/examEditTextId4"
+        android:hint="Enter Mark"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        />
+    <EditText
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/examEditTextId5"
+        android:hint="Enter Mark"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        />
+    <EditText
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:textColor="#000000"
+        android:background="@drawable/item_backgraound"
+        android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/examEditTextId6"
         android:hint="Enter Mark"
         android:textSize="18sp"
-        android:layout_width="150dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp" />
+        />
 
     </LinearLayout>
 

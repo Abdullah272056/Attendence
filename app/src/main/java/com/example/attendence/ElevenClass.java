@@ -153,12 +153,12 @@ public class ElevenClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    String result1="1";
-                    String result2="2";
-                    String result3="3";
-                    String result4="4";
-                    String result5="5";
-                    String result6="6";
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
 
                     int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,

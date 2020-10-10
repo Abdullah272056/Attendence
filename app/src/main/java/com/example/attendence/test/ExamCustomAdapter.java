@@ -41,8 +41,21 @@ public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.My
         return new ExamCustomAdapter.MyViewHolder(view);
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
+
+
+    @Override
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         holder.nameTextView.setText(allNotes.get(position).getStudentName());
         holder.examEditText1.setText(allNotes.get(position).getExamResult1());
         holder.examEditText2.setText(allNotes.get(position).getExamResult2());
@@ -51,119 +64,128 @@ public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.My
         holder.examEditText5.setText(allNotes.get(position).getExamResult5());
         holder.examEditText6.setText(allNotes.get(position).getExamResult6());
 
+
         holder.examEditText1.addTextChangedListener(new TextWatcher(){
+            public void afterTextChanged(Editable s) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
-            public void afterTextChanged(Editable s) {
-                String result=String.valueOf(s);
-                customDialog(position,result,allNotes.get(position).getExamResult2(),
-                        allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
-                        allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
+            public void onTextChanged(CharSequence s, int start,int before, int count) {
+                String editTextContent = holder.examEditText1.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,result,allNotes.get(position).getExamResult2(),
+                            allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
+                            allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                }
             }
+        });
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+        holder.examEditText2.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {}
+            public void beforeTextChanged(CharSequence s, int start,int count, int after) { }
+            public void onTextChanged(CharSequence s, int start,int before, int count) {
+                String editTextContent = holder.examEditText2.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,allNotes.get(position).getExamResult1(),result,
+                            allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
+                            allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                } }
+        });
 
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
+
+        holder.examEditText3.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                String editTextContent = holder.examEditText3.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
+                            result,allNotes.get(position).getExamResult4(),
+                            allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
 
 
-
-        holder.examEditText2.addTextChangedListener(new TextWatcher(){
-
-            public void afterTextChanged(Editable s) {
-                String result=String.valueOf(s);
-                customDialog(position,allNotes.get(position).getExamResult1(),result,
-                        allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
-                        allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
-
-            }
-        });
-        holder.examEditText3.addTextChangedListener(new TextWatcher(){
-
-            public void afterTextChanged(Editable s) {
-                String result=String.valueOf(s);
-                customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
-                        result,allNotes.get(position).getExamResult4(),
-                        allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
-
-            }
-        });
         holder.examEditText4.addTextChangedListener(new TextWatcher(){
-
-            public void afterTextChanged(Editable s) {
-
-                String result=String.valueOf(s);
-                customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
-                        allNotes.get(position).getExamResult3(),result,
-                        allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
-            }
-
+            public void afterTextChanged(Editable s) {}
             public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
+                                          int count, int after) { }
+            public void onTextChanged(CharSequence s, int start,int before, int count) {
+                String editTextContent = holder.examEditText4.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
+                            allNotes.get(position).getExamResult3(),result,
+                            allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6());
+
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                }
+
+
 
             }
         });
+
+
         holder.examEditText5.addTextChangedListener(new TextWatcher(){
-
-            public void afterTextChanged(Editable s) {
-                String result=String.valueOf(s);
-                customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
-                        allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
-                        result,allNotes.get(position).getExamResult6());
-
+            public void afterTextChanged(Editable s) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+            public void onTextChanged(CharSequence s, int start,int before, int count) {
+                String editTextContent = holder.examEditText5.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
+                            allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
+                            result,allNotes.get(position).getExamResult6());
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                }
             }
+        });
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
+        holder.examEditText6.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String editTextContent = holder.examEditText6.getText().toString();
+                if(editTextContent != null && editTextContent.trim().length() > 0) {
+                    String result=String.valueOf(s);
+                    customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
+                            allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
+                            allNotes.get(position).getExamResult5(),result);
+                }
+                else {
+                    Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
-        holder.examEditText6.addTextChangedListener(new TextWatcher(){
 
-            public void afterTextChanged(Editable s) {
 
-                String result=String.valueOf(s);
 
-                customDialog(position,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),
-                        allNotes.get(position).getExamResult3(),allNotes.get(position).getExamResult4(),
-                        allNotes.get(position).getExamResult5(),result);
-            }
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
 
-            }
-        });
+
+
+
 
 
 
@@ -209,7 +231,7 @@ public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.My
             Toast.makeText(context, "s", Toast.LENGTH_SHORT).show();
             allNotes.clear();
             allNotes.addAll((Collection<? extends Notes2>) dataBaseHelper.getAllNotes());
-            notifyDataSetChanged();
+            //notifyDataSetChanged();
 
         } else {
             Toast.makeText(context, "f", Toast.LENGTH_SHORT).show();

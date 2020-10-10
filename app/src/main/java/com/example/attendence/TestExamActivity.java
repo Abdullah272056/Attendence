@@ -39,17 +39,14 @@ public class TestExamActivity extends AppCompatActivity {
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
         saveButton=findViewById(R.id.saveButtonId);
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
+
+
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
