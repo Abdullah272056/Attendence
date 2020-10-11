@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ import java.util.List;
 
 public class Eight_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter8 customAdapter;
 
@@ -53,7 +54,7 @@ public class Eight_Class extends AppCompatActivity {
 
         dataBaseHelper=new DataBaseHelper8(context);
         dataBaseHelper.getWritableDatabase();
-
+        examButton=findViewById(R.id.examButtonId);
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
         dateDataBaseHelper=new DateDataBaseHelper8(context);
@@ -74,12 +75,14 @@ public class Eight_Class extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(Eight_Class.this,ExamActivity8.class);
+                startActivity(intent);
+
+            }
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
 
