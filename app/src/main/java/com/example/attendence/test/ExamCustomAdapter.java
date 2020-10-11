@@ -179,16 +179,6 @@ public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.My
             }
         });
 
-
-
-
-
-
-
-
-
-
-
     }
 
     @Override
