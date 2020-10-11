@@ -15,11 +15,11 @@ import com.example.attendence.common.DateNote;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBaseHelperTestExamDate extends SQLiteOpenHelper {
+public class DataBaseHelperExamDate11 extends SQLiteOpenHelper {
     Context context;
-   ConstantTestExam constant;
-    public DataBaseHelperTestExamDate(@Nullable Context context ){
-        super(context, ConstantTestExam.DATE_TABLE_NAME, null, ConstantTestExam.DATABASE_Version);
+   ConstantExam11 constant;
+    public DataBaseHelperExamDate11(@Nullable Context context ){
+        super(context, ConstantExam11.DATE_TABLE_NAME, null, ConstantExam11.DATABASE_Version);
         this.context=context;
     }
 

@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
+import com.example.attendence.test_class.Constant11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 public class DataBaseHelper9 extends SQLiteOpenHelper {
     Constant9 constant;
     Context context;
+
     public DataBaseHelper9(@Nullable Context context) {
         super(context, Constant9.TABLE_NAME, null, Constant9.DATABASE_Version);
         this.context=context;
@@ -34,13 +37,13 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
         Toast.makeText(context, "onUpgrade is Called",Toast.LENGTH_SHORT).show();
     }
 
-    public List<Notes> getAllNotes(){
+    public List<Notes2> getAllNotes(){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-        List<Notes> dataList = new ArrayList<>();
+        List<Notes2> dataList = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+constant.TABLE_NAME,null);
         if (cursor.moveToFirst()){
             do {
-                Notes note = new Notes(
+                Notes2 note = new Notes2(
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_ID)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX1)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX2)),
@@ -73,7 +76,13 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX29)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX30)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX_COUNT)),
-                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_STUDENT_NAME))
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_STUDENT_NAME)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT1)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT2)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT3)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT4)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT5)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT6))
                 );
 
                 dataList.add(note);
@@ -81,8 +90,7 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
         }
         return dataList;
     }
-
-    public int insertData(Notes notes){
+    public int insertData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
@@ -121,12 +129,21 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
 
         contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
+
+        contentValues.put(constant.COLUMN_EXAM_RESULT1,notes.getExamResult1());
+        contentValues.put(constant.COLUMN_EXAM_RESULT2,notes.getExamResult2());
+        contentValues.put(constant.COLUMN_EXAM_RESULT3,notes.getExamResult3());
+        contentValues.put(constant.COLUMN_EXAM_RESULT4,notes.getExamResult4());
+        contentValues.put(constant.COLUMN_EXAM_RESULT5,notes.getExamResult5());
+        contentValues.put(constant.COLUMN_EXAM_RESULT6,notes.getExamResult6());
 
         int id= (int) sqLiteDatabase.insert(constant.TABLE_NAME,null,contentValues);
         return id;
     }
 
-    public int updateData(Notes notes){
+
+
+    public int updateData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put(constant.COLUMN_CHECKBOX1,notes.getCheckBox1());
@@ -163,6 +180,15 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_CHECKBOX30,notes.getCheckBox30());
         contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
         contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
+
+        contentValues.put(constant.COLUMN_EXAM_RESULT1,notes.getExamResult1());
+        contentValues.put(constant.COLUMN_EXAM_RESULT2,notes.getExamResult2());
+        contentValues.put(constant.COLUMN_EXAM_RESULT3,notes.getExamResult3());
+        contentValues.put(constant.COLUMN_EXAM_RESULT4,notes.getExamResult4());
+        contentValues.put(constant.COLUMN_EXAM_RESULT5,notes.getExamResult5());
+        contentValues.put(constant.COLUMN_EXAM_RESULT6,notes.getExamResult6());
+
+
         int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
         return status;
     }

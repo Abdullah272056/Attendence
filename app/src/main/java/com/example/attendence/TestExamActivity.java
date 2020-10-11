@@ -17,8 +17,8 @@ import com.example.attendence.common.DateNote;
 import com.example.attendence.test_class.DataBaseHelper11;
 import com.example.attendence.test_class.ExamCustomAdapter11;
 import com.example.attendence.common.Notes2;
-import com.example.attendence.test_exam_date.CustomAdapterTestExamDate;
-import com.example.attendence.test_exam_date.DataBaseHelperTestExamDate;
+import com.example.attendence.test_exam_date.CustomAdapterExamDate11;
+import com.example.attendence.test_exam_date.DataBaseHelperExamDate11;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -34,9 +34,9 @@ public class TestExamActivity extends AppCompatActivity {
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
 
-    DataBaseHelperTestExamDate dateDataBaseHelper;
+    DataBaseHelperExamDate11 dateDataBaseHelper;
     private List<DateNote> dateDataList;
-    CustomAdapterTestExamDate dateCustomAdapter;
+    CustomAdapterExamDate11 dateCustomAdapter;
 
 
     @Override
@@ -49,7 +49,7 @@ public class TestExamActivity extends AppCompatActivity {
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
 
-        dateDataBaseHelper=new DataBaseHelperTestExamDate(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate11(context);
         dateDataBaseHelper.getWritableDatabase();
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
@@ -94,7 +94,7 @@ public class TestExamActivity extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new CustomAdapterTestExamDate(context,dateDataList);
+            dateCustomAdapter = new CustomAdapterExamDate11(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {

@@ -18,7 +18,7 @@ import java.util.List;
 public class DataBaseHelper11 extends SQLiteOpenHelper {
     Constant11 constant;
     Context context;
-    Notes2 notes2;
+
     public DataBaseHelper11(@Nullable Context context) {
         super(context, Constant11.TABLE_NAME, null, Constant11.DATABASE_Version);
         this.context=context;

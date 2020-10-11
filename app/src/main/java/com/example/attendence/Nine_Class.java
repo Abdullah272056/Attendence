@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.nine_class.CustomAdapter9;
 import com.example.attendence.nine_class.DataBaseHelper9;
 import com.example.attendence.nine_class_date.DateCustomAdapter9;
@@ -27,7 +28,7 @@ import java.util.List;
 
 public class Nine_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter9 customAdapter;
 
@@ -36,12 +37,12 @@ public class Nine_Class extends AppCompatActivity {
 
     DataBaseHelper9 dataBaseHelper;
     DateDataBaseHelper9 dateDataBaseHelper;
-
-    private List<Notes> studentInformationDataList;
+    DateCustomAdapter9 dateCustomAdapter;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
-    DateCustomAdapter9 dateCustomAdapter;
+
 
     Context context;
     @Override
@@ -53,18 +54,18 @@ public class Nine_Class extends AppCompatActivity {
         dataBaseHelper=new DataBaseHelper9(context);
         dataBaseHelper.getWritableDatabase();
 
-        //add date
-        addDateButton=findViewById(R.id.dateFloatingButtonId);
         dateDataBaseHelper=new DateDataBaseHelper9(context);
         dateDataBaseHelper.getWritableDatabase();
+
+        examButton=findViewById(R.id.examButtonId);
+        //add date
+        addDateButton=findViewById(R.id.dateFloatingButtonId);
+
 
 
         recyclerView=findViewById(R.id.recyclerViewId);
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
         addButton=findViewById(R.id.addButtonId);
-
-
-
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,12 +74,17 @@ public class Nine_Class extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(Nine_Class.this,ExamActivity9.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
 
@@ -143,12 +149,21 @@ public class Nine_Class extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

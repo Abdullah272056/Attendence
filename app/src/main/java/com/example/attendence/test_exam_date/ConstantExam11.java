@@ -1,6 +1,6 @@
 package com.example.attendence.test_exam_date;
 
-public class ConstantTestExam {
+public class ConstantExam11 {
     public  static final String DATABASE_NAME="EXAM_DATE.db";
     public  static final int DATABASE_Version=2;
     public  static final String DATE_TABLE_NAME="EXAM_DATE";

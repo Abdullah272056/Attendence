@@ -161,6 +161,7 @@ public class ElevenClass extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,studentName, result1,result2,result3,result4,result5,result6));
 
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
