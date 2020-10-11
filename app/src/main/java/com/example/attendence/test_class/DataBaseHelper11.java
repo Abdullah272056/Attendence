@@ -1,4 +1,4 @@
-package com.example.attendence.test;
+package com.example.attendence.test_class;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;
 import java.util.List;

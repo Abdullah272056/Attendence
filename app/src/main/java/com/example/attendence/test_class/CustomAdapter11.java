@@ -1,4 +1,4 @@
-package com.example.attendence.test;
+package com.example.attendence.test_class;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;
 import java.util.Collection;

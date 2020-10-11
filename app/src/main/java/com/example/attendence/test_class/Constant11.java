@@ -1,4 +1,4 @@
-package com.example.attendence.test;
+package com.example.attendence.test_class;
 
 public class Constant11 {
     public  static final String DATABASE_NAME="Reminder.db11";

@@ -15,10 +15,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.test.CustomAdapter11;
-import com.example.attendence.test.DataBaseHelper11;
-import com.example.attendence.common.Notes;
-import com.example.attendence.test.Notes2;
+import com.example.attendence.test_class.CustomAdapter11;
+import com.example.attendence.test_class.DataBaseHelper11;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -83,12 +82,7 @@ public class ElevenClass extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
 
@@ -166,6 +160,7 @@ public class ElevenClass extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

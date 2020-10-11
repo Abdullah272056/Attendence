@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.List;
 
 
-public class ExamDateCustomAdapter extends RecyclerView.Adapter<ExamDateCustomAdapter.MyViewHolder> {
+public class CustomAdapterTestExamDate extends RecyclerView.Adapter<CustomAdapterTestExamDate.MyViewHolder> {
     Button saveButton,cancelButton;
 
     EditText dateEditText;
@@ -27,12 +27,12 @@ public class ExamDateCustomAdapter extends RecyclerView.Adapter<ExamDateCustomAd
 
     Context context;
     private List<DateNote> allDate;
-    ExamDateDataBaseHelper dateDataBaseHelper;
+    DataBaseHelperTestExamDate dateDataBaseHelper;
 
-    public ExamDateCustomAdapter(Context context, List<DateNote> allDate) {
+    public CustomAdapterTestExamDate(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new ExamDateDataBaseHelper(context);
+        dateDataBaseHelper=new DataBaseHelperTestExamDate(context);
     }
 
     @NonNull
@@ -40,8 +40,8 @@ public class ExamDateCustomAdapter extends RecyclerView.Adapter<ExamDateCustomAd
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.exam_date_item,parent,false);
-        dateDataBaseHelper=new ExamDateDataBaseHelper(context);
-        return new ExamDateCustomAdapter.MyViewHolder(view);
+        dateDataBaseHelper=new DataBaseHelperTestExamDate(context);
+        return new CustomAdapterTestExamDate.MyViewHolder(view);
     }
 
     @Override

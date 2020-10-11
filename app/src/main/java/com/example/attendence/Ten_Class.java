@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.ten_class.CustomAdapter10;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class_date.DateCustomAdapter10;
@@ -27,7 +29,7 @@ import java.util.List;
 
 public class Ten_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter10 customAdapter;
 
@@ -37,7 +39,7 @@ public class Ten_Class extends AppCompatActivity {
     DataBaseHelper10 dataBaseHelper;
     DateDataBaseHelper10 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -50,10 +52,17 @@ public class Ten_Class extends AppCompatActivity {
         setContentView(R.layout.activity_ten__class_);
 
         context= Ten_Class.this;
-
+        examButton=findViewById(R.id.examButtonId);
         dataBaseHelper=new DataBaseHelper10(context);
         dataBaseHelper.getWritableDatabase();
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(Ten_Class.this,TenExamActivity.class);
+                startActivity(intent);
 
+            }
+        });
         //add date
         addDateButton=findViewById(R.id.dateFloatingButtonId);
         dateDataBaseHelper=new DateDataBaseHelper10(context);
@@ -144,12 +153,19 @@ public class Ten_Class extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

@@ -1,4 +1,4 @@
-package com.example.attendence.test;
+package com.example.attendence.test_class;
 
 import android.content.Context;
 import android.text.Editable;
@@ -14,19 +14,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 
 
-import java.text.BreakIterator;
 import java.util.Collection;
 import java.util.List;
 
-public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.MyViewHolder> {
+public class ExamCustomAdapter11 extends RecyclerView.Adapter<ExamCustomAdapter11.MyViewHolder> {
     Context context;
     private List<Notes2> allNotes;
     DataBaseHelper11 dataBaseHelper;
 
-    public ExamCustomAdapter(Context context, List<Notes2> allNotes) {
+    public ExamCustomAdapter11(Context context, List<Notes2> allNotes) {
         this.context = context;
         this.allNotes = allNotes;
         dataBaseHelper=new DataBaseHelper11(context);
@@ -38,7 +37,7 @@ public class ExamCustomAdapter extends RecyclerView.Adapter<ExamCustomAdapter.My
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.item2,parent,false);
         dataBaseHelper=new DataBaseHelper11(context);
-        return new ExamCustomAdapter.MyViewHolder(view);
+        return new ExamCustomAdapter11.MyViewHolder(view);
     }
 
 

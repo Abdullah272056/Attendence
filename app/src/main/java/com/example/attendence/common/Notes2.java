@@ -1,4 +1,4 @@
-package com.example.attendence.test;
+package com.example.attendence.common;
 
 public class Notes2 {
     int id;
