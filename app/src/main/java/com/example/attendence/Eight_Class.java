@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.CustomAdapter8;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class_date.DateCustomAdapter8;
@@ -37,7 +38,7 @@ public class Eight_Class extends AppCompatActivity {
     DataBaseHelper8 dataBaseHelper;
     DateDataBaseHelper8 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -143,12 +144,20 @@ public class Eight_Class extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
