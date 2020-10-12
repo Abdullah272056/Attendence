@@ -80,7 +80,6 @@ public class Eight_Class extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(Eight_Class.this,ExamActivity8.class);
                 startActivity(intent);
-
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
