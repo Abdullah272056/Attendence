@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.first_class.CustomAdapter;
 import com.example.attendence.first_class.DataBaseHelper;
 import com.example.attendence.first_class_date.DateCustomAdapter;
@@ -29,7 +30,7 @@ import java.util.List;
 
 public class First_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter customAdapter;
 
@@ -39,7 +40,7 @@ public class First_Class extends AppCompatActivity {
 
     DateDataBaseHelper dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -78,12 +79,14 @@ public class First_Class extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+        examButton=findViewById(R.id.examButtonId);
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(First_Class.this,ExamActivity1.class);
+                startActivity(intent);
+            }
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         LoadStudentInformationData();
 
@@ -149,12 +152,20 @@ public class First_Class extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         LoadStudentInformationData();

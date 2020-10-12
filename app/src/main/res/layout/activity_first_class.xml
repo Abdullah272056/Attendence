@@ -8,12 +8,26 @@
     android:orientation="vertical"
     >
 
-    <Button
-        android:textSize="30sp"
-        android:text="Add"
-        android:id="@+id/addButtonId"
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="Add"
+            android:id="@+id/addButtonId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="Exam"
+            android:id="@+id/examButtonId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
     <HorizontalScrollView
         android:scrollbarSize="20dp"
         android:layout_width="match_parent"
