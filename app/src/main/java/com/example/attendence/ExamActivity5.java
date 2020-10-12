@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
-import com.example.attendence.seventh_class.DataBaseHelper7;
-import com.example.attendence.seventh_class.ExamCustomAdapter7;
-import com.example.attendence.seventh_exam_date.CustomAdapterExamDate7;
-import com.example.attendence.seventh_exam_date.DataBaseHelperExamDate7;
+import com.example.attendence.fifth_class.DataBaseHelper5;
+import com.example.attendence.fifth_class.ExamCustomAdapter5;
+import com.example.attendence.fifth_exam_date.CustomAdapterExamDate5;
+import com.example.attendence.fifth_exam_date.DataBaseHelperExamDate5;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class.ExamCustomAdapter6;
 import com.example.attendence.sixth_exam_date.CustomAdapterExamDate6;
@@ -28,30 +28,30 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExamActivity6 extends AppCompatActivity {
+public class ExamActivity5 extends AppCompatActivity {
     private List<Notes2> studentInformationDataList;
-    DataBaseHelper6 dataBaseHelper;
+    DataBaseHelper5 dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;
-    ExamCustomAdapter6 customAdapter;
+    ExamCustomAdapter5 customAdapter;
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
 
-    DataBaseHelperExamDate6 dateDataBaseHelper;
+    DataBaseHelperExamDate5 dateDataBaseHelper;
     private List<DateNote> dateDataList;
-    CustomAdapterExamDate6 dateCustomAdapter;
+    CustomAdapterExamDate5 dateCustomAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exam6);
+        setContentView(R.layout.activity_exam5);
 
-        context=ExamActivity6.this;
+        context=ExamActivity5.this;
 
-        dataBaseHelper=new DataBaseHelper6(context);
+        dataBaseHelper=new DataBaseHelper5(context);
         dataBaseHelper.getWritableDatabase();
 
-        dateDataBaseHelper=new DataBaseHelperExamDate6(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate5(context);
         dateDataBaseHelper.getWritableDatabase();
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
@@ -84,7 +84,7 @@ public class ExamActivity6 extends AppCompatActivity {
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){
-            customAdapter = new ExamCustomAdapter6(context,studentInformationDataList);
+            customAdapter = new ExamCustomAdapter5(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
@@ -96,7 +96,7 @@ public class ExamActivity6 extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new CustomAdapterExamDate6(context,dateDataList);
+            dateCustomAdapter = new CustomAdapterExamDate5(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {
