@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.third_class.CustomAdapter3;
 import com.example.attendence.third_class.DataBaseHelper3;
 import com.example.attendence.third_class_date.DateCustomAdapter3;
@@ -27,7 +29,7 @@ import java.util.List;
 
 public class ThirdClass extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter3 customAdapter;
 
@@ -37,7 +39,7 @@ public class ThirdClass extends AppCompatActivity {
 
     DateDataBaseHelper3 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -66,7 +68,14 @@ public class ThirdClass extends AppCompatActivity {
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
         addButton=findViewById(R.id.addButtonId);
 
-
+        examButton=findViewById(R.id.examButtonId);
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(ThirdClass.this,ExamActivity3.class);
+                startActivity(intent);
+            }
+        });
 
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -76,12 +85,7 @@ public class ThirdClass extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
 
@@ -146,12 +150,20 @@ public class ThirdClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

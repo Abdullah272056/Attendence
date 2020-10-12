@@ -212,12 +212,11 @@ public class Sixth_Class extends AppCompatActivity {
                     if (id!=-1){
                         Toast.makeText(context, id+"Success", Toast.LENGTH_SHORT).show();
                         loadDateListData();
-                        alertDialog.dismiss();
                     }
                     else {
                         Toast.makeText(context, "fail", Toast.LENGTH_SHORT).show();
-                        alertDialog.dismiss();
                     }
+                    alertDialog.dismiss();
                 }
             }
         });

@@ -39,8 +39,8 @@ public class Fourth_Class extends AppCompatActivity {
     DataBaseHelper4 dataBaseHelper;
     DateDataBaseHelper4 dateDataBaseHelper;
 
-    private List<Notes2> studentInformationDataList;
-    private List<DateNote> dateDataList;
+    List<Notes2> studentInformationDataList;
+    List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
     DateCustomAdapter4 dateCustomAdapter;
@@ -166,12 +166,11 @@ public class Fourth_Class extends AppCompatActivity {
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
-                        bottomSheetDialog.dismiss();
 
                     }else {
                         Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
-                        bottomSheetDialog.dismiss();
                     }
+                    bottomSheetDialog.dismiss();
                 }
 
             }
@@ -210,12 +209,11 @@ public class Fourth_Class extends AppCompatActivity {
                     if (id!=-1){
                         Toast.makeText(context, id+"Success", Toast.LENGTH_SHORT).show();
                         loadDateListData();
-                        alertDialog.dismiss();
                     }
                     else {
                         Toast.makeText(context, "fail", Toast.LENGTH_SHORT).show();
-                        alertDialog.dismiss();
                     }
+                    alertDialog.dismiss();
                 }
             }
         });
