@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.second_class.CustomAdapter2;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class_date.DateCustomAdapter2;
@@ -27,7 +29,7 @@ import java.util.List;
 
 public class SecondClass extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
-    Button addButton;
+    Button addButton,examButton;
 
     CustomAdapter2 customAdapter;
 
@@ -37,7 +39,7 @@ public class SecondClass extends AppCompatActivity {
 
     DateDataBaseHelper2 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -59,7 +61,15 @@ public class SecondClass extends AppCompatActivity {
         addDateButton=findViewById(R.id.dateFloatingButtonId);
         dateDataBaseHelper=new DateDataBaseHelper2(context);
         dateDataBaseHelper.getWritableDatabase();
+        examButton=findViewById(R.id.examButtonId);
+        examButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(SecondClass.this,ExamActivity2.class);
+                startActivity(intent);
 
+            }
+        });
 
         recyclerView=findViewById(R.id.recyclerViewId);
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
@@ -75,12 +85,7 @@ public class SecondClass extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
 
@@ -145,12 +150,20 @@ public class SecondClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    String result1="";
+                    String result2="";
+                    String result3="";
+                    String result4="";
+                    String result5="";
+                    String result6="";
+
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
-                            0,studentName));
+                            0,studentName, result1,result2,result3,result4,result5,result6));
+
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();

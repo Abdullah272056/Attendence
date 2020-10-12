@@ -59,7 +59,7 @@ public class Seventh_Class extends AppCompatActivity {
         addDateButton=findViewById(R.id.dateFloatingButtonId);
         dateDataBaseHelper=new DateDataBaseHelper7(context);
         dateDataBaseHelper.getWritableDatabase();
-        examButton=findViewById(R.id.examButtonId);
+
 
         recyclerView=findViewById(R.id.recyclerViewId);
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
@@ -75,6 +75,7 @@ public class Seventh_Class extends AppCompatActivity {
 
             }
         });
+        examButton=findViewById(R.id.examButtonId);
         examButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
