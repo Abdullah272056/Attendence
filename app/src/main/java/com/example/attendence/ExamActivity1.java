@@ -1,11 +1,11 @@
 package com.example.attendence;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +24,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExamActivity1 extends AppCompatActivity {
+public class ExamActivity1 extends AppCompatActivity{
     private List<Notes2> studentInformationDataList;
     DataBaseHelper dataBaseHelper;
     RecyclerView recyclerView;
@@ -33,14 +33,18 @@ public class ExamActivity1 extends AppCompatActivity {
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
-
     DataBaseHelperExamDate1 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterExamDate1 dateCustomAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam1);
+        //setAppBar Title
+        Intent intent = getIntent();
+        String appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
 
         context=ExamActivity1.this;
         // for add back Button in title bar
@@ -75,7 +79,6 @@ public class ExamActivity1 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
 
 
     private void loadStudentInformationData(){

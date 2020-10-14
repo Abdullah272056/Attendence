@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,11 @@ public class ExamActivity7 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam7);
         context=ExamActivity7.this;
+        //setAppBar Title
+        Intent intent = getIntent();
+        String appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
+
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

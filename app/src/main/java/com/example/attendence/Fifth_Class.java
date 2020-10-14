@@ -44,7 +44,7 @@ public class Fifth_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter5 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,10 @@ public class Fifth_Class extends AppCompatActivity {
         context=Fifth_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper5(context);
         dataBaseHelper.getWritableDatabase();
@@ -62,6 +66,7 @@ public class Fifth_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Fifth_Class.this,ExamActivity5.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
             }
         });

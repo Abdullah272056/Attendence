@@ -43,7 +43,7 @@ public class Ten_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter10 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,10 @@ public class Ten_Class extends AppCompatActivity {
         context= Ten_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+       appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         examButton=findViewById(R.id.examButtonId);
         dataBaseHelper=new DataBaseHelper10(context);
@@ -61,6 +65,7 @@ public class Ten_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Ten_Class.this, ExamActivity10.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }

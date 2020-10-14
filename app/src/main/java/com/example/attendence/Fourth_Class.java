@@ -44,6 +44,7 @@ public class Fourth_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter4 dateCustomAdapter;
+    String appBarTitle;
 
     Context context;
 
@@ -56,6 +57,10 @@ public class Fourth_Class extends AppCompatActivity {
 
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper4(context);
         dataBaseHelper.getWritableDatabase();
@@ -85,6 +90,7 @@ public class Fourth_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Fourth_Class.this,ExamActivity4.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
             }
         });

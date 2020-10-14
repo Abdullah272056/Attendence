@@ -37,7 +37,7 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
 
     EditText classNameEditText;
 
-
+    String appBarTitle;
     Context context;
     private List<NoteClass> allClassName;
     NameDataBaseHelperName nameDataBaseHelperName;
@@ -64,6 +64,7 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
             @Override
             public void onClick(View v) {
                 Intent intent = null;
+                appBarTitle=allClassName.get(position).getClassName();
                 if(position==0){
                     intent=new Intent(context, First_Class.class);
                 }
@@ -99,7 +100,8 @@ public class NameCustomAdapter extends RecyclerView.Adapter<NameCustomAdapter.My
                 }
 
 
-
+                assert intent != null;
+                intent.putExtra("appBarTitle",appBarTitle);
                 context.startActivity(intent);
             }
         });

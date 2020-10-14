@@ -44,7 +44,7 @@ public class SecondClass extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter2 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,10 @@ public class SecondClass extends AppCompatActivity {
         context=SecondClass.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper2(context);
         dataBaseHelper.getWritableDatabase();
@@ -67,6 +71,7 @@ public class SecondClass extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(SecondClass.this,ExamActivity2.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }

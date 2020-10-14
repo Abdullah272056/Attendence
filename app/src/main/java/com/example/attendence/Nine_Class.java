@@ -43,7 +43,7 @@ public class Nine_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
 
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,10 @@ public class Nine_Class extends AppCompatActivity {
         context=Nine_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper9(context);
         dataBaseHelper.getWritableDatabase();
@@ -80,6 +84,7 @@ public class Nine_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Nine_Class.this,ExamActivity9.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }

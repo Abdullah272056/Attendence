@@ -43,7 +43,7 @@ public class ElevenClass extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter11 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,10 @@ public class ElevenClass extends AppCompatActivity {
         context= ElevenClass.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
@@ -72,6 +76,7 @@ public class ElevenClass extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(ElevenClass.this, ExamActivity11.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }
@@ -149,6 +154,7 @@ public class ElevenClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
+
                     String result1="";
                     String result2="";
                     String result3="";
@@ -168,13 +174,11 @@ public class ElevenClass extends AppCompatActivity {
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
                         bottomSheetDialog.dismiss();
-
                     }else {
                         Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
                         bottomSheetDialog.dismiss();
                     }
                 }
-
             }
         });
 

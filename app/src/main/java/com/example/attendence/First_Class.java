@@ -45,7 +45,7 @@ public class First_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -53,9 +53,14 @@ public class First_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_class);
 
+
             context= First_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+        appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper(context);
         dataBaseHelper.getWritableDatabase();
@@ -85,6 +90,7 @@ public class First_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(First_Class.this,ExamActivity1.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
             }
         });

@@ -27,7 +27,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Seventh_Class extends AppCompatActivity {
+public class Seventh_Class extends AppCompatActivity{
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton,examButton;
 
@@ -44,7 +44,7 @@ public class Seventh_Class extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter7 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,10 @@ public class Seventh_Class extends AppCompatActivity {
         context=Seventh_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+       appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper7(context);
         dataBaseHelper.getWritableDatabase();
@@ -82,6 +86,7 @@ public class Seventh_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Seventh_Class.this,ExamActivity7.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }

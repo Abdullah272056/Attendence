@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,10 @@ public class ExamActivity8 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_class8);
+        //setAppBar Title
+        Intent intent = getIntent();
+        String appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
 
         context=ExamActivity8.this;
 

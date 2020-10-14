@@ -46,7 +46,7 @@ public class Sixth_Class extends AppCompatActivity {
     DateCustomAdapter6 dateCustomAdapter;
 
     Context context;
-
+    String appBarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,10 @@ public class Sixth_Class extends AppCompatActivity {
         context=Sixth_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+       appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
 
         dataBaseHelper=new DataBaseHelper6(context);
         dataBaseHelper.getWritableDatabase();
@@ -64,6 +68,7 @@ public class Sixth_Class extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(Sixth_Class.this,ExamActivity6.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
             }
         });

@@ -44,7 +44,7 @@ public class ThirdClass extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter3 dateCustomAdapter;
-
+    String appBarTitle;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,11 @@ public class ThirdClass extends AppCompatActivity {
         context=ThirdClass.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setAppBar Title
+        Intent intent = getIntent();
+       appBarTitle = intent.getStringExtra("appBarTitle");
+        getSupportActionBar().setTitle(appBarTitle);
+
 
         dataBaseHelper=new DataBaseHelper3(context);
         dataBaseHelper.getWritableDatabase();
@@ -73,6 +78,7 @@ public class ThirdClass extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(ThirdClass.this,ExamActivity3.class);
+                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
             }
         });
