@@ -53,8 +53,9 @@ public class First_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_class);
 
-
             context= First_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper(context);
         dataBaseHelper.getWritableDatabase();

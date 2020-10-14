@@ -52,6 +52,8 @@ public class Fifth_Class extends AppCompatActivity {
         setContentView(R.layout.activity_fifth__class);
 
         context=Fifth_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper5(context);
         dataBaseHelper.getWritableDatabase();

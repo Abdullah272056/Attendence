@@ -51,6 +51,8 @@ public class Seventh_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seventh__class);
         context=Seventh_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper7(context);
         dataBaseHelper.getWritableDatabase();

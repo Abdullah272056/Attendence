@@ -14,40 +14,44 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.test_class.DataBaseHelper11;
+import com.example.attendence.test_class.ExamCustomAdapter11;
 import com.example.attendence.common.Notes2;
-import com.example.attendence.ten_class.DataBaseHelper10;
-import com.example.attendence.ten_class.ExamCustomAdapter10;
-import com.example.attendence.ten_exam_date.CustomAdapterTenExamDate;
-import com.example.attendence.ten_exam_date.DataBaseHelperTenExamDate;
+import com.example.attendence.test_exam_date.CustomAdapterExamDate11;
+import com.example.attendence.test_exam_date.DataBaseHelperExamDate11;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TenExamActivity extends AppCompatActivity {
+public class ExamActivity11 extends AppCompatActivity {
     private List<Notes2> studentInformationDataList;
-    DataBaseHelper10 dataBaseHelper;
+    DataBaseHelper11 dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;
-    ExamCustomAdapter10 customAdapter;
+    ExamCustomAdapter11 customAdapter;
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
 
-    DataBaseHelperTenExamDate dateDataBaseHelper;
+    DataBaseHelperExamDate11 dateDataBaseHelper;
     private List<DateNote> dateDataList;
-    CustomAdapterTenExamDate dateCustomAdapter;
+    CustomAdapterExamDate11 dateCustomAdapter;
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ten_exam);
+        setContentView(R.layout.activity_test_exam);
 
-        context=TenExamActivity.this;
+        context= ExamActivity11.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        dataBaseHelper=new DataBaseHelper10(context);
+        dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
 
-        dateDataBaseHelper=new DataBaseHelperTenExamDate(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate11(context);
         dateDataBaseHelper.getWritableDatabase();
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
@@ -80,7 +84,7 @@ public class TenExamActivity extends AppCompatActivity {
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){
-            customAdapter = new ExamCustomAdapter10(context,studentInformationDataList);
+            customAdapter = new ExamCustomAdapter11(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
             customAdapter.notifyDataSetChanged();
         }else {
@@ -92,7 +96,7 @@ public class TenExamActivity extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new CustomAdapterTenExamDate(context,dateDataList);
+            dateCustomAdapter = new CustomAdapterExamDate11(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {

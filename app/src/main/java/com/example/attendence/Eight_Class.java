@@ -51,6 +51,8 @@ public class Eight_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eight__class);
         context=Eight_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper8(context);
         dataBaseHelper.getWritableDatabase();

@@ -46,6 +46,9 @@ public class ExamActivity8 extends AppCompatActivity {
 
         context=ExamActivity8.this;
 
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         dataBaseHelper=new DataBaseHelper8(context);
         dataBaseHelper.getWritableDatabase();
 

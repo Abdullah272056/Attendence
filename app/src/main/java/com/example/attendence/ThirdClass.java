@@ -51,9 +51,9 @@ public class ThirdClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_class);
 
-
-
         context=ThirdClass.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper3(context);
         dataBaseHelper.getWritableDatabase();

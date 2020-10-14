@@ -50,6 +50,8 @@ public class ElevenClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_class);
         context= ElevenClass.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper11(context);
         dataBaseHelper.getWritableDatabase();
@@ -69,7 +71,7 @@ public class ElevenClass extends AppCompatActivity {
         examButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(ElevenClass.this,TestExamActivity.class);
+                Intent intent =new Intent(ElevenClass.this, ExamActivity11.class);
                 startActivity(intent);
 
             }

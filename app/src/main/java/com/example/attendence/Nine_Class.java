@@ -50,6 +50,8 @@ public class Nine_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nine__class);
         context=Nine_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper9(context);
         dataBaseHelper.getWritableDatabase();

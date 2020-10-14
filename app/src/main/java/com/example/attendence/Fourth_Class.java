@@ -54,6 +54,9 @@ public class Fourth_Class extends AppCompatActivity {
 
         context=Fourth_Class.this;
 
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         dataBaseHelper=new DataBaseHelper4(context);
         dataBaseHelper.getWritableDatabase();
 

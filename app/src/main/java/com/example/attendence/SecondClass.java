@@ -51,8 +51,9 @@ public class SecondClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_class);
 
-
         context=SecondClass.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper2(context);
         dataBaseHelper.getWritableDatabase();

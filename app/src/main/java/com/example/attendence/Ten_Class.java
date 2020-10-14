@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.ten_class.CustomAdapter10;
 import com.example.attendence.ten_class.DataBaseHelper10;
@@ -52,13 +51,16 @@ public class Ten_Class extends AppCompatActivity {
         setContentView(R.layout.activity_ten__class_);
 
         context= Ten_Class.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         examButton=findViewById(R.id.examButtonId);
         dataBaseHelper=new DataBaseHelper10(context);
         dataBaseHelper.getWritableDatabase();
         examButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(Ten_Class.this,TenExamActivity.class);
+                Intent intent =new Intent(Ten_Class.this, ExamActivity10.class);
                 startActivity(intent);
 
             }

@@ -47,6 +47,8 @@ public class ExamActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_exam3);
 
         context=ExamActivity3.this;
+        // for add back Button in title bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper3(context);
         dataBaseHelper.getWritableDatabase();
