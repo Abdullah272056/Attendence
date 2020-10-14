@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/editID"
+    android:title="Edit"
+    android:icon="@drawable/ic_create_black_24dp"/>
+    <item android:id="@+id/mailId"
+        android:title="Mail"
+        android:icon="@drawable/ic_mail_black_24dp"/>
+    <item android:id="@+id/colorizeId"
+        android:title="Colorize"
+        android:icon="@drawable/ic_colorize_black_24dp"/>
+    <item android:title="Other"
+        android:id="@+id/otherId"
+        >
+        <menu>
+            <item android:id="@+id/locationId"
+                android:icon="@drawable/ic_location_on_black_24dp"
+                android:title="Location"/>
+            <item android:id="@+id/shareId"
+                android:title="Share"
+                android:icon="@drawable/ic_share_black_24dp"/>
+        </menu>
+    </item>
+</menu>
