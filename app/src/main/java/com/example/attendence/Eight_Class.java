@@ -21,6 +21,8 @@ import com.example.attendence.eight_class.CustomAdapter8;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class_date.DateCustomAdapter8;
 import com.example.attendence.eight_class_date.DateDataBaseHelper8;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -53,10 +55,13 @@ public class Eight_Class extends AppCompatActivity {
         context=Eight_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //setAppBar Title
-        Intent intent = getIntent();
-        appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle(appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                Eight_Class.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle(classNameList.get(7).getClassName());
 
         dataBaseHelper=new DataBaseHelper8(context);
         dataBaseHelper.getWritableDatabase();

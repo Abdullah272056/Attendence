@@ -21,6 +21,8 @@ import com.example.attendence.fourth_class.CustomAdapter4;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateCustomAdapter4;
 import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -58,9 +60,11 @@ public class Fourth_Class extends AppCompatActivity {
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //setAppBar Title
-        Intent intent = getIntent();
-        appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle(appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                Fourth_Class.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle(classNameList.get(3).getClassName());
 
         dataBaseHelper=new DataBaseHelper4(context);
         dataBaseHelper.getWritableDatabase();

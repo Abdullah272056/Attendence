@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.second_class.CustomAdapter2;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class_date.DateCustomAdapter2;
@@ -55,9 +57,11 @@ public class SecondClass extends AppCompatActivity {
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //setAppBar Title
-        Intent intent = getIntent();
-        appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle(appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                SecondClass.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle(classNameList.get(1).getClassName());
 
         dataBaseHelper=new DataBaseHelper2(context);
         dataBaseHelper.getWritableDatabase();

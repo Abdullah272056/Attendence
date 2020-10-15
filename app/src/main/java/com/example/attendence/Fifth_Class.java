@@ -21,6 +21,8 @@ import com.example.attendence.fifth_class.CustomAdapter5;
 import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class_date.DateCustomAdapter5;
 import com.example.attendence.fifth_class_date.DateDataBaseHelper5;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -51,13 +53,20 @@ public class Fifth_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifth__class);
 
+
+
+
+
         context=Fifth_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //setAppBar Title
-        Intent intent = getIntent();
-        appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle(appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                Fifth_Class.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle(classNameList.get(4).getClassName());
 
         dataBaseHelper=new DataBaseHelper5(context);
         dataBaseHelper.getWritableDatabase();

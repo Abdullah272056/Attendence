@@ -22,6 +22,8 @@ import com.example.attendence.first_class.CustomAdapter;
 import com.example.attendence.first_class.DataBaseHelper;
 import com.example.attendence.first_class_date.DateCustomAdapter;
 import com.example.attendence.first_class_date.DateDataBaseHelper;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -57,10 +59,13 @@ public class First_Class extends AppCompatActivity {
             context= First_Class.this;
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //setAppBar Title
-        Intent intent = getIntent();
-        appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle(appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                First_Class.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle(classNameList.get(0).getClassName());
 
         dataBaseHelper=new DataBaseHelper(context);
         dataBaseHelper.getWritableDatabase();
