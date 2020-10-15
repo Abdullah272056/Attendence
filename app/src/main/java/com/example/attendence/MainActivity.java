@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if (toolbar!=null){
             setSupportActionBar (toolbar);
         }
+
         final DrawerLayout drawerLayout=findViewById (R.id.drawerLayoutId);
         ActionBarDrawerToggle actionBarDrawerToggle=new ActionBarDrawerToggle(
                 MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.closed){
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         };
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+        //Changing Navigation Drawer Icon (Burger Button) on Actionbar
+        toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 
         final NavigationView navigationView=findViewById (R.id.myNavigationViewId);
         navigationView.setNavigationItemSelectedListener (new NavigationView.OnNavigationItemSelectedListener () {
