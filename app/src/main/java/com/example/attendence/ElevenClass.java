@@ -143,14 +143,14 @@ public class ElevenClass extends AppCompatActivity {
 
 
     public void CustomAdapter(){
-        final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(context);
-        bottomSheetDialog.setContentView(R.layout.input);
-        bottomSheetDialog.setCanceledOnTouchOutside(false);
-
-        saveButton=bottomSheetDialog.findViewById(R.id.saveButtonId);
-        cancelButton=bottomSheetDialog.findViewById(R.id.cancelButtonId);
-        nameEditText=bottomSheetDialog.findViewById(R.id.nameEditTextId);
-
+        AlertDialog.Builder builder     =new AlertDialog.Builder(context);
+        LayoutInflater layoutInflater   =LayoutInflater.from(context);
+        View view                       =layoutInflater.inflate(R.layout.input,null);
+        builder.setView(view);
+        final AlertDialog alertDialog   = builder.create();
+        saveButton=view.findViewById(R.id.saveButtonId);
+        cancelButton=view.findViewById(R.id.cancelButtonId);
+        nameEditText=view.findViewById(R.id.nameEditTextId);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,7 +159,6 @@ public class ElevenClass extends AppCompatActivity {
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-
                     String result1="";
                     String result2="";
                     String result3="";
@@ -174,26 +173,27 @@ public class ElevenClass extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,studentName, result1,result2,result3,result4,result5,result6));
 
-
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
-                        bottomSheetDialog.dismiss();
+                        alertDialog.dismiss();
+
                     }else {
                         Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
-                        bottomSheetDialog.dismiss();
+                        alertDialog.dismiss();
                     }
                 }
+
             }
         });
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bottomSheetDialog.dismiss();
+                alertDialog.dismiss();
             }
         });
-        bottomSheetDialog.show();
+        alertDialog.show();
     }
 
 

@@ -149,14 +149,14 @@ public class Ten_Class extends AppCompatActivity {
 
 
     public void CustomAdapter(){
-        final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(context);
-        bottomSheetDialog.setContentView(R.layout.input);
-        bottomSheetDialog.setCanceledOnTouchOutside(false);
-
-        saveButton=bottomSheetDialog.findViewById(R.id.saveButtonId);
-        cancelButton=bottomSheetDialog.findViewById(R.id.cancelButtonId);
-        nameEditText=bottomSheetDialog.findViewById(R.id.nameEditTextId);
-
+        AlertDialog.Builder builder     =new AlertDialog.Builder(context);
+        LayoutInflater layoutInflater   =LayoutInflater.from(context);
+        View view                       =layoutInflater.inflate(R.layout.input,null);
+        builder.setView(view);
+        final AlertDialog alertDialog   = builder.create();
+        saveButton=view.findViewById(R.id.saveButtonId);
+        cancelButton=view.findViewById(R.id.cancelButtonId);
+        nameEditText=view.findViewById(R.id.nameEditTextId);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,6 +171,7 @@ public class Ten_Class extends AppCompatActivity {
                     String result4="";
                     String result5="";
                     String result6="";
+
                     int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
@@ -181,11 +182,11 @@ public class Ten_Class extends AppCompatActivity {
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
-                        bottomSheetDialog.dismiss();
+                        alertDialog.dismiss();
 
                     }else {
                         Toast.makeText(context, "insert fail", Toast.LENGTH_SHORT).show();
-                        bottomSheetDialog.dismiss();
+                        alertDialog.dismiss();
                     }
                 }
 
@@ -195,10 +196,10 @@ public class Ten_Class extends AppCompatActivity {
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bottomSheetDialog.dismiss();
+                alertDialog.dismiss();
             }
         });
-        bottomSheetDialog.show();
+        alertDialog.show();
     }
 
 
