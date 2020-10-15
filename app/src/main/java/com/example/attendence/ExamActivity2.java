@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class.ExamCustomAdapter2;
 import com.example.attendence.second_exam_date.CustomAdapterExamDate2;
@@ -47,9 +49,11 @@ public class ExamActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam2);
         //setAppBar Title
-        Intent intent = getIntent();
-        String appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                ExamActivity2.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle("<Exam Result>"+classNameList.get(1).getClassName());
 
         context=ExamActivity2.this;
         // for add back Button in title bar

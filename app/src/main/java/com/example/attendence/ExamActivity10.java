@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class.ExamCustomAdapter10;
 import com.example.attendence.ten_exam_date.CustomAdapterTenExamDate;
@@ -43,12 +45,14 @@ public class ExamActivity10 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ten_exam);
         //setAppBar Title
-        Intent intent = getIntent();
-        String appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                ExamActivity10.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle("<Exam Result> "+classNameList.get(9).getClassName());
 
         context= ExamActivity10.this;
-        // for add back Button in title bar
+        // for add back Button in title ba
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dataBaseHelper=new DataBaseHelper10(context);

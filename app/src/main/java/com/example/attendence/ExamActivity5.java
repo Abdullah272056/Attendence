@@ -20,6 +20,8 @@ import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class.ExamCustomAdapter5;
 import com.example.attendence.fifth_exam_date.CustomAdapterExamDate5;
 import com.example.attendence.fifth_exam_date.DataBaseHelperExamDate5;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class.ExamCustomAdapter6;
 import com.example.attendence.sixth_exam_date.CustomAdapterExamDate6;
@@ -47,9 +49,11 @@ public class ExamActivity5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam5);
         //setAppBar Title
-        Intent intent = getIntent();
-        String appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                ExamActivity5.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle("<Exam Result>"+classNameList.get(4).getClassName());
 
         context=ExamActivity5.this;
         // for add back Button in title bar

@@ -19,6 +19,8 @@ import com.example.attendence.first_class.DataBaseHelper;
 import com.example.attendence.first_class.ExamCustomAdapter;
 import com.example.attendence.first_exam_date.CustomAdapterExamDate1;
 import com.example.attendence.first_exam_date.DataBaseHelperExamDate1;
+import com.example.attendence.mainpage.NameDataBaseHelperName;
+import com.example.attendence.mainpage.NoteClass;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -41,10 +43,15 @@ public class ExamActivity1 extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam1);
+
         //setAppBar Title
-        Intent intent = getIntent();
-        String appBarTitle = intent.getStringExtra("appBarTitle");
-        getSupportActionBar().setTitle("<Exam Result>"+appBarTitle);
+        NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
+                ExamActivity1.this);
+        nameDataBaseHelperName.getWritableDatabase();
+        List<NoteClass> classNameList = nameDataBaseHelperName.getAllNotes();
+        getSupportActionBar().setTitle("<Exam Result>"+classNameList.get(0).getClassName());
+
+
 
         context=ExamActivity1.this;
         // for add back Button in title bar
