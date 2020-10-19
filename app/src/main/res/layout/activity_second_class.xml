@@ -13,15 +13,21 @@
         android:layout_height="wrap_content">
         <Button
             android:layout_weight="1"
-            android:textSize="30sp"
-            android:text="Add"
+            android:textSize="22sp"
+            android:text="Add Student"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textAllCaps="false"
             android:id="@+id/addButtonId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
         <Button
             android:layout_weight="1"
-            android:textSize="30sp"
-            android:text="Exam"
+            android:textSize="22sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Exam &amp; Result"
+            android:textAllCaps="false"
             android:id="@+id/examButtonId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>

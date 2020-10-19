@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> implements Filterable {
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     Button saveButton,cancelButton;
     EditText nameEditText;
 
@@ -1689,38 +1689,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return allNotes.size();
     }
 
-    @Override
-    public Filter getFilter() {
-        return filterData;
-    }
-    Filter filterData =new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence charSequence) {
-            List<Notes2> filterList=new ArrayList<>();//for filter data keeping
-            if (charSequence==null||charSequence.length()==0){
-                filterList.addAll(copyAllNotes);
-            }
-            else{
-                String value=charSequence.toString().toLowerCase().trim();
-                for (Notes2 notes:copyAllNotes){
-                    if (notes.getStudentName().toLowerCase().trim().contains(value)){
-                        filterList.add(notes);
-                    }
-
-                }
-            }
-            FilterResults filterResults = new FilterResults();
-            filterResults.values = filterList;
-            return filterResults;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            allNotes.clear();
-            allNotes.addAll((List)results.values);
-            notifyDataSetChanged();
-        }
-    };
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;

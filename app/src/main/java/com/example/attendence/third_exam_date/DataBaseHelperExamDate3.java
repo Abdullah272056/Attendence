@@ -56,7 +56,6 @@ public class DataBaseHelperExamDate3 extends SQLiteOpenHelper {
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_DATE_ID)),
                         cursor.getString(cursor.getColumnIndex(constant.COLUMN_DATE))
                 );
-
                 dateList.add(note);
             }while (cursor.moveToNext());
         }

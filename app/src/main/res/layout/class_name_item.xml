@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
-        android:textColor="#000000"
+        android:textColor="#090909"
         android:layout_weight="1.6"
        android:textAlignment="center"
         android:id="@+id/classNameTextViewId"

@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -1686,6 +1688,8 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.MyViewHo
     public int getItemCount() {
         return allNotes.size();
     }
+
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;
