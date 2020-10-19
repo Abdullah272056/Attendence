@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
@@ -22,6 +24,8 @@ import com.example.attendence.nine_class.DataBaseHelper9;
 import com.example.attendence.nine_class.ExamCustomAdapter9;
 import com.example.attendence.nine_exam_date.CustomAdapterExamDate9;
 import com.example.attendence.nine_exam_date.DataBaseHelperExamDate9;
+import com.example.attendence.theme.ThemeDataBaseHelper;
+import com.example.attendence.theme.ThemeNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -44,6 +48,38 @@ public class ExamActivity9 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam9);
+
+        LinearLayout linearLayout=findViewById(R.id.layoutId);
+        ThemeDataBaseHelper themeDataBaseHelper=new ThemeDataBaseHelper(ExamActivity9.this);
+        themeDataBaseHelper.getWritableDatabase();
+        List<ThemeNote>  themeStatusData = themeDataBaseHelper.getAllNotes();
+
+        if (themeStatusData.get(0).getThemeStatus()==1){
+            Toast.makeText(this, "theme change", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+        }
+        else if (themeStatusData.get(0).getThemeStatus()==2){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
+        }
+        else  if (themeStatusData.get(0).getThemeStatus()==3){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
+        }
+        else if (themeStatusData.get(0).getThemeStatus()==4){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
+        }
+
+        else  if (themeStatusData.get(0).getThemeStatus()==5){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
+        }
+        else  if (themeStatusData.get(0).getThemeStatus()==6){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
+        }
+
 
         //setAppBar Title
         NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(

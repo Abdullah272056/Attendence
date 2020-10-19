@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,8 +21,6 @@ import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class.ExamCustomAdapter8;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
-import com.example.attendence.nine_class.DataBaseHelper9;
-import com.example.attendence.nine_class.ExamCustomAdapter9;
 import com.example.attendence.nine_exam_date.CustomAdapterExamDate9;
 import com.example.attendence.nine_exam_date.DataBaseHelperExamDate9;
 import com.example.attendence.theme.ThemeDataBaseHelper;
@@ -49,7 +46,7 @@ public class ExamActivity8 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exam_class8);
+        setContentView(R.layout.activity_exam8);
 
         LinearLayout linearLayout=findViewById(R.id.layoutId);
         ThemeDataBaseHelper themeDataBaseHelper=new ThemeDataBaseHelper(ExamActivity8.this);
