@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".First_Class"
     android:orientation="vertical"
+    android:id="@+id/layoutId"
     >
 
     <LinearLayout

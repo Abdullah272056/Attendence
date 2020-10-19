@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         themeDataBaseHelper=new ThemeDataBaseHelper(MainActivity.this);
         themeDataBaseHelper.getWritableDatabase();
 
-        themeStatusData  = new ArrayList<>();
+         themeStatusData  = new ArrayList<>();
        themeStatusData = themeDataBaseHelper.getAllNotes();
 
         if (themeStatusData.size()<1){
@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+
         if (themeStatusData.get(0).getThemeStatus()==1){
             Toast.makeText(this, "theme change", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
@@ -232,8 +234,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int id=themeDataBaseHelper.updateThemeData(new ThemeNote(1,colorStatus));
                 if (id==1){
-                    linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
-
                     if (colorStatus==1){
                         linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
                     }
