@@ -200,6 +200,9 @@ public class DataBaseHelper9 extends SQLiteOpenHelper {
 
     }
 
-
+    public void deleteAllData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.TABLE_NAME);
+    }
 }
 
