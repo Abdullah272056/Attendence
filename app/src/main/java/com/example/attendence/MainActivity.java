@@ -126,26 +126,27 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch(item.getItemId ()){
-                    case R.id.locationId:
+                    case R.id.aboutItemIdId:
                        // drawerLayout.closeDrawers();
                         //Intent intent=new Intent(MainActivity.this,MainActivity2.class);
                         //startActivity(intent);
                         //Toast.makeText (MainActivity.this, String.valueOf(id), Toast.LENGTH_SHORT).show ();
                         break;
-                    case R.id.editID:
+                    case R.id.resetAllDataItemIdId:
                         //drawerLayout.closeDrawers();
                         int id1 = themeDataBaseHelper.updateThemeData(new ThemeNote(1,3));
                         Toast.makeText (MainActivity.this, String.valueOf(id1), Toast.LENGTH_SHORT).show ();
                         break;
-                    case R.id.colorizeId:
-                        drawerLayout.closeDrawers();
+                    case R.id.themeItemIdId:
+
                         CustomAdapterForColorChange();
+                        //drawerLayout.closeDrawers();
                         break;
-                    case R.id.shareId:
+                    case R.id.shareItemIdId:
                         drawerLayout.closeDrawers();
                         Toast.makeText (MainActivity.this, item.getTitle (), Toast.LENGTH_SHORT).show ();
                         break;
-                    case R.id.mailId:
+                    case R.id.contactItemId:
                         drawerLayout.closeDrawers();
                         Toast.makeText (MainActivity.this, item.getTitle (), Toast.LENGTH_SHORT).show ();
                         break;
