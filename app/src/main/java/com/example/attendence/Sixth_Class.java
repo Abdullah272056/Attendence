@@ -10,6 +10,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +28,8 @@ import com.example.attendence.sixth_class.CustomAdapter6;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class_date.DateCustomAdapter6;
 import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
+import com.example.attendence.ten_class.CustomAdapter10;
+import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -155,6 +160,36 @@ public class Sixth_Class extends AppCompatActivity {
 
 
     }
+
+
+    //create option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.studentNameDeleteItemId:
+                dataBaseHelper.deleteAllData();
+                dataBaseHelper=new DataBaseHelper6(context);
+                dataBaseHelper.getWritableDatabase();
+                studentInformationDataList= new ArrayList<>();
+                studentInformationDataList = dataBaseHelper.getAllNotes();
+                customAdapter = new CustomAdapter6(context,studentInformationDataList);
+                recyclerView.setAdapter(customAdapter);
+                return true;
+            case R.id.dateDeleteItemId:
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
