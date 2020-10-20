@@ -89,7 +89,6 @@ public class ElevenClass extends AppCompatActivity {
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
 
-
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -108,7 +107,6 @@ public class ElevenClass extends AppCompatActivity {
         examButton=findViewById(R.id.examButtonId);
         dateDataBaseHelper=new DateDataBaseHelper11(context);
         dateDataBaseHelper.getWritableDatabase();
-
 
         recyclerView=findViewById(R.id.recyclerViewId);
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
@@ -133,8 +131,6 @@ public class ElevenClass extends AppCompatActivity {
             }
         });
 
-
-
         /// add date
         addDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,8 +143,6 @@ public class ElevenClass extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
         loadDateListData();
-
-
 
     }
 

@@ -140,47 +140,6 @@ public class DataBaseHelper10 extends SQLiteOpenHelper {
         return id;
     }
 
-    public int updateData1(Notes notes){
-        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
-        ContentValues contentValues=new ContentValues();
-        contentValues.put(constant.COLUMN_CHECKBOX1,notes.getCheckBox1());
-        contentValues.put(constant.COLUMN_CHECKBOX2,notes.getCheckBox2());
-        contentValues.put(constant.COLUMN_CHECKBOX3,notes.getCheckBox3());
-        contentValues.put(constant.COLUMN_CHECKBOX4,notes.getCheckBox4());
-        contentValues.put(constant.COLUMN_CHECKBOX5,notes.getCheckBox5());
-        contentValues.put(constant.COLUMN_CHECKBOX6,notes.getCheckBox6());
-        contentValues.put(constant.COLUMN_CHECKBOX7,notes.getCheckBox7());
-        contentValues.put(constant.COLUMN_CHECKBOX8,notes.getCheckBox8());
-        contentValues.put(constant.COLUMN_CHECKBOX9,notes.getCheckBox9());
-        contentValues.put(constant.COLUMN_CHECKBOX10,notes.getCheckBox10());
-
-        contentValues.put(constant.COLUMN_CHECKBOX11,notes.getCheckBox11());
-        contentValues.put(constant.COLUMN_CHECKBOX12,notes.getCheckBox12());
-        contentValues.put(constant.COLUMN_CHECKBOX13,notes.getCheckBox13());
-        contentValues.put(constant.COLUMN_CHECKBOX14,notes.getCheckBox14());
-        contentValues.put(constant.COLUMN_CHECKBOX15,notes.getCheckBox15());
-        contentValues.put(constant.COLUMN_CHECKBOX16,notes.getCheckBox16());
-        contentValues.put(constant.COLUMN_CHECKBOX17,notes.getCheckBox17());
-        contentValues.put(constant.COLUMN_CHECKBOX18,notes.getCheckBox18());
-        contentValues.put(constant.COLUMN_CHECKBOX19,notes.getCheckBox19());
-        contentValues.put(constant.COLUMN_CHECKBOX20,notes.getCheckBox20());
-
-        contentValues.put(constant.COLUMN_CHECKBOX21,notes.getCheckBox21());
-        contentValues.put(constant.COLUMN_CHECKBOX22,notes.getCheckBox22());
-        contentValues.put(constant.COLUMN_CHECKBOX23,notes.getCheckBox23());
-        contentValues.put(constant.COLUMN_CHECKBOX24,notes.getCheckBox24());
-        contentValues.put(constant.COLUMN_CHECKBOX25,notes.getCheckBox25());
-        contentValues.put(constant.COLUMN_CHECKBOX26,notes.getCheckBox26());
-        contentValues.put(constant.COLUMN_CHECKBOX27,notes.getCheckBox27());
-        contentValues.put(constant.COLUMN_CHECKBOX28,notes.getCheckBox28());
-        contentValues.put(constant.COLUMN_CHECKBOX29,notes.getCheckBox29());
-        contentValues.put(constant.COLUMN_CHECKBOX30,notes.getCheckBox30());
-        contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
-        contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
-        int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
-        return status;
-    }
-
 
     public int updateData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
@@ -237,6 +196,10 @@ public class DataBaseHelper10 extends SQLiteOpenHelper {
         int status = sqLiteDatabase.delete(constant.TABLE_NAME,"id=?",new String[]{String.valueOf(id)});
         return status;
 
+    }
+    public void deleteAllData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.TABLE_NAME);
     }
 
 
