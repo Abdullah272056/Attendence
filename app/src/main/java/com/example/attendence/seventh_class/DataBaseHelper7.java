@@ -36,53 +36,7 @@ public class DataBaseHelper7 extends SQLiteOpenHelper {
         Toast.makeText(context, "onUpgrade is Called",Toast.LENGTH_SHORT).show();
     }
 
-//    public List<Notes2> getAllNotes2(){
-//        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-//        List<Notes2> dataList = new ArrayList<>();
-//        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+constant.TABLE_NAME,null);
-//        if (cursor.moveToFirst()){
-//            do {
-//                Notes2 note = new Notes2(
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_ID)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX1)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX2)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX3)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX4)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX5)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX6)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX7)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX8)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX9)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX10)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX11)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX12)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX13)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX14)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX15)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX16)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX17)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX18)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX19)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX20)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX21)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX22)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX23)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX24)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX25)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX26)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX27)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX28)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX29)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX30)),
-//                        cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX_COUNT)),
-//                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_STUDENT_NAME))
-//                );
-//
-//                dataList.add(note);
-//            }while (cursor.moveToNext());
-//        }
-//        return dataList;
-//    }
+
     public List<Notes2> getAllNotes(){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         List<Notes2> dataList = new ArrayList<>();
@@ -284,6 +238,11 @@ public class DataBaseHelper7 extends SQLiteOpenHelper {
         int status = sqLiteDatabase.delete(constant.TABLE_NAME,"id=?",new String[]{String.valueOf(id)});
         return status;
 
+    }
+
+    public void deleteAllData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.TABLE_NAME);
     }
 
 
