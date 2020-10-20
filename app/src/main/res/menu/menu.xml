@@ -2,11 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        app:showAsAction="ifRoom|collapseActionView"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="search"
+        android:title="Delete all student name"
+        android:id="@+id/studentNameDeleteItemId"
+        app:actionViewClass="androidx.appcompat.widget.SearchView">
+
+    </item>
+
+    <item
+        android:title="Delete all date"
+        android:id="@+id/dateDeleteItemId"
+        app:actionViewClass="androidx.appcompat.widget.SearchView">
+
+    </item>
+    <item
+        android:title="Delete all data"
         android:id="@+id/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView">
 
     </item>
+
+
 </menu>

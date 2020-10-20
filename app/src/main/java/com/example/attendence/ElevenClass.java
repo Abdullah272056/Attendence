@@ -10,6 +10,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,10 +52,9 @@ public class ElevenClass extends AppCompatActivity {
     FloatingActionButton addDateButton;
 
     DateCustomAdapter11 dateCustomAdapter;
-    String appBarTitle;
     Context context;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_class);
         context= ElevenClass.this;
@@ -112,12 +114,12 @@ public class ElevenClass extends AppCompatActivity {
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
         addButton=findViewById(R.id.addButtonId);
 
-
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        loadStudentInformationData();
         examButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(ElevenClass.this, ExamActivity11.class);
-                intent.putExtra("appBarTitle",appBarTitle);
                 startActivity(intent);
 
             }
@@ -130,9 +132,6 @@ public class ElevenClass extends AppCompatActivity {
 
             }
         });
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        loadStudentInformationData();
 
 
 
@@ -152,6 +151,35 @@ public class ElevenClass extends AppCompatActivity {
 
 
     }
+
+//create option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.studentNameDeleteItemId:
+                dataBaseHelper.deleteAllData();
+                dataBaseHelper=new DataBaseHelper11(context);
+                dataBaseHelper.getWritableDatabase();
+                studentInformationDataList= new ArrayList<>();
+                studentInformationDataList = dataBaseHelper.getAllNotes();
+                customAdapter = new CustomAdapter11(context,studentInformationDataList);
+                recyclerView.setAdapter(customAdapter);
+                return true;
+            case R.id.dateDeleteItemId:
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
