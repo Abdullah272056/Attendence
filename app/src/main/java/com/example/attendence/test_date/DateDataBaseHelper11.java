@@ -15,7 +15,7 @@ import com.example.attendence.test_class.Constant11;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DateDataBaseHelper11 extends SQLiteOpenHelper {
+public class DateDataBaseHelper11 extends SQLiteOpenHelper{
     Context context;
    Constant11 constant;
     public DateDataBaseHelper11(@Nullable Context context ){
@@ -79,6 +79,10 @@ public class DateDataBaseHelper11 extends SQLiteOpenHelper {
         int status = sqLiteDatabase.delete(constant.DATE_TABLE_NAME,"date_id=?",new String[]{String.valueOf(id)});
         return status;
 
+    }
+    public void deleteAllDateData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
     }
 
 

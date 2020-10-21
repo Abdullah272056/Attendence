@@ -167,7 +167,13 @@ public class ElevenClass extends AppCompatActivity {
                 recyclerView.setAdapter(customAdapter);
                 return true;
             case R.id.dateDeleteItemId:
-
+                dateDataBaseHelper.deleteAllDateData();
+                dateDataBaseHelper=new DateDataBaseHelper11(context);
+                dateDataBaseHelper.getWritableDatabase();
+                dateDataList= new ArrayList<>();
+                dateDataList = dateDataBaseHelper.getAllNotes();
+                dateCustomAdapter = new DateCustomAdapter11(context,dateDataList);
+                dateRecyclerView.setAdapter(dateCustomAdapter);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

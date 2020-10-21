@@ -3,7 +3,6 @@ package com.example.attendence;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,13 +29,9 @@ import com.example.attendence.first_class_date.DateCustomAdapter;
 import com.example.attendence.first_class_date.DateDataBaseHelper;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
-import com.example.attendence.ten_class.CustomAdapter10;
-import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -166,7 +161,6 @@ public class First_Class extends AppCompatActivity {
     }
 
 
-
     //create option menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -188,7 +182,6 @@ public class First_Class extends AppCompatActivity {
                 recyclerView.setAdapter(customAdapter);
                 return true;
             case R.id.dateDeleteItemId:
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -219,8 +212,6 @@ public class First_Class extends AppCompatActivity {
             Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 
     public void CustomAdapter(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
