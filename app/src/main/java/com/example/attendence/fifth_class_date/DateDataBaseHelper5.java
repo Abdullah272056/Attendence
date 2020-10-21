@@ -80,6 +80,9 @@ public class DateDataBaseHelper5 extends SQLiteOpenHelper {
         return status;
 
     }
-
+    public void deleteAllDateData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
+    }
 
 }

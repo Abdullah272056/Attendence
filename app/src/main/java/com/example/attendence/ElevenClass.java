@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -158,22 +159,59 @@ public class ElevenClass extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.studentNameDeleteItemId:
-                dataBaseHelper.deleteAllData();
-                dataBaseHelper=new DataBaseHelper11(context);
-                dataBaseHelper.getWritableDatabase();
-                studentInformationDataList= new ArrayList<>();
-                studentInformationDataList = dataBaseHelper.getAllNotes();
-                customAdapter = new CustomAdapter11(context,studentInformationDataList);
-                recyclerView.setAdapter(customAdapter);
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Do you want to delete all student name ?");
+                builder.setIcon(R.drawable.ic_baseline_delete_24);
+                builder.setMessage("\n \nPlease click Yes or No button !\n \n");
+
+                builder.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dataBaseHelper.deleteAllData();
+                        dataBaseHelper=new DataBaseHelper11(context);
+                        dataBaseHelper.getWritableDatabase();
+                        studentInformationDataList= new ArrayList<>();
+                        studentInformationDataList = dataBaseHelper.getAllNotes();
+                        customAdapter = new CustomAdapter11(context,studentInformationDataList);
+                        recyclerView.setAdapter(customAdapter);
+                    }
+                });
+               builder.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
+                   @Override
+                   public void onClick(DialogInterface dialog, int which) {
+
+                   }
+               });
+               builder.show();
+
+
                 return true;
             case R.id.dateDeleteItemId:
-                dateDataBaseHelper.deleteAllDateData();
-                dateDataBaseHelper=new DateDataBaseHelper11(context);
-                dateDataBaseHelper.getWritableDatabase();
-                dateDataList= new ArrayList<>();
-                dateDataList = dateDataBaseHelper.getAllNotes();
-                dateCustomAdapter = new DateCustomAdapter11(context,dateDataList);
-                dateRecyclerView.setAdapter(dateCustomAdapter);
+
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+                builder2.setTitle("Do you want to delete Date?");
+                builder2.setIcon(R.drawable.ic_baseline_delete_24);
+                builder2.setMessage("\n \nPlease click Yes or No button !\n \n");
+
+                builder2.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dateDataBaseHelper.deleteAllDateData();
+                        dateDataBaseHelper=new DateDataBaseHelper11(context);
+                        dateDataBaseHelper.getWritableDatabase();
+                        dateDataList= new ArrayList<>();
+                        dateDataList = dateDataBaseHelper.getAllNotes();
+                        dateCustomAdapter = new DateCustomAdapter11(context,dateDataList);
+                        dateRecyclerView.setAdapter(dateCustomAdapter);
+                    }
+                });
+                builder2.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder2.show();
+
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
