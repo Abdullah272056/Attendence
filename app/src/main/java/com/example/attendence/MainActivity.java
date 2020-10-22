@@ -195,7 +195,6 @@ public class MainActivity extends AppCompatActivity {
                         });
                         builder2.show();
 
-
                         break;
                     case R.id.themeItemIdId:
                         CustomAdapterForColorChange();
@@ -207,10 +206,10 @@ public class MainActivity extends AppCompatActivity {
                         sendIntent.setType("text/plain");
                         Intent shareIntent = Intent.createChooser(sendIntent, null);
                         startActivity(shareIntent);
-                        drawerLayout.closeDrawers();
                         break;
                     case R.id.contactItemId:
-                        drawerLayout.closeDrawers();
+                        CustomAdapter();
+//
                         break;
                 }
                 return false;
@@ -394,6 +393,27 @@ public class MainActivity extends AppCompatActivity {
         });
         alertDialog.show();
     }
+
+
+
+    public void CustomAdapter(){
+        AlertDialog.Builder builder     =new AlertDialog.Builder(MainActivity.this);
+        LayoutInflater layoutInflater   =LayoutInflater.from(MainActivity.this);
+        View view                       =layoutInflater.inflate(R.layout.contact,null);
+        builder.setView(view);
+        final AlertDialog alertDialog   = builder.create();
+        Button okButton=view.findViewById(R.id.okButtonId);
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+
+        alertDialog.show();
+    }
+
+
 
 
 }
