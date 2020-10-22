@@ -79,6 +79,11 @@ public class DataBaseHelperExamDate6 extends SQLiteOpenHelper {
         return status;
 
     }
+    public void deleteAllExamDateData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
+    }
+
 
 
 }

@@ -14,10 +14,10 @@ import com.example.attendence.common.DateNote;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBaseHelperTenExamDate extends SQLiteOpenHelper {
+public class DataBaseHelperExamDate10 extends SQLiteOpenHelper {
     Context context;
     ConstantTenExam constant;
-    public DataBaseHelperTenExamDate(@Nullable Context context ){
+    public DataBaseHelperExamDate10(@Nullable Context context ){
         super(context, ConstantTenExam.DATE_TABLE_NAME, null, ConstantTenExam.DATABASE_Version);
         this.context=context;
     }
@@ -78,6 +78,9 @@ public class DataBaseHelperTenExamDate extends SQLiteOpenHelper {
         return status;
 
     }
-
+    public void deleteAllExamDateData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
+    }
 
 }

@@ -27,12 +27,12 @@ public class CustomAdapterTenExamDate extends RecyclerView.Adapter<CustomAdapter
 
     Context context;
     private List<DateNote> allDate;
-    DataBaseHelperTenExamDate dateDataBaseHelper;
+    DataBaseHelperExamDate10 dateDataBaseHelper;
 
     public CustomAdapterTenExamDate(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new DataBaseHelperTenExamDate(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate10(context);
     }
 
     @NonNull
@@ -40,7 +40,7 @@ public class CustomAdapterTenExamDate extends RecyclerView.Adapter<CustomAdapter
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.exam_date_item,parent,false);
-        dateDataBaseHelper=new DataBaseHelperTenExamDate(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate10(context);
         return new CustomAdapterTenExamDate.MyViewHolder(view);
     }
 

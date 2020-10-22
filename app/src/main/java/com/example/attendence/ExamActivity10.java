@@ -22,7 +22,7 @@ import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class.ExamCustomAdapter10;
 import com.example.attendence.ten_exam_date.CustomAdapterTenExamDate;
-import com.example.attendence.ten_exam_date.DataBaseHelperTenExamDate;
+import com.example.attendence.ten_exam_date.DataBaseHelperExamDate10;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -40,7 +40,7 @@ public class ExamActivity10 extends AppCompatActivity {
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
 
-    DataBaseHelperTenExamDate dateDataBaseHelper;
+    DataBaseHelperExamDate10 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterTenExamDate dateCustomAdapter;
     @Override
@@ -93,7 +93,7 @@ public class ExamActivity10 extends AppCompatActivity {
         dataBaseHelper=new DataBaseHelper10(context);
         dataBaseHelper.getWritableDatabase();
 
-        dateDataBaseHelper=new DataBaseHelperTenExamDate(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate10(context);
         dateDataBaseHelper.getWritableDatabase();
 
         recyclerView=findViewById(R.id.examRecyclerViewId);

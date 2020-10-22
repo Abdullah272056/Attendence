@@ -23,32 +23,43 @@ import android.widget.Toast;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class_date.DateDataBaseHelper8;
+import com.example.attendence.eight_exam_date.DataBaseHelperExamDate8;
 import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class_date.DateDataBaseHelper5;
+import com.example.attendence.fifth_exam_date.DataBaseHelperExamDate5;
 import com.example.attendence.first_class.DataBaseHelper;
 import com.example.attendence.first_class_date.DateDataBaseHelper;
+import com.example.attendence.first_exam_date.DataBaseHelperExamDate1;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
+import com.example.attendence.foutth_exam_date.DataBaseHelperExamDate4;
 import com.example.attendence.mainpage.NameCustomAdapter;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.nine_class.DataBaseHelper9;
 import com.example.attendence.nine_class_date.DateDataBaseHelper9;
+import com.example.attendence.nine_exam_date.DataBaseHelperExamDate9;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class_date.DateDataBaseHelper2;
+import com.example.attendence.second_exam_date.DataBaseHelperExamDate2;
 import com.example.attendence.seventh_class.DataBaseHelper7;
 import com.example.attendence.seventh_class_date.DateDataBaseHelper7;
+import com.example.attendence.seventh_exam_date.DataBaseHelperExamDate7;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
+import com.example.attendence.sixth_exam_date.DataBaseHelperExamDate6;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class_date.DateDataBaseHelper10;
+import com.example.attendence.ten_exam_date.DataBaseHelperExamDate10;
 import com.example.attendence.test_class.DataBaseHelper11;
 import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
+import com.example.attendence.test_exam_date.DataBaseHelperExamDate11;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
 import com.example.attendence.third_class.DataBaseHelper3;
 import com.example.attendence.third_class_date.DateDataBaseHelper3;
+import com.example.attendence.third_exam_date.DataBaseHelperExamDate3;
 import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
@@ -144,6 +155,18 @@ public class MainActivity extends AppCompatActivity {
                                 new DateDataBaseHelper3(MainActivity.this).deleteAllDateData();
                                 new DateDataBaseHelper2(MainActivity.this).deleteAllDateData();
                                 new DateDataBaseHelper(MainActivity.this).deleteAllDateData();
+
+                               new  DataBaseHelperExamDate11(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate10(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate9(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate8(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate7(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate6(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate5(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate4(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate3(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate2(MainActivity.this).deleteAllExamDateData();
+                               new DataBaseHelperExamDate1(MainActivity.this).deleteAllExamDateData();
                                 Toast.makeText(MainActivity.this, "Delete All Data", Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -154,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                         builder2.show();
-                        
+
 
                         break;
                     case R.id.themeItemIdId:

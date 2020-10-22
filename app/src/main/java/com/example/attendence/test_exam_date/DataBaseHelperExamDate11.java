@@ -82,7 +82,7 @@ public class DataBaseHelperExamDate11 extends SQLiteOpenHelper {
     }
 
 
-    public void deleteAllDateData(){
+    public void deleteAllExamDateData(){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
     }
