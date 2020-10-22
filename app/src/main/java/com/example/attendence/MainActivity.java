@@ -20,11 +20,33 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.attendence.common.Notes2;
+import com.example.attendence.eight_class.DataBaseHelper8;
+import com.example.attendence.eight_class_date.DateDataBaseHelper8;
+import com.example.attendence.fifth_class.DataBaseHelper5;
+import com.example.attendence.fifth_class_date.DateDataBaseHelper5;
+import com.example.attendence.first_class.DataBaseHelper;
+import com.example.attendence.first_class_date.DateDataBaseHelper;
+import com.example.attendence.fourth_class.DataBaseHelper4;
+import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
 import com.example.attendence.mainpage.NameCustomAdapter;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
+import com.example.attendence.nine_class.DataBaseHelper9;
+import com.example.attendence.nine_class_date.DateDataBaseHelper9;
+import com.example.attendence.second_class.DataBaseHelper2;
+import com.example.attendence.second_class_date.DateDataBaseHelper2;
+import com.example.attendence.seventh_class.DataBaseHelper7;
+import com.example.attendence.seventh_class_date.DateDataBaseHelper7;
+import com.example.attendence.sixth_class.DataBaseHelper6;
+import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
+import com.example.attendence.ten_class.DataBaseHelper10;
+import com.example.attendence.ten_class_date.DateDataBaseHelper10;
+import com.example.attendence.test_class.DataBaseHelper11;
+import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
+import com.example.attendence.third_class.DataBaseHelper3;
+import com.example.attendence.third_class_date.DateDataBaseHelper3;
 import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,54 +64,15 @@ public class MainActivity extends AppCompatActivity {
     Button saveButton ,cancelButton;
     int colorStatus;
 
-    List<ThemeNote>  themeStatusData;
+    private List<ThemeNote>  themeStatusData;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         linearLayout=findViewById(R.id.mainLayoutId);
-        themeDataBaseHelper=new ThemeDataBaseHelper(MainActivity.this);
-        themeDataBaseHelper.getWritableDatabase();
-
-         themeStatusData  = new ArrayList<>();
-       themeStatusData = themeDataBaseHelper.getAllNotes();
-
-        if (themeStatusData.size()<1){
-            for (int i = 1; i <=1; i++) {
-                int id=themeDataBaseHelper.insertData(new ThemeNote(1));
-                if (id!=0){
-                    Toast.makeText(this, "success "+String.valueOf(i), Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
 
 
-        if (themeStatusData.get(0).getThemeStatus()==1){
-            Toast.makeText(this, "theme change", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
-        }
-        else if (themeStatusData.get(0).getThemeStatus()==2){
-            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
-        }
-        else  if (themeStatusData.get(0).getThemeStatus()==3){
-            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
-        }
-        else if (themeStatusData.get(0).getThemeStatus()==4){
-            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
-        }
-
-        else  if (themeStatusData.get(0).getThemeStatus()==5){
-            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
-        }
-        else  if (themeStatusData.get(0).getThemeStatus()==6){
-            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
-        }
 
 
 
@@ -115,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-        //Changing Navigation Drawer Icon (Burger Button) on Actionbar
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 
         final NavigationView navigationView=findViewById (R.id.myNavigationViewId);
@@ -127,28 +110,30 @@ public class MainActivity extends AppCompatActivity {
 
                 switch(item.getItemId ()){
                     case R.id.aboutItemIdId:
-                       // drawerLayout.closeDrawers();
-                        //Intent intent=new Intent(MainActivity.this,MainActivity2.class);
-                        //startActivity(intent);
-                        //Toast.makeText (MainActivity.this, String.valueOf(id), Toast.LENGTH_SHORT).show ();
                         break;
                     case R.id.resetAllDataItemIdId:
-                        //drawerLayout.closeDrawers();
-                        int id1 = themeDataBaseHelper.updateThemeData(new ThemeNote(1,3));
-                        Toast.makeText (MainActivity.this, String.valueOf(id1), Toast.LENGTH_SHORT).show ();
+                       new DataBaseHelper11(MainActivity.this).deleteAllData();
+                       new DataBaseHelper10(MainActivity.this).deleteAllData();
+                       new DataBaseHelper9(MainActivity.this).deleteAllData();
+                       new DataBaseHelper8(MainActivity.this).deleteAllData();
+                       new DataBaseHelper7(MainActivity.this).deleteAllData();
+                       new DataBaseHelper6(MainActivity.this).deleteAllData();
+                       new DataBaseHelper5(MainActivity.this).deleteAllData();
+                       new DataBaseHelper4(MainActivity.this).deleteAllData();
+                       new DataBaseHelper3(MainActivity.this).deleteAllData();
+                       new DataBaseHelper2(MainActivity.this).deleteAllData();
+                       new DataBaseHelper(MainActivity.this).deleteAllData();
+                       
+
                         break;
                     case R.id.themeItemIdId:
-
                         CustomAdapterForColorChange();
-                        //drawerLayout.closeDrawers();
                         break;
                     case R.id.shareItemIdId:
                         drawerLayout.closeDrawers();
-                        Toast.makeText (MainActivity.this, item.getTitle (), Toast.LENGTH_SHORT).show ();
                         break;
                     case R.id.contactItemId:
                         drawerLayout.closeDrawers();
-                        Toast.makeText (MainActivity.this, item.getTitle (), Toast.LENGTH_SHORT).show ();
                         break;
                 }
                 return false;
@@ -171,6 +156,42 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        themeDataBaseHelper=new ThemeDataBaseHelper(MainActivity.this);
+        themeDataBaseHelper.getWritableDatabase();
+
+        themeStatusData  = new ArrayList<>();
+        if (themeDataBaseHelper.getAllNotes().size()<1){
+            for (int i = 0; i <=1; i++) {
+                int id=themeDataBaseHelper.insertData(new ThemeNote(1));
+                if (id!=0){
+                    Toast.makeText(this, "success "+String.valueOf(i), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+        themeStatusData  = new ArrayList<>();
+        themeStatusData = themeDataBaseHelper.getAllNotes();
+
+        if (themeStatusData.get(1).getThemeStatus()==1){
+            linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+        }
+        else if (themeStatusData.get(1).getThemeStatus()==2){
+            linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
+        }
+        else  if (themeStatusData.get(1).getThemeStatus()==3){
+            linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
+        }
+        else if (themeStatusData.get(1).getThemeStatus()==4){
+            linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
+        }
+        else  if (themeStatusData.get(1).getThemeStatus()==5){
+            linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
+        }
+        else  if (themeStatusData.get(1).getThemeStatus()==6){
+            linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
+        }
+
+
+
         classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadClassNameListData();
     }
@@ -188,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void CustomAdapterForColorChange(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(MainActivity.this);
         LayoutInflater layoutInflater   =LayoutInflater.from(MainActivity.this);
         final View view                       =layoutInflater.inflate(R.layout.color_change_box,null);
@@ -197,15 +217,12 @@ public class MainActivity extends AppCompatActivity {
         saveButton=view.findViewById(R.id.colorOkButtonId);
         cancelButton=view.findViewById(R.id.colorCancelButtonId);
 
-
         final RadioGroup radio =view.findViewById(R.id.radioGroupId);
         radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 View radioButton = radio.findViewById(checkedId);
                 int index = radio.indexOfChild(radioButton);
-
                 switch (index){
                     case 0:
                         colorStatus=1;
@@ -247,7 +264,6 @@ public class MainActivity extends AppCompatActivity {
                     else if (colorStatus==4){
                         linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
                     }
-
                     else  if (colorStatus==5){
                         linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
                     }
@@ -263,7 +279,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         alertDialog.dismiss();
-
             }
         });
 
