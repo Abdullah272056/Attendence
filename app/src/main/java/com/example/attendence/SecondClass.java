@@ -21,7 +21,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
@@ -29,15 +28,8 @@ import com.example.attendence.second_class.CustomAdapter2;
 import com.example.attendence.second_class.DataBaseHelper2;
 import com.example.attendence.second_class_date.DateCustomAdapter2;
 import com.example.attendence.second_class_date.DateDataBaseHelper2;
-import com.example.attendence.ten_class.CustomAdapter10;
-import com.example.attendence.ten_class.DataBaseHelper10;
-import com.example.attendence.test_class.CustomAdapter11;
-import com.example.attendence.test_class.DataBaseHelper11;
-import com.example.attendence.test_date.DateCustomAdapter11;
-import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

@@ -22,9 +22,6 @@ public class ThemeDataBaseHelper extends SQLiteOpenHelper {
     public  static final int DATABASE_VERSION=8;
     public  static final String THEME_TABLE_NAME="THEME";
 
-
-
-
     public  static final String COLUMN_THEME_ID="theme_id";
     public  static final String COLUMN_THEME="Theme_Status";
     public static final String CREATE_THEME_TABLE  = " CREATE TABLE "+THEME_TABLE_NAME+"("
@@ -75,17 +72,6 @@ public class ThemeDataBaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-
-//    public int updateData(ThemeNote themeNote){
-////        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
-////        ContentValues contentValues=new ContentValues();
-////        contentValues.put(COLUMN_THEME,themeNote.getThemeStatus());
-////        int status = sqLiteDatabase.update(THEME_TABLE_NAME,contentValues,"theme_id=?",
-////                new String[]{String.valueOf(themeNote.getId())});
-////        return status;
-////    }
-
     public int updateThemeData(ThemeNote themeNote){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValue=new ContentValues();
@@ -94,11 +80,5 @@ public class ThemeDataBaseHelper extends SQLiteOpenHelper {
         int status1 = sqLiteDatabase.update(THEME_TABLE_NAME,contentValue,"theme_id=?",new String[]{String.valueOf(themeNote.getId())});
         return status1;
     }
-
-
-
-
-
-
 
 }
