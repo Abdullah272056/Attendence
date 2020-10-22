@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button saveButton ,cancelButton;
     int colorStatus;
-
+    DrawerLayout drawerLayout;
     private List<ThemeNote>  themeStatusData;
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -94,12 +95,15 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar (toolbar);
         }
 
-        final DrawerLayout drawerLayout=findViewById (R.id.drawerLayoutId);
+
+
+        drawerLayout=findViewById (R.id.drawerLayoutId);
         ActionBarDrawerToggle actionBarDrawerToggle=new ActionBarDrawerToggle(
                 MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.closed){
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
+
                 Toast.makeText (MainActivity.this, "Open", Toast.LENGTH_SHORT).show ();
 
             }
@@ -249,6 +253,33 @@ public class MainActivity extends AppCompatActivity {
         classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadClassNameListData();
     }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(Gravity.LEFT)){
+            drawerLayout.closeDrawers();
+        }else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false);
+            builder.setMessage("Do you want to Exit?");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    MainActivity.super.onBackPressed();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
+
+    }
+
     private void loadClassNameListData(){
         classNameList  = new ArrayList<>();
         classNameList = nameDataBaseHelperName.getAllNotes();
