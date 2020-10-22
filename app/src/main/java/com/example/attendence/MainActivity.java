@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -42,6 +43,7 @@ import com.example.attendence.sixth_class_date.DateDataBaseHelper6;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class_date.DateDataBaseHelper10;
 import com.example.attendence.test_class.DataBaseHelper11;
+import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
@@ -112,18 +114,47 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.aboutItemIdId:
                         break;
                     case R.id.resetAllDataItemIdId:
-                       new DataBaseHelper11(MainActivity.this).deleteAllData();
-                       new DataBaseHelper10(MainActivity.this).deleteAllData();
-                       new DataBaseHelper9(MainActivity.this).deleteAllData();
-                       new DataBaseHelper8(MainActivity.this).deleteAllData();
-                       new DataBaseHelper7(MainActivity.this).deleteAllData();
-                       new DataBaseHelper6(MainActivity.this).deleteAllData();
-                       new DataBaseHelper5(MainActivity.this).deleteAllData();
-                       new DataBaseHelper4(MainActivity.this).deleteAllData();
-                       new DataBaseHelper3(MainActivity.this).deleteAllData();
-                       new DataBaseHelper2(MainActivity.this).deleteAllData();
-                       new DataBaseHelper(MainActivity.this).deleteAllData();
-                       
+
+                        AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
+                        builder2.setTitle("Do you want to delete Date?");
+                        builder2.setIcon(R.drawable.ic_baseline_delete_24);
+                        builder2.setMessage("\n \nPlease click Yes or No button !\n \n");
+                        builder2.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                new DataBaseHelper11(MainActivity.this).deleteAllData();
+                                new DataBaseHelper10(MainActivity.this).deleteAllData();
+                                new DataBaseHelper9(MainActivity.this).deleteAllData();
+                                new DataBaseHelper8(MainActivity.this).deleteAllData();
+                                new DataBaseHelper7(MainActivity.this).deleteAllData();
+                                new DataBaseHelper6(MainActivity.this).deleteAllData();
+                                new DataBaseHelper5(MainActivity.this).deleteAllData();
+                                new DataBaseHelper4(MainActivity.this).deleteAllData();
+                                new DataBaseHelper3(MainActivity.this).deleteAllData();
+                                new DataBaseHelper2(MainActivity.this).deleteAllData();
+                                new DataBaseHelper(MainActivity.this).deleteAllData();
+
+                                new DateDataBaseHelper11(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper10(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper9(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper8(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper7(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper6(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper5(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper4(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper3(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper2(MainActivity.this).deleteAllDateData();
+                                new DateDataBaseHelper(MainActivity.this).deleteAllDateData();
+                                Toast.makeText(MainActivity.this, "Delete All Data", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        builder2.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        builder2.show();
+                        
 
                         break;
                     case R.id.themeItemIdId:
