@@ -244,25 +244,26 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
         themeStatusData  = new ArrayList<>();
         themeStatusData = themeDataBaseHelper.getAllNotes();
 
-        if (themeStatusData.get(1).getThemeStatus()==1){
+        if (themeStatusData.get(0).getThemeStatus()==1){
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
         }
-        else if (themeStatusData.get(1).getThemeStatus()==2){
-            linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
+       if (themeStatusData.get(0).getThemeStatus()==2){
+            linearLayout.setBackgroundColor(Color.rgb(70, 70, 70));
         }
-        else  if (themeStatusData.get(1).getThemeStatus()==3){
+        if (themeStatusData.get(0).getThemeStatus()==3){
             linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
         }
-        else if (themeStatusData.get(1).getThemeStatus()==4){
+        if (themeStatusData.get(0).getThemeStatus()==4){
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-        else  if (themeStatusData.get(1).getThemeStatus()==5){
+        if (themeStatusData.get(0).getThemeStatus()==5){
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
         }
-        else  if (themeStatusData.get(1).getThemeStatus()==6){
+       if (themeStatusData.get(0).getThemeStatus()==6){
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
 
