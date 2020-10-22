@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -127,6 +128,18 @@ public class MainActivity extends AppCompatActivity {
 
                 switch(item.getItemId ()){
                     case R.id.aboutItemIdId:
+                        final AlertDialog.Builder aboutBuilder = new AlertDialog.Builder(MainActivity.this);
+                        aboutBuilder.setTitle("About this app!");
+                        aboutBuilder.setMessage("\n \nThis is an attendance app." +
+                                "Teacher will be use it .  It is very useful for teacher. Teacher will can gather student's attendance and result, with the definition date.\n" +
+                                "\n\n" +
+                                "<-\bIt made by Abdullah ->.\n \n");
+                        aboutBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                        aboutBuilder.show();
                         break;
                     case R.id.resetAllDataItemIdId:
 
@@ -188,6 +201,12 @@ public class MainActivity extends AppCompatActivity {
                         CustomAdapterForColorChange();
                         break;
                     case R.id.shareItemIdId:
+                        Intent sendIntent = new Intent();
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://www.youtube.com/watch?v=WpnM1BITW1Y    ");
+                        sendIntent.setType("text/plain");
+                        Intent shareIntent = Intent.createChooser(sendIntent, null);
+                        startActivity(shareIntent);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.contactItemId:

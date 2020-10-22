@@ -2,23 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/resetAllDataItemIdId"
     android:title="Reset All Data"
-    android:icon="@drawable/ic_create_black_24dp"/>
-    <item android:id="@+id/contactItemId"
-        android:title="Contact"
-        android:icon="@drawable/ic_mail_black_24dp"/>
+    android:icon="@drawable/ic_baseline_delete_24"/>
+
     <item android:id="@+id/themeItemIdId"
         android:title="Theme"
         android:icon="@drawable/ic_colorize_black_24dp"/>
+    <item android:id="@+id/shareItemIdId"
+        android:title="Share"
+        android:icon="@drawable/ic_share_black_24dp"/>
     <item android:title="Other"
         android:id="@+id/otherId"
         >
         <menu>
+            <item android:id="@+id/contactItemId"
+                android:title="Contact Support"
+                android:icon="@drawable/ic_baseline_contact_support_24"/>
             <item android:id="@+id/aboutItemIdId"
-                android:icon="@drawable/ic_location_on_black_24dp"
+                android:icon="@drawable/ic_baseline_info_24"
                 android:title="About"/>
-            <item android:id="@+id/shareItemIdId"
-                android:title="Share"
-                android:icon="@drawable/ic_share_black_24dp"/>
+
         </menu>
     </item>
 </menu>
