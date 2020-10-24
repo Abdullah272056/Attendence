@@ -24,6 +24,10 @@ import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
+import com.example.attendence.seventh_class.CustomAdapter7;
+import com.example.attendence.seventh_class.DataBaseHelper7;
+import com.example.attendence.seventh_class_date.DateCustomAdapter7;
+import com.example.attendence.seventh_class_date.DateDataBaseHelper7;
 import com.example.attendence.ten_class.CustomAdapter10;
 import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class_date.DateCustomAdapter10;
@@ -203,8 +207,6 @@ public class Ten_Class extends AppCompatActivity {
                     }
                 });
                 builder.show();
-
-
                 return true;
             case R.id.dateDeleteItemId:
 
@@ -231,9 +233,44 @@ public class Ten_Class extends AppCompatActivity {
                     }
                 });
                 builder2.show();
-
-
                 return true;
+
+            case R.id.deleteAllDataId:
+                AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
+                builder3.setTitle("Do you want to delete Date?");
+                builder3.setIcon(R.drawable.ic_baseline_delete_24);
+                builder3.setMessage("\n \nPlease click Yes or No button !\n \n");
+
+                builder3.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dateDataBaseHelper.deleteAllDateData();
+                        dateDataBaseHelper=new DateDataBaseHelper10(context);
+                        dateDataBaseHelper.getWritableDatabase();
+                        dateDataList= new ArrayList<>();
+                        dateDataList = dateDataBaseHelper.getAllNotes();
+                        dateCustomAdapter = new DateCustomAdapter10(context,dateDataList);
+                        dateRecyclerView.setAdapter(dateCustomAdapter);
+
+
+                        dataBaseHelper.deleteAllData();
+                        dataBaseHelper=new DataBaseHelper10(context);
+                        dataBaseHelper.getWritableDatabase();
+                        studentInformationDataList= new ArrayList<>();
+                        studentInformationDataList = dataBaseHelper.getAllNotes();
+                        customAdapter = new CustomAdapter10(context,studentInformationDataList);
+                        recyclerView.setAdapter(customAdapter);
+
+                    }
+                });
+                builder3.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder3.show();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
