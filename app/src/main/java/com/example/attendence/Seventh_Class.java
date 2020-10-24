@@ -22,6 +22,10 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
+import com.example.attendence.fourth_class.CustomAdapter4;
+import com.example.attendence.fourth_class.DataBaseHelper4;
+import com.example.attendence.fourth_class_date.DateCustomAdapter4;
+import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.seventh_class.CustomAdapter7;
@@ -194,9 +198,8 @@ public class Seventh_Class extends AppCompatActivity{
                     }
                 });
                 builder.show();
-
-
                 return true;
+
             case R.id.dateDeleteItemId:
 
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
@@ -222,9 +225,9 @@ public class Seventh_Class extends AppCompatActivity{
                     }
                 });
                 builder2.show();
-
-
                 return true;
+
+           
             default:
                 return super.onOptionsItemSelected(item);
         }
