@@ -265,8 +265,6 @@ public class First_Class extends AppCompatActivity {
                     }
                 });
                 builder3.show();
-
-
                 return true;
 
             default:
