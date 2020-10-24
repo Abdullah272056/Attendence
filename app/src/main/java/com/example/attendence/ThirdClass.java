@@ -223,8 +223,8 @@ public class ThirdClass extends AppCompatActivity {
                 });
                 builder2.show();
                 return true;
-            case R.id.deleteAllDataId:
 
+            case R.id.deleteAllDataId:
                 AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
                 builder3.setTitle("Do you want to delete Date?");
                 builder3.setIcon(R.drawable.ic_baseline_delete_24);
