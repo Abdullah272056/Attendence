@@ -23,6 +23,10 @@ import android.widget.Toast;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
+import com.example.attendence.seventh_class.CustomAdapter7;
+import com.example.attendence.seventh_class.DataBaseHelper7;
+import com.example.attendence.seventh_class_date.DateCustomAdapter7;
+import com.example.attendence.seventh_class_date.DateDataBaseHelper7;
 import com.example.attendence.test_class.CustomAdapter11;
 import com.example.attendence.test_class.DataBaseHelper11;
 import com.example.attendence.common.Notes2;
@@ -210,9 +214,44 @@ public class ElevenClass extends AppCompatActivity {
                     }
                 });
                 builder2.show();
-
-
                 return true;
+            case R.id.deleteAllDataId:
+                AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
+                builder3.setTitle("Do you want to delete Date?");
+                builder3.setIcon(R.drawable.ic_baseline_delete_24);
+                builder3.setMessage("\n \nPlease click Yes or No button !\n \n");
+
+                builder3.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dateDataBaseHelper.deleteAllDateData();
+                        dateDataBaseHelper=new DateDataBaseHelper11(context);
+                        dateDataBaseHelper.getWritableDatabase();
+                        dateDataList= new ArrayList<>();
+                        dateDataList = dateDataBaseHelper.getAllNotes();
+                        dateCustomAdapter = new DateCustomAdapter11(context,dateDataList);
+                        dateRecyclerView.setAdapter(dateCustomAdapter);
+
+
+                        dataBaseHelper.deleteAllData();
+                        dataBaseHelper=new DataBaseHelper11(context);
+                        dataBaseHelper.getWritableDatabase();
+                        studentInformationDataList= new ArrayList<>();
+                        studentInformationDataList = dataBaseHelper.getAllNotes();
+                        customAdapter = new CustomAdapter11(context,studentInformationDataList);
+                        recyclerView.setAdapter(customAdapter);
+
+                    }
+                });
+                builder3.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder3.show();
+                return true;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
