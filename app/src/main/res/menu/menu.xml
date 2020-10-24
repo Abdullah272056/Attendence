@@ -16,7 +16,7 @@
     </item>
     <item
         android:title="Delete all data"
-        android:id="@+id/search"
+        android:id="@+id/deleteAllDataId"
         app:actionViewClass="androidx.appcompat.widget.SearchView">
 
     </item>
