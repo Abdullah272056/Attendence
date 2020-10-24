@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:layout_marginTop="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginBottom="10dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="20dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/attendance"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
     <TextView
-        android:layout_marginTop="20dp"
-        android:paddingTop="20dp"
-        android:textStyle="bold"
-        android:paddingBottom="8dp"
-        android:paddingLeft="20dp"
-        android:textColor="#990000"
-        android:textSize="30sp"
-        android:text="Attendance App "
-        android:id="@+id/navigationHeaderId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:paddingBottom="8dp"
         android:paddingLeft="15dp"
         android:textColor="#0570C5"
         android:textSize="20sp"
-        android:text=" Sub Header"
+        android:text="Attendance App"
         android:id="@+id/navigationSubHeaderId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <View
         android:layout_marginTop="10dp"
-        android:background="#E91E63"
+        android:background="#0426E4"
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="1.5dp"/>
 
 </LinearLayout>

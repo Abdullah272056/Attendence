@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
     ThemeDataBaseHelper themeDataBaseHelper;
     LinearLayout linearLayout;
-    View view;
 
     Button saveButton ,cancelButton;
     int colorStatus;
@@ -86,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayout=findViewById(R.id.mainLayoutId);
-
-
 
 
 
