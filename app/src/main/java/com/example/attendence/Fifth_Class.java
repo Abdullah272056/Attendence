@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
@@ -58,10 +60,13 @@ public class Fifth_Class extends AppCompatActivity {
     DateCustomAdapter5 dateCustomAdapter;
     String appBarTitle;
     Context context;
+    ActionBar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifth__class);
+
+
 
         context=Fifth_Class.this;
         LinearLayout linearLayout=findViewById(R.id.layoutId);

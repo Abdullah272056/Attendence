@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.shareItemIdId:
                         Intent sendIntent = new Intent();
                         sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, "https://www.youtube.com/watch?v=WpnM1BITW1Y    ");
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "Link");
                         sendIntent.setType("text/plain");
                         Intent shareIntent = Intent.createChooser(sendIntent, null);
                         startActivity(shareIntent);
