@@ -55,7 +55,7 @@ public class ExamActivity10 extends AppCompatActivity {
 
         if (themeStatusData.get(0).getThemeStatus()==1){
             Toast.makeText(this, "theme change", Toast.LENGTH_SHORT).show();
-            linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+            linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
         }
         else if (themeStatusData.get(0).getThemeStatus()==2){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();

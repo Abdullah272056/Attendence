@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     int colorStatus;
     DrawerLayout drawerLayout;
     private List<ThemeNote>  themeStatusData;
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -118,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 
-        final NavigationView navigationView=findViewById (R.id.myNavigationViewId);
+        navigationView=findViewById (R.id.myNavigationViewId);
+
         navigationView.setNavigationItemSelectedListener (new NavigationView.OnNavigationItemSelectedListener () {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -246,22 +248,28 @@ public class MainActivity extends AppCompatActivity {
         themeStatusData = themeDataBaseHelper.getAllNotes();
 
         if (themeStatusData.get(0).getThemeStatus()==1){
-            linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+            linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
+            navigationView.setBackgroundColor(Color.rgb(128, 0, 128));
         }
        if (themeStatusData.get(0).getThemeStatus()==2){
             linearLayout.setBackgroundColor(Color.rgb(70, 70, 70));
+           navigationView.setBackgroundColor(Color.rgb(70, 70, 70));
         }
         if (themeStatusData.get(0).getThemeStatus()==3){
             linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
+            navigationView.setBackgroundColor(Color.rgb(255, 255, 255));
         }
         if (themeStatusData.get(0).getThemeStatus()==4){
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
+            navigationView.setBackgroundColor(Color.rgb(255, 0, 0));
         }
         if (themeStatusData.get(0).getThemeStatus()==5){
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
+            navigationView.setBackgroundColor(Color.rgb(0, 0, 255));
         }
        if (themeStatusData.get(0).getThemeStatus()==6){
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
+           navigationView.setBackgroundColor(Color.rgb(0, 255, 0));
         }
 
 
@@ -354,22 +362,28 @@ public class MainActivity extends AppCompatActivity {
                 int id=themeDataBaseHelper.updateThemeData(new ThemeNote(1,colorStatus));
                 if (id==1){
                     if (colorStatus==1){
-                        linearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+                        linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
+                        navigationView.setBackgroundColor(Color.rgb(128, 0, 128));
                     }
                     else if (colorStatus==2){
                         linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
+                        navigationView.setBackgroundColor(Color.rgb(50, 50, 50));
                     }
                     else  if (colorStatus==3){
                         linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
+                        navigationView.setBackgroundColor(Color.rgb(255, 255, 255));
                     }
                     else if (colorStatus==4){
                         linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
+                        navigationView.setBackgroundColor(Color.rgb(255, 0, 0));
                     }
                     else  if (colorStatus==5){
                         linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
+                        navigationView.setBackgroundColor(Color.rgb(0, 0, 255));
                     }
                     else  if (colorStatus==6){
                         linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
+                        navigationView.setBackgroundColor(Color.rgb(0, 255, 0));
                     }
                     Toast.makeText(getApplicationContext(), "update success", Toast.LENGTH_LONG).show();
                 }else {

@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"/>
     <View
         android:layout_marginTop="10dp"
-        android:background="#0426E4"
+        android:background="#8A020202"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"/>
 
