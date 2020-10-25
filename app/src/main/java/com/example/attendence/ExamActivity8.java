@@ -16,9 +16,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class.ExamCustomAdapter8;
+import com.example.attendence.eight_exam_date.CustomAdapterExamDate8;
+import com.example.attendence.eight_exam_date.DataBaseHelperExamDate8;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.nine_exam_date.CustomAdapterExamDate9;
@@ -31,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity8 extends AppCompatActivity {
-    private List<Notes2> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     DataBaseHelper8 dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;
@@ -40,9 +43,9 @@ public class ExamActivity8 extends AppCompatActivity {
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
 
-    DataBaseHelperExamDate9 dateDataBaseHelper;
+    DataBaseHelperExamDate8 dateDataBaseHelper;
     private List<DateNote> dateDataList;
-    CustomAdapterExamDate9 dateCustomAdapter;
+    CustomAdapterExamDate8 dateCustomAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,7 +97,7 @@ public class ExamActivity8 extends AppCompatActivity {
         dataBaseHelper=new DataBaseHelper8(context);
         dataBaseHelper.getWritableDatabase();
 
-        dateDataBaseHelper=new DataBaseHelperExamDate9(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate8(context);
         dateDataBaseHelper.getWritableDatabase();
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
@@ -139,7 +142,7 @@ public class ExamActivity8 extends AppCompatActivity {
         dateDataList  = new ArrayList<>();
         dateDataList = dateDataBaseHelper.getAllNotes();
         if (dateDataList.size() > 0){
-            dateCustomAdapter = new CustomAdapterExamDate9(context,dateDataList);
+            dateCustomAdapter = new CustomAdapterExamDate8(context,dateDataList);
             dateRecyclerView.setAdapter(dateCustomAdapter);
             dateCustomAdapter.notifyDataSetChanged();
         }else {

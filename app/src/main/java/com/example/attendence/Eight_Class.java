@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.CustomAdapter8;
 import com.example.attendence.eight_class.DataBaseHelper8;
@@ -28,10 +29,6 @@ import com.example.attendence.eight_class_date.DateCustomAdapter8;
 import com.example.attendence.eight_class_date.DateDataBaseHelper8;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
-import com.example.attendence.seventh_class.CustomAdapter7;
-import com.example.attendence.seventh_class.DataBaseHelper7;
-import com.example.attendence.seventh_class_date.DateCustomAdapter7;
-import com.example.attendence.seventh_class_date.DateDataBaseHelper7;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -51,7 +48,7 @@ public class Eight_Class extends AppCompatActivity {
     DataBaseHelper8 dataBaseHelper;
     DateDataBaseHelper8 dateDataBaseHelper;
 
-    private List<Notes2> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -315,11 +312,14 @@ public class Eight_Class extends AppCompatActivity {
                     String result5="";
                     String result6="";
 
-                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
+                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,
                             0,studentName, result1,result2,result3,result4,result5,result6));
 
                     if (id!=-1){
