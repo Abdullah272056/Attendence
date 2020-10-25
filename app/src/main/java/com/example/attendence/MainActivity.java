@@ -437,7 +437,4 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-
-
-
 }

@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.common.Notes2;
 import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class.ExamCustomAdapter5;
 import com.example.attendence.fifth_exam_date.CustomAdapterExamDate5;

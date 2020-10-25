@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.common.Notes2;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.sixth_class.DataBaseHelper6;

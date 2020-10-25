@@ -24,7 +24,6 @@ import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.test_class.CustomAdapter11;
 import com.example.attendence.test_class.DataBaseHelper11;
-import com.example.attendence.common.Notes2;
 import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.example.attendence.theme.ThemeDataBaseHelper;

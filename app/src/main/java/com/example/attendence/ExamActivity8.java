@@ -17,15 +17,12 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class.ExamCustomAdapter8;
 import com.example.attendence.eight_exam_date.CustomAdapterExamDate8;
 import com.example.attendence.eight_exam_date.DataBaseHelperExamDate8;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
-import com.example.attendence.nine_exam_date.CustomAdapterExamDate9;
-import com.example.attendence.nine_exam_date.DataBaseHelperExamDate9;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

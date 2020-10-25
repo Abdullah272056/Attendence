@@ -163,7 +163,6 @@ public class CustomAdapterExamDate5 extends RecyclerView.Adapter<CustomAdapterEx
         });
         alertDialog.show();
 
-
     }
 
 }

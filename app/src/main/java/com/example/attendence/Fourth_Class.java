@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
-import com.example.attendence.common.Notes2;
 import com.example.attendence.fourth_class.CustomAdapter4;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateCustomAdapter4;

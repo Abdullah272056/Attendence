@@ -10,9 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 
-import com.example.attendence.common.Notes2;
-import com.example.attendence.mainpage.NoteClass;
-
 import java.util.ArrayList;
 import java.util.List;
 
