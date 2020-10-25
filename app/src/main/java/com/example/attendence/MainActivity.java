@@ -22,7 +22,6 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.attendence.common.Notes2;
 import com.example.attendence.eight_class.DataBaseHelper8;
 import com.example.attendence.eight_class_date.DateDataBaseHelper8;
 import com.example.attendence.eight_exam_date.DataBaseHelperExamDate8;
@@ -54,7 +53,6 @@ import com.example.attendence.ten_class.DataBaseHelper10;
 import com.example.attendence.ten_class_date.DateDataBaseHelper10;
 import com.example.attendence.ten_exam_date.DataBaseHelperExamDate10;
 import com.example.attendence.test_class.DataBaseHelper11;
-import com.example.attendence.test_date.DateCustomAdapter11;
 import com.example.attendence.test_date.DateDataBaseHelper11;
 import com.example.attendence.test_exam_date.DataBaseHelperExamDate11;
 import com.example.attendence.theme.ThemeDataBaseHelper;
