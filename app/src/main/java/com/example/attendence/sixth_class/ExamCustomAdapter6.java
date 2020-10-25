@@ -14,17 +14,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes2;
+import com.example.attendence.common.Notes;
 
 import java.util.Collection;
 import java.util.List;
 
 public class ExamCustomAdapter6 extends RecyclerView.Adapter<ExamCustomAdapter6.MyViewHolder> {
     Context context;
-    private List<Notes2> allNotes;
+    private List<Notes> allNotes;
     DataBaseHelper6 dataBaseHelper;
 
-    public ExamCustomAdapter6(Context context, List<Notes2> allNotes) {
+    public ExamCustomAdapter6(Context context, List<Notes> allNotes) {
         this.context = context;
         this.allNotes = allNotes;
         dataBaseHelper=new DataBaseHelper6(context);
@@ -203,7 +203,7 @@ public class ExamCustomAdapter6 extends RecyclerView.Adapter<ExamCustomAdapter6.
     private void customDialog(final int position,String result1,String result2,String result3
                             ,String result4,String result5,String result6) {
 
-        int id=dataBaseHelper.updateData(new Notes2(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+        int id=dataBaseHelper.updateData(new Notes(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                 allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
                 allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
                 allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
@@ -213,12 +213,18 @@ public class ExamCustomAdapter6 extends RecyclerView.Adapter<ExamCustomAdapter6.
                 allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                 allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                 allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                allNotes.get(position).getCheckBox30(),allNotes.get(position).getCheckBoxCount(),allNotes.get(position).getStudentName()
+                allNotes.get(position).getCheckBox30(),
+                allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                allNotes.get(position).getCheckBoxCount(),allNotes.get(position).getStudentName()
                 ,result1,result2,result3,result4,result5,result6));
         if (id==1){
             Toast.makeText(context, "s", Toast.LENGTH_SHORT).show();
             allNotes.clear();
-            allNotes.addAll((Collection<? extends Notes2>) dataBaseHelper.getAllNotes());
+            allNotes.addAll((Collection<? extends Notes>) dataBaseHelper.getAllNotes());
             //notifyDataSetChanged();
 
         } else {
