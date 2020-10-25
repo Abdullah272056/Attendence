@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class.ExamCustomAdapter5;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity5 extends AppCompatActivity {
-    private List<Notes2> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     DataBaseHelper5 dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;
