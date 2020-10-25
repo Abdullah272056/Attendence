@@ -2,7 +2,7 @@ package com.example.attendence.sixth_class;
 
 public class Constant6 {
     public  static final String DATABASE_NAME="Reminder.db6";
-    public  static final int DATABASE_Version=1;
+    public  static final int DATABASE_Version=3;
     public  static final String TABLE_NAME="MosQueInFormation6";
     public  static final String DATE_TABLE_NAME="DATE6";
 
