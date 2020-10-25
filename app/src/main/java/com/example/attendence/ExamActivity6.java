@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,10 +19,6 @@ import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
-import com.example.attendence.seventh_class.DataBaseHelper7;
-import com.example.attendence.seventh_class.ExamCustomAdapter7;
-import com.example.attendence.seventh_exam_date.CustomAdapterExamDate7;
-import com.example.attendence.seventh_exam_date.DataBaseHelperExamDate7;
 import com.example.attendence.sixth_class.DataBaseHelper6;
 import com.example.attendence.sixth_class.ExamCustomAdapter6;
 import com.example.attendence.sixth_exam_date.CustomAdapterExamDate6;

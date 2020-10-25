@@ -21,11 +21,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
-import com.example.attendence.fourth_class.CustomAdapter4;
-import com.example.attendence.fourth_class.DataBaseHelper4;
-import com.example.attendence.fourth_class_date.DateCustomAdapter4;
-import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.seventh_class.CustomAdapter7;
@@ -51,7 +48,7 @@ public class Seventh_Class extends AppCompatActivity{
 
     DateDataBaseHelper7 dateDataBaseHelper;
 
-    private List<Notes2> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -317,11 +314,14 @@ public class Seventh_Class extends AppCompatActivity{
                     String result5="";
                     String result6="";
 
-                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
+                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,0,0,0,
+                            0,0,0,
                             0,studentName, result1,result2,result3,result4,result5,result6));
 
                     if (id!=-1){
