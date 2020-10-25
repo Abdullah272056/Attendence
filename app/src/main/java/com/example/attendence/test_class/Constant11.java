@@ -38,6 +38,21 @@ public class Constant11 {
     public  static final String COLUMN_CHECKBOX28="COLUMN_CHECKBOX28";
     public  static final String COLUMN_CHECKBOX29="COLUMN_CHECKBOX29";
     public  static final String COLUMN_CHECKBOX30="COLUMN_CHECKBOX30";
+    public  static final String COLUMN_CHECKBOX31="COLUMN_CHECKBOX31";
+    public  static final String COLUMN_CHECKBOX32="COLUMN_CHECKBOX32";
+    public  static final String COLUMN_CHECKBOX33="COLUMN_CHECKBOX33";
+    public  static final String COLUMN_CHECKBOX34="COLUMN_CHECKBOX34";
+    public  static final String COLUMN_CHECKBOX35="COLUMN_CHECKBOX35";
+    public  static final String COLUMN_CHECKBOX36="COLUMN_CHECKBOX36";
+    public  static final String COLUMN_CHECKBOX37="COLUMN_CHECKBOX37";
+    public  static final String COLUMN_CHECKBOX38="COLUMN_CHECKBOX38";
+    public  static final String COLUMN_CHECKBOX39="COLUMN_CHECKBOX39";
+    public  static final String COLUMN_CHECKBOX40="COLUMN_CHECKBOX40";
+    public  static final String COLUMN_CHECKBOX41="COLUMN_CHECKBOX41";
+    public  static final String COLUMN_CHECKBOX42="COLUMN_CHECKBOX42";
+    public  static final String COLUMN_CHECKBOX43="COLUMN_CHECKBOX43";
+    public  static final String COLUMN_CHECKBOX44="COLUMN_CHECKBOX44";
+    public  static final String COLUMN_CHECKBOX45="COLUMN_CHECKBOX45";
     public  static final String COLUMN_CHECKBOX_COUNT="COLUMN_CHECKBOX_COUNT";
 
     public  static final String COLUMN_EXAM_RESULT1="COLUMN_EXAM_RESULT1";
@@ -81,6 +96,21 @@ public class Constant11 {
             +COLUMN_CHECKBOX28+" INTEGER, "
             +COLUMN_CHECKBOX29+" INTEGER, "
             +COLUMN_CHECKBOX30+" INTEGER, "
+            +COLUMN_CHECKBOX31+" INTEGER, "
+            +COLUMN_CHECKBOX32+" INTEGER, "
+            +COLUMN_CHECKBOX33+" INTEGER, "
+            +COLUMN_CHECKBOX34+" INTEGER, "
+            +COLUMN_CHECKBOX35+" INTEGER, "
+            +COLUMN_CHECKBOX36+" INTEGER, "
+            +COLUMN_CHECKBOX37+" INTEGER, "
+            +COLUMN_CHECKBOX38+" INTEGER, "
+            +COLUMN_CHECKBOX39+" INTEGER, "
+            +COLUMN_CHECKBOX40+" INTEGER, "
+            +COLUMN_CHECKBOX41+" INTEGER, "
+            +COLUMN_CHECKBOX42+" INTEGER, "
+            +COLUMN_CHECKBOX43+" INTEGER, "
+            +COLUMN_CHECKBOX44+" INTEGER, "
+            +COLUMN_CHECKBOX45+" INTEGER, "
             +COLUMN_CHECKBOX_COUNT+" INTEGER, "
             +COLUMN_STUDENT_NAME+" TEXT, "
             +COLUMN_EXAM_RESULT1+" TEXT, "
