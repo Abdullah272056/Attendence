@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,29 +15,32 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes2;
+import com.example.attendence.common.Notes;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>{
     Button saveButton,cancelButton;
     EditText nameEditText;
 
     Context context;
-    private List<Notes2> allNotes;
+    private List<Notes> allNotes;
 
-    List<Notes2> copyAllNotes;
+    List<Notes> copyAllNotes;
     private DataBaseHelper databaseHelper;
 
     int checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
-            checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
-            checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-            checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30;
+            checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,
+            checkBox16, checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,
+            checkBox23, checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,
+            checkBox30, checkBox31,checkBox32,checkBox33,checkBox34,checkBox35,checkBox36,
+            checkBox37, checkBox38, checkBox39,checkBox40,checkBox41,checkBox42,checkBox43,
+            checkBox44, checkBox45;
     int checkBoxCount;
 
-    public CustomAdapter(Context context, List<Notes2> allNotes){
+    public CustomAdapter(Context context, List<Notes> allNotes){
         this.context = context;
         this.allNotes = allNotes;
         databaseHelper=new DataBaseHelper(context);
@@ -150,6 +151,23 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         checkBox28=allNotes.get(position).getCheckBox28();
         checkBox29=allNotes.get(position).getCheckBox29();
         checkBox30=allNotes.get(position).getCheckBox30();
+
+        checkBox31=allNotes.get(position).getCheckBox31();
+        checkBox32=allNotes.get(position).getCheckBox32();
+        checkBox33=allNotes.get(position).getCheckBox33();
+        checkBox34=allNotes.get(position).getCheckBox34();
+        checkBox35=allNotes.get(position).getCheckBox35();
+        checkBox36=allNotes.get(position).getCheckBox36();
+        checkBox37=allNotes.get(position).getCheckBox37();
+        checkBox38=allNotes.get(position).getCheckBox38();
+        checkBox39=allNotes.get(position).getCheckBox39();
+        checkBox40=allNotes.get(position).getCheckBox40();
+
+        checkBox41=allNotes.get(position).getCheckBox41();
+        checkBox42=allNotes.get(position).getCheckBox42();
+        checkBox43=allNotes.get(position).getCheckBox43();
+        checkBox44=allNotes.get(position).getCheckBox44();
+        checkBox45=allNotes.get(position).getCheckBox45();
 
         checkBoxCount=allNotes.get(position).getCheckBoxCount();
 
@@ -365,6 +383,113 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             holder.checkBox30.setChecked(false);
         }
 
+        if (checkBox31==1){
+            holder.checkBox31.setChecked(true);
+        }
+        if (checkBox31==0){
+            holder.checkBox31.setChecked(false);
+        }
+
+        if (checkBox32==1){
+            holder.checkBox32.setChecked(true);
+        }
+        if (checkBox32==0){
+            holder.checkBox32.setChecked(false);
+        }
+
+        if (checkBox33==1){
+            holder.checkBox33.setChecked(true);
+        }
+        if (checkBox33==0){
+            holder.checkBox33.setChecked(false);
+        }
+
+        if (checkBox34==1){
+            holder.checkBox34.setChecked(true);
+        }
+        if (checkBox34==0){
+            holder.checkBox34.setChecked(false);
+        }
+
+        if (checkBox35==1){
+            holder.checkBox35.setChecked(true);
+        }
+        if (checkBox35==0){
+            holder.checkBox35.setChecked(false);
+        }
+
+        if (checkBox36==1){
+            holder.checkBox36.setChecked(true);
+        }
+        if (checkBox36==0){
+            holder.checkBox36.setChecked(false);
+        }
+
+        if (checkBox37==1){
+            holder.checkBox37.setChecked(true);
+        }
+        if (checkBox37==0){
+            holder.checkBox37.setChecked(false);
+        }
+
+        if (checkBox38==1){
+            holder.checkBox38.setChecked(true);
+        }
+        if (checkBox38==0){
+            holder.checkBox38.setChecked(false);
+        }
+
+        if (checkBox39==1){
+            holder.checkBox39.setChecked(true);
+        }
+        if (checkBox39==0){
+            holder.checkBox39.setChecked(false);
+        }
+
+        if (checkBox40==1){
+            holder.checkBox40.setChecked(true);
+        }
+        if (checkBox40==0){
+            holder.checkBox40.setChecked(false);
+        }
+
+        if (checkBox41==1){
+            holder.checkBox41.setChecked(true);
+        }
+        if (checkBox41==0){
+            holder.checkBox41.setChecked(false);
+        }
+
+        if (checkBox42==1){
+            holder.checkBox42.setChecked(true);
+        }
+        if (checkBox42==0){
+            holder.checkBox42.setChecked(false);
+        }
+
+        if (checkBox43==1){
+            holder.checkBox43.setChecked(true);
+        }
+        if (checkBox43==0){
+            holder.checkBox43.setChecked(false);
+        }
+
+        if (checkBox44==1){
+            holder.checkBox44.setChecked(true);
+        }
+        if (checkBox44==0){
+            holder.checkBox44.setChecked(false);
+        }
+
+
+        if (checkBox45==1){
+            holder.checkBox45.setChecked(true);
+        }
+        if (checkBox45==0){
+            holder.checkBox45.setChecked(false);
+        }
+
+
 
 
         holder.checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -383,7 +508,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -401,7 +532,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -426,7 +563,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -444,7 +587,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -470,7 +619,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -488,7 +643,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -514,7 +675,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -532,7 +699,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -558,7 +731,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -576,7 +755,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -602,7 +787,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -620,7 +811,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -646,7 +843,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -664,7 +867,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -691,7 +900,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -709,7 +924,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45()
+                            ,checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -735,7 +956,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -753,7 +980,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -779,7 +1012,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -797,7 +1036,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName() ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName() ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
 
                     );
@@ -823,7 +1068,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -841,7 +1092,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -867,7 +1124,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -885,7 +1149,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -911,7 +1181,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -929,7 +1205,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -955,7 +1237,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -973,7 +1261,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -999,7 +1293,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1017,7 +1317,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1043,7 +1349,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1061,7 +1373,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1087,7 +1405,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1105,7 +1429,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1131,7 +1461,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1149,7 +1485,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1175,7 +1517,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1193,7 +1541,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1219,7 +1573,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1237,7 +1597,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1263,7 +1629,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             1,allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1281,7 +1653,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             0,allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1307,7 +1685,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),1,allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1325,7 +1709,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),0,allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1350,7 +1740,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),1,
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1368,7 +1764,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),0,
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1393,7 +1795,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             1,allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1411,7 +1819,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             0,allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1436,7 +1850,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),1,allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1454,7 +1874,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),0,allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1479,7 +1905,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),1,
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1497,7 +1929,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),0,
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1522,7 +1960,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             1,allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1540,7 +1984,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             0,allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1564,7 +2014,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),1,allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1582,7 +2038,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),0,allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1607,7 +2069,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),1,
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1625,7 +2093,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),0,
-                            allNotes.get(position).getCheckBox30(),checkBoxCount,allNotes.get(position).getStudentName()
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1650,7 +2124,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            1,checkBoxCount,allNotes.get(position).getStudentName()
+                            1,
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
@@ -1668,13 +2148,855 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            0,checkBoxCount,allNotes.get(position).getStudentName()
+                            0,
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
                             ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
                     );
                 }
             }
         });
+
+
+
+
+
+        holder.checkBox31.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            1,allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                           0,allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox32.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),1, allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),0, allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox33.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), 1,
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), 0,
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox34.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            1, allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            0, allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox35.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), 1,allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), 0,allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox36.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),1,
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),0,
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox37.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            1, allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            0, allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox38.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), 1, allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), 0, allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox39.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), 1,
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), 0,
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox40.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                          1, allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            0, allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox41.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), 1, allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), 0, allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox42.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), 1,
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), 0,
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox43.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            1, allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            0, allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox44.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), 1, allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), 0, allNotes.get(position).getCheckBox45(),
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+        holder.checkBox45.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount++;
+
+                    Check(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), 1,
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+                else {
+                    checkBoxCount=allNotes.get(position).getCheckBoxCount();
+                    checkBoxCount--;
+                    Uncheck(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                            allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
+                            allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
+                            allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
+                            allNotes.get(position).getCheckBox12(),allNotes.get(position).getCheckBox13(),allNotes.get(position).getCheckBox14(),
+                            allNotes.get(position).getCheckBox15(),allNotes.get(position).getCheckBox16(),allNotes.get(position).getCheckBox17(),
+                            allNotes.get(position).getCheckBox18(),allNotes.get(position).getCheckBox19(),allNotes.get(position).getCheckBox20(),
+                            allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
+                            allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
+                            allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(),0,
+                            checkBoxCount,allNotes.get(position).getStudentName()
+                            ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
+                            ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()
+                    );
+                }
+            }
+        });
+
+
+
+
+
+
+
 
 
 
@@ -1689,13 +3011,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return allNotes.size();
     }
 
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;
         CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30;
+                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,
+                checkBox31,checkBox32,checkBox33,checkBox34,checkBox35,checkBox36,
+                checkBox37, checkBox38, checkBox39,checkBox40,checkBox41,checkBox42,checkBox43,
+                checkBox44, checkBox45;;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -1731,6 +3055,22 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             checkBox29=itemView.findViewById(R.id.checkbox29);
             checkBox30=itemView.findViewById(R.id.checkbox30);
 
+            checkBox31=itemView.findViewById(R.id.checkbox31);
+            checkBox32=itemView.findViewById(R.id.checkbox32);
+            checkBox33=itemView.findViewById(R.id.checkbox33);
+            checkBox34=itemView.findViewById(R.id.checkbox34);
+            checkBox35=itemView.findViewById(R.id.checkbox35);
+            checkBox36=itemView.findViewById(R.id.checkbox36);
+            checkBox37=itemView.findViewById(R.id.checkbox37);
+            checkBox38=itemView.findViewById(R.id.checkbox38);
+            checkBox39=itemView.findViewById(R.id.checkbox39);
+            checkBox40=itemView.findViewById(R.id.checkbox40);
+            checkBox41=itemView.findViewById(R.id.checkbox41);
+            checkBox42=itemView.findViewById(R.id.checkbox42);
+            checkBox43=itemView.findViewById(R.id.checkbox43);
+            checkBox44=itemView.findViewById(R.id.checkbox44);
+            checkBox45=itemView.findViewById(R.id.checkbox45);
+
         }
 
     }
@@ -1741,19 +3081,25 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                         int checkBox16,int checkBox17,int checkBox18,int checkBox19,int checkBox20,
                         int checkBox21,int checkBox22,int checkBox23,int checkBox24,int checkBox25,
                         int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
+                        int checkBox31,int checkBox32,int checkBox33,int checkBox34,int checkBox35,
+                        int checkBox36, int checkBox37,int checkBox38, int checkBox39,int checkBox40,
+                        int checkBox41,int checkBox42,int checkBox43, int checkBox44,int checkBox45,
                         int checkBoxCount,String name,String examResult1,String examResult2,String examResult3,
                         String examResult4,String examResult5,String examResult6){
 
-        int status = databaseHelper.updateData(new Notes2(id,
+        int status = databaseHelper.updateData(new Notes(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name,
+                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,
+                checkBox31,checkBox32,checkBox33,checkBox34,checkBox35,checkBox36,checkBox37,checkBox38,
+                checkBox39,checkBox40,checkBox41,checkBox42,checkBox43,checkBox44,checkBox45,
+                checkBoxCount,name,
                 examResult1,examResult2,examResult3,examResult4,examResult5,examResult6
         ));
         if (status==1){
             allNotes.clear();
-            allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
+            allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
             //notifyDataSetChanged();
             Toast.makeText(context, "uncheck successful", Toast.LENGTH_SHORT).show();
         }else {
@@ -1769,13 +3115,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             int checkBox16,int checkBox17,int checkBox18,int checkBox19,int checkBox20,
             int checkBox21,int checkBox22,int checkBox23,int checkBox24,int checkBox25,
             int checkBox26,int checkBox27,int checkBox28, int checkBox29,int checkBox30,
+            int checkBox31,int checkBox32,int checkBox33,int checkBox34,int checkBox35,
+            int checkBox36, int checkBox37,int checkBox38, int checkBox39,int checkBox40,
+            int checkBox41,int checkBox42,int checkBox43, int checkBox44,int checkBox45,
             int checkBoxCount,String name,String examResult1,String examResult2,String examResult3,
             String examResult4,String examResult5,String examResult6){
-        int status = databaseHelper.updateData(new Notes2(id,
+        int status = databaseHelper.updateData(new Notes(id,
                 checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
                 checkBox9,checkBox10,checkBox11,checkBox12,checkBox13,checkBox14,checkBox15,checkBox16,
                 checkBox17,checkBox18,checkBox19,checkBox20,checkBox21,checkBox22,checkBox23,
-                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,checkBoxCount,name,
+                checkBox24, checkBox25,checkBox26,checkBox27,checkBox28,checkBox29,checkBox30,
+                checkBox31,checkBox32,checkBox33,checkBox34,checkBox35,checkBox36,
+                checkBox37, checkBox38, checkBox39,checkBox40,checkBox41,checkBox42,checkBox43,
+                checkBox44, checkBox45, checkBoxCount,name,
                 examResult1,examResult2,examResult3,examResult4,examResult5,examResult6
         ));
         if (status==1){
@@ -1812,7 +3164,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 }
                 else {
                     String studentName=nameEditText.getText().toString();
-                    int id=databaseHelper.updateData(new Notes2(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
+                    int id=databaseHelper.updateData(new Notes(allNotes.get(position).getId(),allNotes.get(position).getCheckBox1(),allNotes.get(position).getCheckBox2(),
                             allNotes.get(position).getCheckBox3(),allNotes.get(position).getCheckBox4(),allNotes.get(position).getCheckBox5(),
                             allNotes.get(position).getCheckBox6(),allNotes.get(position).getCheckBox7(),allNotes.get(position).getCheckBox8(),
                             allNotes.get(position).getCheckBox9(),allNotes.get(position).getCheckBox10(),allNotes.get(position).getCheckBox11(),
@@ -1822,13 +3174,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                             allNotes.get(position).getCheckBox21(),allNotes.get(position).getCheckBox22(),allNotes.get(position).getCheckBox23(),
                             allNotes.get(position).getCheckBox24(),allNotes.get(position).getCheckBox25(),allNotes.get(position).getCheckBox26(),
                             allNotes.get(position).getCheckBox27(),allNotes.get(position).getCheckBox28(),allNotes.get(position).getCheckBox29(),
-                            allNotes.get(position).getCheckBox30(),allNotes.get(position).getCheckBoxCount(),studentName
+                            allNotes.get(position).getCheckBox30(),
+                            allNotes.get(position).getCheckBox31(),allNotes.get(position).getCheckBox32(), allNotes.get(position).getCheckBox33(),
+                            allNotes.get(position).getCheckBox34(), allNotes.get(position).getCheckBox35(),allNotes.get(position).getCheckBox36(),
+                            allNotes.get(position).getCheckBox37(), allNotes.get(position).getCheckBox38(), allNotes.get(position).getCheckBox39(),
+                            allNotes.get(position).getCheckBox40(), allNotes.get(position).getCheckBox41(), allNotes.get(position).getCheckBox42(),
+                            allNotes.get(position).getCheckBox43(), allNotes.get(position).getCheckBox44(), allNotes.get(position).getCheckBox45(),
+                            allNotes.get(position).getCheckBoxCount(),studentName
                     ,allNotes.get(position).getExamResult1(),allNotes.get(position).getExamResult2(),allNotes.get(position).getExamResult3()
                             ,allNotes.get(position).getExamResult4(),allNotes.get(position).getExamResult5(),allNotes.get(position).getExamResult6()));
                     if (id==1){
                         Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allNotes.clear();
-                        allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
+                        allNotes.addAll((Collection<? extends Notes>) databaseHelper.getAllNotes());
                         notifyDataSetChanged();
                         alertDialog.dismiss();
 

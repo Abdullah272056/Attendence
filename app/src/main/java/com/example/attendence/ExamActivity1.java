@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
+import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.first_class.DataBaseHelper;
 import com.example.attendence.first_class.ExamCustomAdapter;
@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity1 extends AppCompatActivity{
-    private List<Notes2> studentInformationDataList;
+    private List<Notes> studentInformationDataList;
     DataBaseHelper dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;
