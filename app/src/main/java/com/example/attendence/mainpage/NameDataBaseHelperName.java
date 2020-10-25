@@ -74,4 +74,10 @@ public class NameDataBaseHelperName extends SQLiteOpenHelper {
         return status;
     }
 
+
+    public void deleteAllClassNameData(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from "+ constantName.TABLE_NAME);
+    }
+
 }

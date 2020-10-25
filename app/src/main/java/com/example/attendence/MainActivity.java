@@ -183,6 +183,21 @@ public class MainActivity extends AppCompatActivity {
                                new DataBaseHelperExamDate3(MainActivity.this).deleteAllExamDateData();
                                new DataBaseHelperExamDate2(MainActivity.this).deleteAllExamDateData();
                                new DataBaseHelperExamDate1(MainActivity.this).deleteAllExamDateData();
+                               new NameDataBaseHelperName(MainActivity.this).deleteAllClassNameData();
+
+                                nameDataBaseHelperName=new NameDataBaseHelperName(MainActivity.this);
+                                if (nameDataBaseHelperName.getAllNotes().size()<1){
+                                    for (int i = 1; i <=11; i++) {
+                                        int id1 =nameDataBaseHelperName.insertData(new NoteClass("Class No "+String.valueOf(i)));
+                                        if (id1!=0){
+                                            Toast.makeText(MainActivity.this, "success "+String.valueOf(i), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                }
+                                classNameRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                                loadClassNameListData();
+
+
                                 Toast.makeText(MainActivity.this, "Delete All Data", Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -237,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         themeStatusData  = new ArrayList<>();
         if (themeDataBaseHelper.getAllNotes().size()<1){
             for (int i = 0; i <=1; i++) {
-                int id=themeDataBaseHelper.insertData(new ThemeNote(1));
+                int id=themeDataBaseHelper.insertData(new ThemeNote(3));
                 if (id!=0){
                     Toast.makeText(this, "success "+String.valueOf(i), Toast.LENGTH_SHORT).show();
                 }
@@ -347,7 +362,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         colorStatus=5;
-
                         break;
                     case 5:
                         colorStatus=6;
