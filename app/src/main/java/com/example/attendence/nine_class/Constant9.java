@@ -53,7 +53,6 @@ public class Constant9 {
     public  static final String COLUMN_CHECKBOX43="COLUMN_CHECKBOX43";
     public  static final String COLUMN_CHECKBOX44="COLUMN_CHECKBOX44";
     public  static final String COLUMN_CHECKBOX45="COLUMN_CHECKBOX45";
-
     public  static final String COLUMN_CHECKBOX_COUNT="COLUMN_CHECKBOX_COUNT";
 
     public  static final String COLUMN_EXAM_RESULT1="COLUMN_EXAM_RESULT1";
