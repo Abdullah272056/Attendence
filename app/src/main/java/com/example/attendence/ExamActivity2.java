@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,10 +25,6 @@ import com.example.attendence.second_exam_date.CustomAdapterExamDate2;
 import com.example.attendence.second_exam_date.DataBaseHelperExamDate2;
 import com.example.attendence.theme.ThemeDataBaseHelper;
 import com.example.attendence.theme.ThemeNote;
-import com.example.attendence.third_class.DataBaseHelper3;
-import com.example.attendence.third_class.ExamCustomAdapter3;
-import com.example.attendence.third_exam_date.CustomAdapterExamDate3;
-import com.example.attendence.third_exam_date.DataBaseHelperExamDate3;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
