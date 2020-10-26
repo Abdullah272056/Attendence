@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.fifth_class.CustomAdapter5;
 import com.example.attendence.fifth_class.DataBaseHelper5;
 import com.example.attendence.fifth_class_date.DateCustomAdapter5;
@@ -48,7 +49,7 @@ public class Fifth_Class extends AppCompatActivity {
     DataBaseHelper5 dataBaseHelper;
     DateDataBaseHelper5 dateDataBaseHelper;
 
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
 
@@ -317,8 +318,12 @@ public class Fifth_Class extends AppCompatActivity {
                     String result4="";
                     String result5="";
                     String result6="";
+                    String result7="";
+                    String result8="";
+                    String result9="";
+                    String result10="";
 
-                    int id=dataBaseHelper.insertData(new Notes(0,0,0,0,0,0,0,
+                    int id=dataBaseHelper.insertData(new Notes2(0,0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
@@ -326,7 +331,8 @@ public class Fifth_Class extends AppCompatActivity {
                             0,0,0,0,0,0,
                             0,0,0,0,0,0,
                             0,0,0,
-                            0,studentName, result1,result2,result3,result4,result5,result6));
+                            0,studentName, result1,result2,result3,result4,result5,result6
+                            ,result7,result8,result9,result10));
 
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
