@@ -53,7 +53,6 @@ public class Constant10 {
     public  static final String COLUMN_CHECKBOX43="COLUMN_CHECKBOX43";
     public  static final String COLUMN_CHECKBOX44="COLUMN_CHECKBOX44";
     public  static final String COLUMN_CHECKBOX45="COLUMN_CHECKBOX45";
-
     public  static final String COLUMN_CHECKBOX_COUNT="COLUMN_CHECKBOX_COUNT";
 
     public  static final String COLUMN_EXAM_RESULT1="COLUMN_EXAM_RESULT1";
@@ -62,6 +61,10 @@ public class Constant10 {
     public  static final String COLUMN_EXAM_RESULT4="COLUMN_EXAM_RESULT4";
     public  static final String COLUMN_EXAM_RESULT5="COLUMN_EXAM_RESULT5";
     public  static final String COLUMN_EXAM_RESULT6="COLUMN_EXAM_RESULT6";
+    public  static final String COLUMN_EXAM_RESULT7="COLUMN_EXAM_RESULT7";
+    public  static final String COLUMN_EXAM_RESULT8="COLUMN_EXAM_RESULT8";
+    public  static final String COLUMN_EXAM_RESULT9="COLUMN_EXAM_RESULT9";
+    public  static final String COLUMN_EXAM_RESULT10="COLUMN_EXAM_RESULT10";
 
 
 
@@ -119,7 +122,11 @@ public class Constant10 {
             +COLUMN_EXAM_RESULT3+" TEXT, "
             +COLUMN_EXAM_RESULT4+" TEXT, "
             +COLUMN_EXAM_RESULT5+" TEXT, "
-            +COLUMN_EXAM_RESULT6+" TEXT "
+            +COLUMN_EXAM_RESULT6+" TEXT, "
+            +COLUMN_EXAM_RESULT7+" TEXT, "
+            +COLUMN_EXAM_RESULT8+" TEXT, "
+            +COLUMN_EXAM_RESULT9+" TEXT, "
+            +COLUMN_EXAM_RESULT10+" TEXT "
             +")";
 
 
