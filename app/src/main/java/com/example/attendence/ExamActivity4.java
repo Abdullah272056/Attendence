@@ -17,10 +17,11 @@ import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class.ExamCustomAdapter4;
-import com.example.attendence.foutth_exam_date.CustomAdapterExamDate4;
-import com.example.attendence.foutth_exam_date.DataBaseHelperExamDate4;
+import com.example.attendence.fourth_exam_date.CustomAdapterExamDate4;
+import com.example.attendence.fourth_exam_date.DataBaseHelperExamDate4;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.theme.ThemeDataBaseHelper;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity4 extends AppCompatActivity {
-    private List<Notes> studentInformationDataList;
+    private List<Notes2> studentInformationDataList;
     DataBaseHelper4 dataBaseHelper;
     RecyclerView recyclerView;
     RecyclerView dateRecyclerView;

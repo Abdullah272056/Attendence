@@ -1,4 +1,4 @@
-package com.example.attendence.foutth_exam_date;
+package com.example.attendence.fourth_exam_date;
 
 public class ConstantExam4 {
     public  static final String DATABASE_NAME="EXAM_DATE.db4";

@@ -33,7 +33,7 @@ import com.example.attendence.first_class_date.DateDataBaseHelper;
 import com.example.attendence.first_exam_date.DataBaseHelperExamDate1;
 import com.example.attendence.fourth_class.DataBaseHelper4;
 import com.example.attendence.fourth_class_date.DateDataBaseHelper4;
-import com.example.attendence.foutth_exam_date.DataBaseHelperExamDate4;
+import com.example.attendence.fourth_exam_date.DataBaseHelperExamDate4;
 import com.example.attendence.mainpage.NameCustomAdapter;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
