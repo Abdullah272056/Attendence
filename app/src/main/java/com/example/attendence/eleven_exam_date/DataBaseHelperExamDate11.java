@@ -1,4 +1,4 @@
-package com.example.attendence.test_date;
+package com.example.attendence.eleven_exam_date;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,17 +9,17 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+
 import com.example.attendence.common.DateNote;
-import com.example.attendence.test_class.Constant11;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DateDataBaseHelper11 extends SQLiteOpenHelper{
+public class DataBaseHelperExamDate11 extends SQLiteOpenHelper {
     Context context;
-   Constant11 constant;
-    public DateDataBaseHelper11(@Nullable Context context ){
-        super(context, Constant11.DATE_TABLE_NAME, null, Constant11.DATABASE_Version);
+   ConstantExam11 constant;
+    public DataBaseHelperExamDate11(@Nullable Context context ){
+        super(context, ConstantExam11.DATE_TABLE_NAME, null, ConstantExam11.DATABASE_Version);
         this.context=context;
     }
 
@@ -80,7 +80,9 @@ public class DateDataBaseHelper11 extends SQLiteOpenHelper{
         return status;
 
     }
-    public void deleteAllDateData(){
+
+
+    public void deleteAllExamDateData(){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         sqLiteDatabase.execSQL("delete from "+ constant.DATE_TABLE_NAME);
     }

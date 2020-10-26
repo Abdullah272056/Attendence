@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
 import com.example.attendence.common.Notes;
-import com.example.attendence.test_class.DataBaseHelper11;
 
 import java.util.Collection;
 import java.util.List;

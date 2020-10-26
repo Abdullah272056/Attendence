@@ -1,4 +1,4 @@
-package com.example.attendence.test_class;
+package com.example.attendence.eleven_class;
 
 public class Constant11 {
     public  static final String DATABASE_NAME="Reminder.db11";
@@ -61,6 +61,10 @@ public class Constant11 {
     public  static final String COLUMN_EXAM_RESULT4="COLUMN_EXAM_RESULT4";
     public  static final String COLUMN_EXAM_RESULT5="COLUMN_EXAM_RESULT5";
     public  static final String COLUMN_EXAM_RESULT6="COLUMN_EXAM_RESULT6";
+    public  static final String COLUMN_EXAM_RESULT7="COLUMN_EXAM_RESULT7";
+    public  static final String COLUMN_EXAM_RESULT8="COLUMN_EXAM_RESULT8";
+    public  static final String COLUMN_EXAM_RESULT9="COLUMN_EXAM_RESULT9";
+    public  static final String COLUMN_EXAM_RESULT10="COLUMN_EXAM_RESULT10";
 
 
 
@@ -118,7 +122,11 @@ public class Constant11 {
             +COLUMN_EXAM_RESULT3+" TEXT, "
             +COLUMN_EXAM_RESULT4+" TEXT, "
             +COLUMN_EXAM_RESULT5+" TEXT, "
-            +COLUMN_EXAM_RESULT6+" TEXT "
+            +COLUMN_EXAM_RESULT6+" TEXT, "
+            +COLUMN_EXAM_RESULT7+" TEXT, "
+            +COLUMN_EXAM_RESULT8+" TEXT, "
+            +COLUMN_EXAM_RESULT9+" TEXT, "
+            +COLUMN_EXAM_RESULT10+" TEXT "
             +")";
 
 

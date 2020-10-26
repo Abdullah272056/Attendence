@@ -1,4 +1,4 @@
-package com.example.attendence.test_date;
+package com.example.attendence.eleven_exam_date;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,7 +18,8 @@ import com.example.attendence.common.DateNote;
 import java.util.Collection;
 import java.util.List;
 
-public class DateCustomAdapter11 extends RecyclerView.Adapter<DateCustomAdapter11.MyViewHolder> {
+
+public class CustomAdapterExamDate11 extends RecyclerView.Adapter<CustomAdapterExamDate11.MyViewHolder> {
     Button saveButton,cancelButton;
 
     EditText dateEditText;
@@ -26,21 +27,21 @@ public class DateCustomAdapter11 extends RecyclerView.Adapter<DateCustomAdapter1
 
     Context context;
     private List<DateNote> allDate;
-    DateDataBaseHelper11 dateDataBaseHelper;
+    DataBaseHelperExamDate11 dateDataBaseHelper;
 
-    public DateCustomAdapter11(Context context, List<DateNote> allDate) {
+    public CustomAdapterExamDate11(Context context, List<DateNote> allDate) {
         this.context = context;
         this.allDate = allDate;
-        dateDataBaseHelper=new DateDataBaseHelper11(context);
+        dateDataBaseHelper=new DataBaseHelperExamDate11(context);
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.date_box,parent,false);
-        dateDataBaseHelper=new DateDataBaseHelper11(context);
-        return new DateCustomAdapter11.MyViewHolder(view);
+        View view= layoutInflater.inflate(R.layout.exam_date_item,parent,false);
+        dateDataBaseHelper=new DataBaseHelperExamDate11(context);
+        return new CustomAdapterExamDate11.MyViewHolder(view);
     }
 
     @Override
@@ -111,7 +112,7 @@ public class DateCustomAdapter11 extends RecyclerView.Adapter<DateCustomAdapter1
         TextView dateTextView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            dateTextView=itemView.findViewById(R.id.dateTextViewId);
+            dateTextView=itemView.findViewById(R.id.examDateTextViewId);
         }
     }
 
