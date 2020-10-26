@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.example.attendence.common.Notes;
+import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,13 +39,13 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
 
 
 
-    public List<Notes> getAllNotes(){
+    public List<Notes2> getAllNotes(){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-        List<Notes> dataList = new ArrayList<>();
+        List<Notes2> dataList = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+constant.TABLE_NAME,null);
         if (cursor.moveToFirst()){
             do {
-                Notes note = new Notes(
+                Notes2 note = new Notes2(
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_ID)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX1)),
                         cursor.getInt(cursor.getColumnIndex(constant.COLUMN_CHECKBOX2)),
@@ -99,7 +99,11 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
                         cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT3)),
                         cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT4)),
                         cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT5)),
-                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT6))
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT6)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT7)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT8)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT9)),
+                        cursor.getString(cursor.getColumnIndex(constant.COLUMN_EXAM_RESULT10))
                 );
 
                 dataList.add(note);
@@ -107,7 +111,7 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
         }
         return dataList;
     }
-    public int insertData(Notes notes){
+    public int insertData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
@@ -168,6 +172,10 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_EXAM_RESULT4,notes.getExamResult4());
         contentValues.put(constant.COLUMN_EXAM_RESULT5,notes.getExamResult5());
         contentValues.put(constant.COLUMN_EXAM_RESULT6,notes.getExamResult6());
+        contentValues.put(constant.COLUMN_EXAM_RESULT7,notes.getExamResult7());
+        contentValues.put(constant.COLUMN_EXAM_RESULT8,notes.getExamResult8());
+        contentValues.put(constant.COLUMN_EXAM_RESULT9,notes.getExamResult9());
+        contentValues.put(constant.COLUMN_EXAM_RESULT10,notes.getExamResult10());
 
         int id= (int) sqLiteDatabase.insert(constant.TABLE_NAME,null,contentValues);
         return id;
@@ -176,7 +184,7 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
 
 
 
-    public int updateData(Notes notes){
+    public int updateData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put(constant.COLUMN_CHECKBOX1,notes.getCheckBox1());
@@ -235,6 +243,10 @@ public class DataBaseHelper8 extends SQLiteOpenHelper {
         contentValues.put(constant.COLUMN_EXAM_RESULT4,notes.getExamResult4());
         contentValues.put(constant.COLUMN_EXAM_RESULT5,notes.getExamResult5());
         contentValues.put(constant.COLUMN_EXAM_RESULT6,notes.getExamResult6());
+        contentValues.put(constant.COLUMN_EXAM_RESULT7,notes.getExamResult7());
+        contentValues.put(constant.COLUMN_EXAM_RESULT8,notes.getExamResult8());
+        contentValues.put(constant.COLUMN_EXAM_RESULT9,notes.getExamResult9());
+        contentValues.put(constant.COLUMN_EXAM_RESULT10,notes.getExamResult10());
 
 
         int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
