@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;
@@ -53,7 +52,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
     @Override
     public CustomAdapter11.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.item,parent,false);
+        View view= layoutInflater.inflate(R.layout.present_recyclerview_item,parent,false);
 
         databaseHelper=new DataBaseHelper11(context);
         return new CustomAdapter11.MyViewHolder(view);
@@ -3317,7 +3316,7 @@ public class CustomAdapter11 extends RecyclerView.Adapter<CustomAdapter11.MyView
 
     private void customDialog(final int position) {
         androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
-        View view = LayoutInflater.from(context).inflate(R.layout.input,null);
+        View view = LayoutInflater.from(context).inflate(R.layout.student_name_input_box,null);
 
         builder.setView(view);
 

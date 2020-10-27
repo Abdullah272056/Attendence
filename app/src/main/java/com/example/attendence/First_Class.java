@@ -23,7 +23,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.attendence.common.DateNote;
-import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 import com.example.attendence.first_class.CustomAdapter;
 import com.example.attendence.first_class.DataBaseHelper;
@@ -172,7 +171,7 @@ public class First_Class extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
+        // Handle present_recyclerview_item selection
         switch (item.getItemId()) {
             case R.id.studentNameDeleteItemId:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -297,7 +296,7 @@ public class First_Class extends AppCompatActivity {
     public void CustomAdapter(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
-        View view                       =layoutInflater.inflate(R.layout.input,null);
+        View view                       =layoutInflater.inflate(R.layout.student_name_input_box,null);
         builder.setView(view);
         final AlertDialog alertDialog   = builder.create();
         saveButton=view.findViewById(R.id.saveButtonId);

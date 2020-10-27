@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.attendence.R;
-import com.example.attendence.common.Notes;
 import com.example.attendence.common.Notes2;
 
 
@@ -36,7 +35,7 @@ public class ExamCustomAdapter11 extends RecyclerView.Adapter<ExamCustomAdapter1
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.item2,parent,false);
+        View view= layoutInflater.inflate(R.layout.exam_recyclerview_item,parent,false);
         dataBaseHelper=new DataBaseHelper11(context);
         return new ExamCustomAdapter11.MyViewHolder(view);
     }

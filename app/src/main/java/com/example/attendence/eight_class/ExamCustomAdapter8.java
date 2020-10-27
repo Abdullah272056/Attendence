@@ -34,7 +34,7 @@ public class ExamCustomAdapter8 extends RecyclerView.Adapter<ExamCustomAdapter8.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.item2,parent,false);
+        View view= layoutInflater.inflate(R.layout.exam_recyclerview_item,parent,false);
         dataBaseHelper=new DataBaseHelper8(context);
         return new ExamCustomAdapter8.MyViewHolder(view);
     }

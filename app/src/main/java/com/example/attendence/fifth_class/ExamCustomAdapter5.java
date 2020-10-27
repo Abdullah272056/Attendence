@@ -34,7 +34,7 @@ public class ExamCustomAdapter5 extends RecyclerView.Adapter<ExamCustomAdapter5.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.item2,parent,false);
+        View view= layoutInflater.inflate(R.layout.exam_recyclerview_item,parent,false);
         dataBaseHelper=new DataBaseHelper5(context);
         return new ExamCustomAdapter5.MyViewHolder(view);
     }

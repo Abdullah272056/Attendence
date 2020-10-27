@@ -52,7 +52,7 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.MyViewHo
     @Override
     public CustomAdapter2.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(context);
-        View view= layoutInflater.inflate(R.layout.item,parent,false);
+        View view= layoutInflater.inflate(R.layout.present_recyclerview_item,parent,false);
 
         databaseHelper=new DataBaseHelper2(context);
         return new CustomAdapter2.MyViewHolder(view);
@@ -3316,7 +3316,7 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.MyViewHo
 
     private void customDialog(final int position) {
         androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
-        View view = LayoutInflater.from(context).inflate(R.layout.input,null);
+        View view = LayoutInflater.from(context).inflate(R.layout.student_name_input_box,null);
 
         builder.setView(view);
 
