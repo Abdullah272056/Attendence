@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.resetAllDataItemIdId:
 
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                        builder2.setTitle("Do you want to delete Date?");
-                        builder2.setIcon(R.drawable.ic_baseline_delete_24);
+                        builder2.setTitle("Do you want to delete All Data?");
+                        builder2.setIcon(R.drawable.ic_baseline_delete);
                         builder2.setMessage("\n \nPlease click Yes or No button !\n \n");
                         builder2.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {

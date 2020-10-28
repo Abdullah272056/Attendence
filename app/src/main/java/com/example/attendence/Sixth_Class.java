@@ -173,7 +173,7 @@ public class Sixth_Class extends AppCompatActivity {
             case R.id.studentNameDeleteItemId:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Do you want to delete all student name ?");
-                builder.setIcon(R.drawable.ic_baseline_delete_24);
+                builder.setIcon(R.drawable.ic_baseline_delete);
                 builder.setMessage("\n \nPlease click Yes or No button !\n \n");
 
                 builder.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
@@ -199,7 +199,7 @@ public class Sixth_Class extends AppCompatActivity {
             case R.id.dateDeleteItemId:
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
                 builder2.setTitle("Do you want to delete Date?");
-                builder2.setIcon(R.drawable.ic_baseline_delete_24);
+                builder2.setIcon(R.drawable.ic_baseline_delete);
                 builder2.setMessage("\n \nPlease click Yes or No button !\n \n");
 
                 builder2.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
@@ -225,7 +225,7 @@ public class Sixth_Class extends AppCompatActivity {
             case R.id.deleteAllDataId:
                 AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
                 builder3.setTitle("Do you want to delete Date?");
-                builder3.setIcon(R.drawable.ic_baseline_delete_24);
+                builder3.setIcon(R.drawable.ic_baseline_delete);
                 builder3.setMessage("\n \nPlease click Yes or No button !\n \n");
 
                 builder3.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
