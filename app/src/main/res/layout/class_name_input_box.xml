@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:padding="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
     >
+    <LinearLayout
+        android:padding="5dp"
+        android:background="@drawable/dialog_box_backgraound"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <EditText
         android:layout_margin="7dp"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:paddingLeft="20dp"
         android:hint="Enter Date Name"
         android:id="@+id/dateEditTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <LinearLayout
-        android:layout_marginTop="60dp"
+        android:weightSum="2"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:layout_margin="10dp"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_weight="1"
             android:text="Cancel"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:id="@+id/cancelButtonId"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"/>
         <Button
-            android:layout_margin="10dp"
+            android:layout_marginLeft="7dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_weight="1"
             android:text="Save"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:id="@+id/saveButtonId"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
     </LinearLayout>
 </LinearLayout>
