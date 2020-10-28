@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Attendence</string>
+    <string name="app_name">Attendance</string>
     <string name="open">Open</string>
     <string name="closed">Closed</string>
 </resources>
