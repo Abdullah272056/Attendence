@@ -18,7 +18,7 @@
         android:orientation="vertical" >
 
         <RadioButton
-            android:id="@+id/lightBlack"
+            android:id="@+id/purpleRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -29,7 +29,7 @@
             android:textColor="#222222"
             android:textSize="28sp"/>
         <RadioButton
-            android:id="@+id/madeBlack"
+            android:id="@+id/madeBlackRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -41,7 +41,7 @@
             android:textColor="#222222"
             android:textSize="28sp" />
         <RadioButton
-            android:id="@+id/white"
+            android:id="@+id/whiteRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -53,10 +53,9 @@
             android:textSize="28sp" />
 
         <RadioButton
-            android:id="@+id/lightRed"
+            android:id="@+id/lightRedRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="#FFFFFF"
             android:button="@null"
             android:drawableLeft="@android:drawable/btn_radio"
@@ -65,7 +64,7 @@
             android:textColor="#222222"
             android:textSize="28sp" />
         <RadioButton
-            android:id="@+id/lightBlue"
+            android:id="@+id/lightBlueRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -77,7 +76,7 @@
             android:textColor="#222222"
             android:textSize="28sp" />
         <RadioButton
-            android:id="@+id/lightGreen"
+            android:id="@+id/lightGreenRadioButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"

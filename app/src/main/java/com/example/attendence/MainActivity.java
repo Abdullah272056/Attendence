@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
     ThemeDataBaseHelper themeDataBaseHelper;
     LinearLayout linearLayout;
     Button saveButton ,cancelButton;
+    RadioButton purpleRadioButton,blackRadioButton,whiteRadioButton,redRadioButton,blueRadioButton,greenRadioButton;
+
     int colorStatus;
     DrawerLayout drawerLayout;
     private List<ThemeNote> themeStatusData;
@@ -231,7 +234,6 @@ public class MainActivity extends AppCompatActivity {
         }
         themeDataBaseHelper=new ThemeDataBaseHelper(MainActivity.this);
         themeDataBaseHelper.getWritableDatabase();
-
         themeStatusData  = new ArrayList<>();
         if (themeDataBaseHelper.getAllNotes().size()<1){
             for (int i = 0; i <=1; i++) {
@@ -244,7 +246,6 @@ public class MainActivity extends AppCompatActivity {
 
         themeStatusData  = new ArrayList<>();
         themeStatusData = themeDataBaseHelper.getAllNotes();
-
         if (themeStatusData.get(0).getThemeStatus()==1){
             linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
             navigationView.setBackgroundColor(Color.rgb(128, 0, 128));
@@ -269,7 +270,6 @@ public class MainActivity extends AppCompatActivity {
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
            navigationView.setBackgroundColor(Color.rgb(0, 255, 0));
         }
-
         classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadClassNameListData();
     }
@@ -297,7 +297,6 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alert = builder.create();
             alert.show();
         }
-
     }
 
     private void loadClassNameListData(){
@@ -312,7 +311,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void CustomAdapterForColorChange(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(MainActivity.this);
         LayoutInflater layoutInflater   =LayoutInflater.from(MainActivity.this);
@@ -321,8 +319,38 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog alertDialog   = builder.create();
         saveButton=view.findViewById(R.id.colorOkButtonId);
         cancelButton=view.findViewById(R.id.colorCancelButtonId);
+        purpleRadioButton=view.findViewById(R.id.purpleRadioButtonId);
+        blackRadioButton=view.findViewById(R.id.madeBlackRadioButtonId);
+        whiteRadioButton=view.findViewById(R.id.whiteRadioButtonId);
+        blueRadioButton=view.findViewById(R.id.lightBlueRadioButtonId);
+        greenRadioButton=view.findViewById(R.id.lightGreenRadioButtonId);
+        redRadioButton=view.findViewById(R.id.lightRedRadioButtonId);
+
 
         final RadioGroup radio =view.findViewById(R.id.radioGroupId);
+
+        themeStatusData  = new ArrayList<>();
+        themeStatusData = themeDataBaseHelper.getAllNotes();
+
+        if (themeStatusData.get(0).getThemeStatus()==1){
+            purpleRadioButton.setChecked(true);
+        }
+        if (themeStatusData.get(0).getThemeStatus()==2){
+            blackRadioButton.setChecked(true);
+        }
+        if (themeStatusData.get(0).getThemeStatus()==3){
+            whiteRadioButton.setChecked(true);
+        }
+        if (themeStatusData.get(0).getThemeStatus()==4){
+            redRadioButton.setChecked(true);
+        }
+        if (themeStatusData.get(0).getThemeStatus()==5){
+            blueRadioButton.setChecked(true);
+        }
+        if (themeStatusData.get(0).getThemeStatus()==6){
+            greenRadioButton.setChecked(true);
+        }
+
         radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
