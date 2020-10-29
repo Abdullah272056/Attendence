@@ -40,7 +40,6 @@ public class ExamActivity6 extends AppCompatActivity {
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
-
     DataBaseHelperExamDate6 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterExamDate6 dateCustomAdapter;
@@ -70,7 +69,6 @@ public class ExamActivity6 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));

@@ -45,7 +45,6 @@ public class ExamActivity11 extends AppCompatActivity {
     private List<DateNote> dateDataList;
     CustomAdapterExamDate11 dateCustomAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -54,7 +53,6 @@ public class ExamActivity11 extends AppCompatActivity {
         ThemeDataBaseHelper themeDataBaseHelper=new ThemeDataBaseHelper(ExamActivity11.this);
         themeDataBaseHelper.getWritableDatabase();
         List<ThemeNote>  themeStatusData = themeDataBaseHelper.getAllNotes();
-
         if (themeStatusData.get(0).getThemeStatus()==1){
             Toast.makeText(this, "theme change", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
@@ -71,7 +69,6 @@ public class ExamActivity11 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
@@ -80,7 +77,6 @@ public class ExamActivity11 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
-
 
         //setAppBar Title
         NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
@@ -118,7 +114,6 @@ public class ExamActivity11 extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
         loadDateListData();
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
@@ -156,7 +151,6 @@ public class ExamActivity11 extends AppCompatActivity {
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
         builder.setView(view);
         final AlertDialog alertDialog   = builder.create();
-
         final EditText dateEditText=view.findViewById(R.id.dateEditTextId);
         Button saveButton=view.findViewById(R.id.saveButtonId);
         Button cancelButton=view.findViewById(R.id.cancelButtonId);
@@ -187,7 +181,6 @@ public class ExamActivity11 extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

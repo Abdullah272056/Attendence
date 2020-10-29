@@ -102,7 +102,6 @@ public class ExamActivity9 extends AppCompatActivity {
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
 
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);

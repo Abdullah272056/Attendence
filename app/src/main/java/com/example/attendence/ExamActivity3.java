@@ -79,8 +79,6 @@ public class ExamActivity3 extends AppCompatActivity {
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
 
-
-
         //setAppBar Title
         NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
                 ExamActivity3.this);
@@ -100,8 +98,6 @@ public class ExamActivity3 extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
-
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);
@@ -121,8 +117,6 @@ public class ExamActivity3 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -149,7 +143,6 @@ public class ExamActivity3 extends AppCompatActivity {
     }
 
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -186,8 +179,6 @@ public class ExamActivity3 extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
-
         alertDialog.show();
 
     }

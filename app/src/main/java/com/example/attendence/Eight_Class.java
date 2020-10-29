@@ -236,7 +236,6 @@ public class Eight_Class extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter8(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper8(context);
                         dataBaseHelper.getWritableDatabase();
@@ -259,10 +258,6 @@ public class Eight_Class extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-
-
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
@@ -310,7 +305,6 @@ public class Eight_Class extends AppCompatActivity {
                     String result4="";
                     String result5="";
                     String result6="";
-
                     String result7="";
                     String result8="";
                     String result9="";
@@ -350,15 +344,12 @@ public class Eight_Class extends AppCompatActivity {
         alertDialog.show();
     }
 
-
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
         builder.setView(view);
         final AlertDialog alertDialog   = builder.create();
-
         final EditText dateEditText=view.findViewById(R.id.dateEditTextId);
         Button saveButton=view.findViewById(R.id.saveButtonId);
         Button cancelButton=view.findViewById(R.id.cancelButtonId);
@@ -389,7 +380,6 @@ public class Eight_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

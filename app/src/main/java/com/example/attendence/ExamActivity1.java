@@ -47,7 +47,6 @@ public class ExamActivity1 extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam1);
-
         LinearLayout linearLayout=findViewById(R.id.layoutId);
         ThemeDataBaseHelper themeDataBaseHelper=new ThemeDataBaseHelper(ExamActivity1.this);
         themeDataBaseHelper.getWritableDatabase();
@@ -69,7 +68,6 @@ public class ExamActivity1 extends AppCompatActivity{
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));

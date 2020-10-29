@@ -69,30 +69,22 @@ public class MainActivity extends AppCompatActivity {
     NameDataBaseHelperName nameDataBaseHelperName;
     RecyclerView classNameRecyclerView;
     Toolbar toolbar;
-
     ThemeDataBaseHelper themeDataBaseHelper;
     LinearLayout linearLayout;
-
     Button saveButton ,cancelButton;
     int colorStatus;
     DrawerLayout drawerLayout;
-    private List<ThemeNote>  themeStatusData;
+    private List<ThemeNote> themeStatusData;
     NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         linearLayout=findViewById(R.id.mainLayoutId);
-
-
-
         toolbar=findViewById (R.id.toolbarId);
         if (toolbar!=null){
             setSupportActionBar (toolbar);
         }
-
-
 
         drawerLayout=findViewById (R.id.drawerLayoutId);
         ActionBarDrawerToggle actionBarDrawerToggle=new ActionBarDrawerToggle(
@@ -100,11 +92,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-
                 Toast.makeText (MainActivity.this, "Open", Toast.LENGTH_SHORT).show ();
-
             }
-
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
@@ -118,11 +107,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 
         navigationView=findViewById (R.id.myNavigationViewId);
-
         navigationView.setNavigationItemSelectedListener (new NavigationView.OnNavigationItemSelectedListener () {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch(item.getItemId ()){
                     case R.id.aboutItemIdId:
                         final AlertDialog.Builder aboutBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -139,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
                         aboutBuilder.show();
                         break;
                     case R.id.resetAllDataItemIdId:
-
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
                         builder2.setTitle("Do you want to delete All Data?");
                         builder2.setIcon(R.drawable.ic_baseline_delete);
@@ -243,7 +229,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-
         themeDataBaseHelper=new ThemeDataBaseHelper(MainActivity.this);
         themeDataBaseHelper.getWritableDatabase();
 
@@ -284,8 +269,6 @@ public class MainActivity extends AppCompatActivity {
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
            navigationView.setBackgroundColor(Color.rgb(0, 255, 0));
         }
-
-
 
         classNameRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadClassNameListData();
@@ -402,9 +385,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "update fail", Toast.LENGTH_LONG).show();
                 }
 
-
-
-
         alertDialog.dismiss();
             }
         });
@@ -417,8 +397,6 @@ public class MainActivity extends AppCompatActivity {
         });
         alertDialog.show();
     }
-
-
 
     public void CustomAdapter(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(MainActivity.this);
@@ -433,8 +411,6 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
         alertDialog.show();
     }
-
 }

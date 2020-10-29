@@ -225,7 +225,6 @@ public class First_Class extends AppCompatActivity {
                 });
                 builder2.show();
 
-
                 return true;
 
             case R.id.deleteAllDataId:
@@ -236,7 +235,6 @@ public class First_Class extends AppCompatActivity {
 
                 builder3.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper(context);
                         dataBaseHelper.getWritableDatabase();
@@ -332,7 +330,6 @@ public class First_Class extends AppCompatActivity {
                             0,studentName, result1,result2,result3,result4,result5,result6
                             ,result7,result8,result9,result10));
 
-
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         LoadStudentInformationData();
@@ -393,7 +390,6 @@ public class First_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

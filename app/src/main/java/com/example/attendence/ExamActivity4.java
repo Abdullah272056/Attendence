@@ -40,7 +40,6 @@ public class ExamActivity4 extends AppCompatActivity {
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
-
     DataBaseHelperExamDate4 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterExamDate4 dateCustomAdapter;
@@ -69,7 +68,6 @@ public class ExamActivity4 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
@@ -78,7 +76,6 @@ public class ExamActivity4 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
-
 
         //setAppBar Title
         NameDataBaseHelperName nameDataBaseHelperName=new NameDataBaseHelperName(
@@ -100,7 +97,6 @@ public class ExamActivity4 extends AppCompatActivity {
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
 
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);
@@ -116,12 +112,9 @@ public class ExamActivity4 extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
         loadDateListData();
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -162,7 +155,6 @@ public class ExamActivity4 extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {
@@ -185,7 +177,6 @@ public class ExamActivity4 extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

@@ -40,7 +40,6 @@ public class ExamActivity7 extends AppCompatActivity {
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
-
     DataBaseHelperExamDate7 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterExamDate7 dateCustomAdapter;
@@ -71,7 +70,6 @@ public class ExamActivity7 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
@@ -100,7 +98,6 @@ public class ExamActivity7 extends AppCompatActivity {
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
 
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);
@@ -120,8 +117,6 @@ public class ExamActivity7 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -148,7 +143,6 @@ public class ExamActivity7 extends AppCompatActivity {
     }
 
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -185,7 +179,6 @@ public class ExamActivity7 extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

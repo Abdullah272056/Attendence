@@ -70,7 +70,6 @@ public class ExamActivity8 extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
-
         else  if (themeStatusData.get(0).getThemeStatus()==5){
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
@@ -101,7 +100,6 @@ public class ExamActivity8 extends AppCompatActivity {
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
 
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);
@@ -112,7 +110,6 @@ public class ExamActivity8 extends AppCompatActivity {
                 DateCustomAdapter();
             }
         });
-
         //for Horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
@@ -121,8 +118,6 @@ public class ExamActivity8 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -147,7 +142,6 @@ public class ExamActivity8 extends AppCompatActivity {
             Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
-
     public void DateCustomAdapter(){
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
@@ -186,7 +180,6 @@ public class ExamActivity8 extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

@@ -244,7 +244,6 @@ public class Fifth_Class extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter5(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper5(context);
                         dataBaseHelper.getWritableDatabase();
@@ -358,7 +357,6 @@ public class Fifth_Class extends AppCompatActivity {
 
 
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -395,7 +393,6 @@ public class Fifth_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

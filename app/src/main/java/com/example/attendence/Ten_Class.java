@@ -38,19 +38,14 @@ import java.util.List;
 public class Ten_Class extends AppCompatActivity {
     RecyclerView recyclerView,dateRecyclerView;
     Button addButton,examButton;
-
     CustomAdapter10 customAdapter;
-
     Button saveButton,cancelButton;
     EditText nameEditText;
-
     DataBaseHelper10 dataBaseHelper;
     DateDataBaseHelper10 dateDataBaseHelper;
-
     private List<Notes2> studentInformationDataList;
     private List<DateNote> dateDataList;
     FloatingActionButton addDateButton;
-
     DateCustomAdapter10 dateCustomAdapter;
     String appBarTitle;
     Context context;
@@ -90,9 +85,6 @@ public class Ten_Class extends AppCompatActivity {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
             linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
         }
-
-
-
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -120,13 +112,9 @@ public class Ten_Class extends AppCompatActivity {
         dateDataBaseHelper=new DateDataBaseHelper10(context);
         dateDataBaseHelper.getWritableDatabase();
 
-
         recyclerView=findViewById(R.id.recyclerViewId);
         dateRecyclerView=findViewById(R.id.dateRecyclerViewId);
         addButton=findViewById(R.id.addButtonId);
-
-
-
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,16 +123,8 @@ public class Ten_Class extends AppCompatActivity {
 
             }
         });
-        //        recyclerView.setLayoutManager( new LinearLayoutManager(MainActivity.this) {
-//            @Override
-//            public boolean canScrollVertically() {
-//                return false;
-//            }
-//        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
-
-
 
         /// add date
         addDateButton.setOnClickListener(new View.OnClickListener() {
@@ -159,10 +139,7 @@ public class Ten_Class extends AppCompatActivity {
         dateRecyclerView.setLayoutManager(layoutManager);
         loadDateListData();
 
-
-
     }
-
     //create option menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -172,7 +149,6 @@ public class Ten_Class extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle present_recyclerview_item selection
         switch (item.getItemId()) {
             case R.id.studentNameDeleteItemId:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);

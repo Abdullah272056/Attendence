@@ -217,7 +217,6 @@ public class Nine_Class extends AppCompatActivity {
                 builder2.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 });
                 builder2.show();
@@ -239,7 +238,6 @@ public class Nine_Class extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter9(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper9(context);
                         dataBaseHelper.getWritableDatabase();
@@ -253,7 +251,6 @@ public class Nine_Class extends AppCompatActivity {
                 builder3.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 });
                 builder3.show();
@@ -262,8 +259,6 @@ public class Nine_Class extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -390,7 +385,6 @@ public class Nine_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

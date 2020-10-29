@@ -40,7 +40,6 @@ public class ExamActivity10 extends AppCompatActivity {
     Context context;
     Button saveButton;
     FloatingActionButton examDateFloatingActionButton;
-
     DataBaseHelperExamDate10 dateDataBaseHelper;
     private List<DateNote> dateDataList;
     CustomAdapterTenExamDate dateCustomAdapter;
@@ -100,7 +99,6 @@ public class ExamActivity10 extends AppCompatActivity {
         recyclerView=findViewById(R.id.examRecyclerViewId);
         dateRecyclerView=findViewById(R.id.examDateRecyclerViewId);
 
-
         saveButton=findViewById(R.id.saveButtonId);
 
         examDateFloatingActionButton=findViewById(R.id.examDateFloatingButtonId);
@@ -111,7 +109,6 @@ public class ExamActivity10 extends AppCompatActivity {
                 DateCustomAdapter();
             }
         });
-
         //for Horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         dateRecyclerView.setLayoutManager(layoutManager);
@@ -120,8 +117,6 @@ public class ExamActivity10 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         loadStudentInformationData();
     }
-
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -148,7 +143,6 @@ public class ExamActivity10 extends AppCompatActivity {
     }
 
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -162,7 +156,6 @@ public class ExamActivity10 extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {

@@ -241,7 +241,6 @@ public class Fourth_Class extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter4(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper4(context);
                         dataBaseHelper.getWritableDatabase();
@@ -255,12 +254,10 @@ public class Fourth_Class extends AppCompatActivity {
                 builder3.setNegativeButton(" No ", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 });
                 builder3.show();
                 return true;
-
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -331,7 +328,6 @@ public class Fourth_Class extends AppCompatActivity {
                             0,studentName, result1,result2,result3,result4,result5,result6
                             ,result7,result8,result9,result10));
 
-
                     if (id!=-1){
                         Toast.makeText(context, "insert Success", Toast.LENGTH_SHORT).show();
                         loadStudentInformationData();
@@ -355,9 +351,7 @@ public class Fourth_Class extends AppCompatActivity {
         alertDialog.show();
     }
 
-
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -371,7 +365,6 @@ public class Fourth_Class extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {
@@ -393,8 +386,6 @@ public class Fourth_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
-
         alertDialog.show();
 
     }

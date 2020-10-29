@@ -240,7 +240,6 @@ public class ThirdClass extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter3(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper3(context);
                         dataBaseHelper.getWritableDatabase();

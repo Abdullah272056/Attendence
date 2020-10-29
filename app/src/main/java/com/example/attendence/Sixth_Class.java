@@ -238,7 +238,6 @@ public class Sixth_Class extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter6(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper6(context);
                         dataBaseHelper.getWritableDatabase();
@@ -350,7 +349,6 @@ public class Sixth_Class extends AppCompatActivity {
 
 
     public void DateCustomAdapter(){
-
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
         LayoutInflater layoutInflater   =LayoutInflater.from(context);
         View view                       =layoutInflater.inflate(R.layout.date_input,null);
@@ -364,7 +362,6 @@ public class Sixth_Class extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {
@@ -386,7 +383,6 @@ public class Sixth_Class extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

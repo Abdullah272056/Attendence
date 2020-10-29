@@ -233,7 +233,6 @@ public class SecondClass extends AppCompatActivity {
 
                 builder3.setPositiveButton(" Yes ", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper2(context);
                         dataBaseHelper.getWritableDatabase();
@@ -352,7 +351,6 @@ public class SecondClass extends AppCompatActivity {
         alertDialog.show();
     }
 
-
     public void DateCustomAdapter(){
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
@@ -368,7 +366,6 @@ public class SecondClass extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {

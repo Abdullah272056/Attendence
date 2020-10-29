@@ -239,7 +239,6 @@ public class Seventh_Class extends AppCompatActivity{
                         dateCustomAdapter = new DateCustomAdapter7(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper7(context);
                         dataBaseHelper.getWritableDatabase();
@@ -262,7 +261,6 @@ public class Seventh_Class extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -287,7 +285,6 @@ public class Seventh_Class extends AppCompatActivity{
             Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     public void CustomAdapter(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
@@ -350,7 +347,6 @@ public class Seventh_Class extends AppCompatActivity{
         alertDialog.show();
     }
 
-
     public void DateCustomAdapter(){
 
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
@@ -366,7 +362,6 @@ public class Seventh_Class extends AppCompatActivity{
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (dateEditText.getText().toString().isEmpty()){
                     dateEditText.setError("Enter a Date");
                 }else {
@@ -389,7 +384,6 @@ public class Seventh_Class extends AppCompatActivity{
                 alertDialog.dismiss();
             }
         });
-
 
         alertDialog.show();
 

@@ -223,7 +223,6 @@ public class ElevenClass extends AppCompatActivity {
                         dateCustomAdapter = new DateCustomAdapter11(context,dateDataList);
                         dateRecyclerView.setAdapter(dateCustomAdapter);
 
-
                         dataBaseHelper.deleteAllData();
                         dataBaseHelper=new DataBaseHelper11(context);
                         dataBaseHelper.getWritableDatabase();
@@ -242,13 +241,10 @@ public class ElevenClass extends AppCompatActivity {
                 });
                 builder3.show();
                 return true;
-
-
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
     private void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
@@ -273,7 +269,6 @@ public class ElevenClass extends AppCompatActivity {
             Toast.makeText(this, "No date found", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     public void CustomAdapter(){
         AlertDialog.Builder builder     =new AlertDialog.Builder(context);
