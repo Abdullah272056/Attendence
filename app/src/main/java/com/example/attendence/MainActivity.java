@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.attendence.eight_class.DataBaseHelper8;
@@ -62,6 +64,9 @@ import com.example.attendence.third_class.DataBaseHelper3;
 import com.example.attendence.third_class_date.DateDataBaseHelper3;
 import com.example.attendence.third_exam_date.DataBaseHelperExamDate3;
 import com.google.android.material.navigation.NavigationView;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     private List<ThemeNote> themeStatusData;
     NavigationView navigationView;
+
+    TextView header;
+    View headerview;
+    View view1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -89,7 +99,9 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar (toolbar);
         }
 
+
         drawerLayout=findViewById (R.id.drawerLayoutId);
+
         ActionBarDrawerToggle actionBarDrawerToggle=new ActionBarDrawerToggle(
                 MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.closed){
             @Override
@@ -110,6 +122,17 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 
         navigationView=findViewById (R.id.myNavigationViewId);
+
+
+        headerview=navigationView.getHeaderView(0);
+        header=headerview.findViewById(R.id.navigationSubHeaderId);
+
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Calling Header", Toast.LENGTH_LONG).show();
+            }
+        });
         navigationView.setNavigationItemSelectedListener (new NavigationView.OnNavigationItemSelectedListener () {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -210,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.contactItemId:
                         CustomAdapter();
-//
+
                         break;
                 }
                 return false;
@@ -255,6 +278,22 @@ public class MainActivity extends AppCompatActivity {
            navigationView.setBackgroundColor(Color.rgb(70, 70, 70));
         }
         if (themeStatusData.get(0).getThemeStatus()==3){
+           headerview=navigationView.getHeaderView(0);
+            header=headerview.findViewById(R.id.navigationSubHeaderId);
+            view1=headerview.findViewById(R.id.viewId);
+            header.setTextColor(Color.rgb(70, 70, 70));
+            view1.setBackgroundColor(Color.rgb(70, 70, 70));
+
+            int[][] states = new int[][] {
+                    new int[] { android.R.attr.state_enabled}, // enabled
+            };
+
+            int[] colors = new int[] {
+                    Color.BLACK,
+            };
+            ColorStateList myList = new ColorStateList(states, colors);
+            navigationView.setItemTextColor(myList);
+            navigationView.setItemIconTintList(myList);
             linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
             navigationView.setBackgroundColor(Color.rgb(255, 255, 255));
         }
@@ -331,7 +370,6 @@ public class MainActivity extends AppCompatActivity {
 
         themeStatusData  = new ArrayList<>();
         themeStatusData = themeDataBaseHelper.getAllNotes();
-
         if (themeStatusData.get(0).getThemeStatus()==1){
             purpleRadioButton.setChecked(true);
         }
@@ -385,26 +423,123 @@ public class MainActivity extends AppCompatActivity {
                 int id=themeDataBaseHelper.updateThemeData(new ThemeNote(1,colorStatus));
                 if (id==1){
                     if (colorStatus==1){
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(255, 255, 255));
+                        view1.setBackgroundColor(Color.rgb(255, 255, 255));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.WHITE,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(128, 0, 128));
                         navigationView.setBackgroundColor(Color.rgb(128, 0, 128));
                     }
                     else if (colorStatus==2){
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(255, 255, 255));
+                        view1.setBackgroundColor(Color.rgb(255, 255, 255));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.WHITE,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(50, 50, 50));
                         navigationView.setBackgroundColor(Color.rgb(50, 50, 50));
                     }
                     else  if (colorStatus==3){
+
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(70, 70, 70));
+                        view1.setBackgroundColor(Color.rgb(70, 70, 70));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.BLACK,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(255, 255, 255));
                         navigationView.setBackgroundColor(Color.rgb(255, 255, 255));
                     }
                     else if (colorStatus==4){
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(255, 255, 255));
+                        view1.setBackgroundColor(Color.rgb(255, 255, 255));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.WHITE,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
                         navigationView.setBackgroundColor(Color.rgb(255, 0, 0));
                     }
                     else  if (colorStatus==5){
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(255, 255, 255));
+                        view1.setBackgroundColor(Color.rgb(255, 255, 255));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.WHITE,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(0, 0, 255));
                         navigationView.setBackgroundColor(Color.rgb(0, 0, 255));
                     }
                     else  if (colorStatus==6){
+                        headerview=navigationView.getHeaderView(0);
+                        header=headerview.findViewById(R.id.navigationSubHeaderId);
+                        view1=headerview.findViewById(R.id.viewId);
+                        header.setTextColor(Color.rgb(255, 255, 255));
+                        view1.setBackgroundColor(Color.rgb(255, 255, 255));
+
+                        int[][] states = new int[][] {
+                                new int[] { android.R.attr.state_enabled}, // enabled
+                        };
+
+                        int[] colors = new int[] {
+                                Color.WHITE,
+                        };
+                        ColorStateList myList = new ColorStateList(states, colors);
+                        navigationView.setItemTextColor(myList);
+                        navigationView.setItemIconTintList(myList);
                         linearLayout.setBackgroundColor(Color.rgb(0, 255, 0));
                         navigationView.setBackgroundColor(Color.rgb(0, 255, 0));
                     }
