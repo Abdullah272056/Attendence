@@ -14,7 +14,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.attendence.Nine_Class;
 import com.example.attendence.R;
+import com.example.attendence.Ten_Class;
 import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;
@@ -97,7 +99,8 @@ public class CustomAdapter10 extends RecyclerView.Adapter<CustomAdapter10.MyView
                         if (status == 1){
                             allNotes.remove(allNotes.get(position));
                             alertDialog.dismiss();
-                            notifyDataSetChanged();
+                            ((Ten_Class)context).loadStudentInformationData();
+
                         }else {
                         }
                     }
@@ -3363,8 +3366,8 @@ public class CustomAdapter10 extends RecyclerView.Adapter<CustomAdapter10.MyView
                         Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allNotes.clear();
                         allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
-                        notifyDataSetChanged();
                         alertDialog.dismiss();
+                        ((Ten_Class)context).loadStudentInformationData();
 
                     }else {
                         Toast.makeText(context, "update fail", Toast.LENGTH_SHORT).show();
