@@ -97,8 +97,6 @@ public class First_Class extends AppCompatActivity {
 
 
 
-
-
         // for add back Button in title bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -267,7 +265,7 @@ public class First_Class extends AppCompatActivity {
     }
 
 
-    private void LoadStudentInformationData(){
+    public void LoadStudentInformationData(){
         studentInformationDataList  = new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){

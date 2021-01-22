@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         aboutBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+
                             }
                         });
                         aboutBuilder.show();

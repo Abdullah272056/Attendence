@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.attendence.First_Class;
 import com.example.attendence.R;
 import com.example.attendence.common.Notes2;
 
@@ -28,7 +29,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     Context context;
     private List<Notes2> allNotes;
 
-    List<Notes2> copyAllNotes;
+   // List<Notes2> copyAllNotes;
     private DataBaseHelper databaseHelper;
 
     int checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,
@@ -44,7 +45,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         this.context = context;
         this.allNotes = allNotes;
         databaseHelper=new DataBaseHelper(context);
-        copyAllNotes = new ArrayList<Notes2>(allNotes);
+      //  copyAllNotes = new ArrayList<Notes2>(allNotes);
         //for searchView//dataList's copy
     }
 
@@ -60,62 +61,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, final int position){
-        holder.nameTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, String.valueOf(allNotes.get(position).getCheckBoxCount()), Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.nameTextView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
-                View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_operation,null);
 
-                builder.setView(view);
-
-                final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
-
-
-                TextView updateTextView=view.findViewById(R.id.updateTextViewId);
-                TextView deleteTextView=view.findViewById(R.id.deleteTextViewId);
-                TextView cancelTextView=view.findViewById(R.id.cancelTextViewId);
-
-                updateTextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        customDialog(position);
-                        alertDialog.dismiss();
-
-                    }
-                });
-
-                deleteTextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int status = databaseHelper.deleteData(allNotes.get(position).getId());
-                        if (status == 1){
-                            allNotes.remove(allNotes.get(position));
-                            alertDialog.dismiss();
-                            notifyDataSetChanged();
-                        }else {
-                        }
-                    }
-                });
-
-                cancelTextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        alertDialog.dismiss();
-
-                    }
-                });
-
-                alertDialog.show();
-
-                return false;
-            }
-        });
 
 
         holder.nameTextView.setText(allNotes.get(position).getStudentName());
@@ -3170,6 +3116,74 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             }
         });
 
+
+
+        holder.nameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, String.valueOf(allNotes.get(position).getCheckBoxCount()), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.nameTextView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                androidx.appcompat.app.AlertDialog.Builder builder  = new androidx.appcompat.app.AlertDialog.Builder(context);
+                View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_operation,null);
+
+                builder.setView(view);
+
+                final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
+
+
+                TextView updateTextView=view.findViewById(R.id.updateTextViewId);
+                TextView deleteTextView=view.findViewById(R.id.deleteTextViewId);
+                TextView cancelTextView=view.findViewById(R.id.cancelTextViewId);
+
+                updateTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        customDialog(position);
+                        alertDialog.dismiss();
+
+                    }
+                });
+
+                deleteTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int status = databaseHelper.deleteData(allNotes.get(position).getId());
+                        if (status == 1){
+                            allNotes.remove(allNotes.get(position));
+                            alertDialog.dismiss();
+                           // notifyDataSetChanged();
+                            ((First_Class)context).LoadStudentInformationData();
+                        }else {
+                        }
+                    }
+                });
+
+                cancelTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+
+                    }
+                });
+
+                alertDialog.show();
+
+                return false;
+            }
+        });
+
+
+
+
+
+
+
+
     }
 
 
@@ -3363,8 +3377,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                         Toast.makeText(context, "update Success", Toast.LENGTH_SHORT).show();
                         allNotes.clear();
                         allNotes.addAll((Collection<? extends Notes2>) databaseHelper.getAllNotes());
-                        notifyDataSetChanged();
+                       // notifyDataSetChanged();
                         alertDialog.dismiss();
+                        ((First_Class)context).LoadStudentInformationData();
+
 
                     }else {
                         Toast.makeText(context, "update fail", Toast.LENGTH_SHORT).show();

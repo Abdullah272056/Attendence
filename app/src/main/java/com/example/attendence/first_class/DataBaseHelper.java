@@ -183,6 +183,17 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
 
+    public int updateName(Notes2 notes){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+
+        //contentValues.put(constant.COLUMN_CHECKBOX_COUNT,notes.getCheckBoxCount());
+        contentValues.put(constant.COLUMN_STUDENT_NAME,notes.getStudentName());
+
+
+        int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
+        return status;
+    }
 
     public int updateData(Notes2 notes){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
@@ -252,7 +263,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         int status = sqLiteDatabase.update(constant.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(notes.getId())});
         return status;
     }
-
     public int deleteData(int id){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         int status = sqLiteDatabase.delete(constant.TABLE_NAME,"id=?",new String[]{String.valueOf(id)});

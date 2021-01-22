@@ -33,6 +33,7 @@ public class CustomAdapterExamDate8 extends RecyclerView.Adapter<CustomAdapterEx
         this.context = context;
         this.allDate = allDate;
         dateDataBaseHelper=new DataBaseHelperExamDate8(context);
+
     }
 
     @NonNull

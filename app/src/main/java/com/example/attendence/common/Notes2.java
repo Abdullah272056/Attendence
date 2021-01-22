@@ -12,7 +12,9 @@ public class Notes2 {
     String studentName ,examResult1,examResult2,examResult3,examResult4,examResult5,examResult6
             ,examResult7,examResult8,examResult9,examResult10;
 
-    public Notes2() {
+    public Notes2(int id, String studentName) {
+        this.id = id;
+        this.studentName = studentName;
     }
 
     public Notes2(int checkBox1, int checkBox2, int checkBox3, int checkBox4, int checkBox5, int checkBox6, int checkBox7, int checkBox8, int checkBox9, int checkBox10, int checkBox11, int checkBox12, int checkBox13, int checkBox14, int checkBox15, int checkBox16, int checkBox17, int checkBox18, int checkBox19, int checkBox20, int checkBox21, int checkBox22, int checkBox23, int checkBox24, int checkBox25, int checkBox26, int checkBox27, int checkBox28, int checkBox29, int checkBox30, int checkBox31, int checkBox32, int checkBox33, int checkBox34, int checkBox35, int checkBox36, int checkBox37, int checkBox38, int checkBox39, int checkBox40, int checkBox41, int checkBox42, int checkBox43, int checkBox44, int checkBox45, int checkBoxCount, String studentName, String examResult1, String examResult2, String examResult3, String examResult4, String examResult5, String examResult6, String examResult7, String examResult8, String examResult9, String examResult10) {
