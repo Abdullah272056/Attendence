@@ -271,7 +271,7 @@ public class First_Class extends AppCompatActivity {
         if (studentInformationDataList.size() > 0){
             customAdapter = new CustomAdapter(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
-            customAdapter.notifyDataSetChanged();
+            //customAdapter.notifyDataSetChanged();
         }else {
             Toast.makeText(this, "No student name  found", Toast.LENGTH_SHORT).show();
         }

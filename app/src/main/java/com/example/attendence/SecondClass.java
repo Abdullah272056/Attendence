@@ -264,13 +264,13 @@ public class SecondClass extends AppCompatActivity {
         }
     }
 
-    private void loadStudentInformationData(){
+    public void loadStudentInformationData(){
         studentInformationDataList= new ArrayList<>();
         studentInformationDataList = dataBaseHelper.getAllNotes();
         if (studentInformationDataList.size() > 0){
             customAdapter = new CustomAdapter2(context,studentInformationDataList);
             recyclerView.setAdapter(customAdapter);
-            customAdapter.notifyDataSetChanged();
+           // customAdapter.notifyDataSetChanged();
         }else {
             Toast.makeText(this, "No student name found", Toast.LENGTH_SHORT).show();
         }
