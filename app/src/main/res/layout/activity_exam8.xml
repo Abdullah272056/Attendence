@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/layoutId"
-    tools:context=".eight_class.eight_exam_date.ExamActivity8">
+    tools:context=".eight_class.ExamActivity8">
 
 
     <HorizontalScrollView

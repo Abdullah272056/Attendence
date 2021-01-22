@@ -1,4 +1,4 @@
-package com.example.attendence.eight_class.eight_exam_date;
+package com.example.attendence.eight_class;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +18,8 @@ import android.widget.Toast;
 import com.example.attendence.R;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;
-import com.example.attendence.eight_class.DataBaseHelper8;
-import com.example.attendence.eight_class.ExamCustomAdapter8;
+import com.example.attendence.eight_class.eight_exam_date.CustomAdapterExamDate8;
+import com.example.attendence.eight_class.eight_exam_date.DataBaseHelperExamDate8;
 import com.example.attendence.mainpage.NameDataBaseHelperName;
 import com.example.attendence.mainpage.NoteClass;
 import com.example.attendence.theme.ThemeDataBaseHelper;

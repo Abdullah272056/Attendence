@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/attendance"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".eight_class.eight_exam_date.ExamActivity8"></activity>
+
+
+
         <activity
             android:name=".first_class.ExamActivity1"
             android:parentActivityName=".first_class.First_Class" />
@@ -22,9 +24,11 @@
         <activity
             android:name=".fourth_class.ExamActivity4"
             android:parentActivityName=".fourth_class.Fourth_Class" />
-        <activity
-            android:name=".fifth_class.ExamActivity5"
-            android:parentActivityName=".fifth_class.Fifth_Class" />
+        <activity android:name=".fifth_class.ExamActivity5"
+            android:parentActivityName=".fifth_class.Fifth_Class"
+            >
+
+        </activity>
         <activity
             android:name=".sixth_class.ExamActivity6"
             android:parentActivityName=".sixth_class.Sixth_Class" />
@@ -32,8 +36,11 @@
             android:name=".seventh_class.ExamActivity7"
             android:parentActivityName=".seventh_class.Seventh_Class" />
         <activity
+            android:name=".eight_class.ExamActivity8"
+            android:parentActivityName=".eight_class.Eight_Class"></activity>
+        <activity
             android:name=".nine_class.ExamActivity9"
-            android:parentActivityName=".Nine_Class" />
+            android:parentActivityName=".nine_class.Nine_Class" />
         <activity
             android:name=".ten_class.ExamActivity10"
             android:parentActivityName=".ten_class.Ten_Class" />
