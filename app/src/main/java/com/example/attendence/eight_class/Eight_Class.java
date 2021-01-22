@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.attendence.ExamActivity8;
 import com.example.attendence.R;
 import com.example.attendence.common.DateNote;
 import com.example.attendence.common.Notes2;

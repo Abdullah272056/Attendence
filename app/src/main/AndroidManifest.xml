@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/attendance"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".eight_class.eight_exam_date.ExamActivity8"></activity>
         <activity
             android:name=".first_class.ExamActivity1"
             android:parentActivityName=".first_class.First_Class" />
@@ -30,9 +31,6 @@
         <activity
             android:name=".seventh_class.ExamActivity7"
             android:parentActivityName=".seventh_class.Seventh_Class" />
-        <activity
-            android:name=".ExamActivity8"
-            android:parentActivityName=".eight_class.Eight_Class" />
         <activity
             android:name=".nine_class.ExamActivity9"
             android:parentActivityName=".Nine_Class" />
