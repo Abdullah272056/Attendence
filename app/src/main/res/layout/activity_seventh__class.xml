@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
    android:orientation="vertical"
     android:id="@+id/layoutId"
-    tools:context=".Seventh_Class">
+    tools:context=".seventh_class.Seventh_Class">
     <LinearLayout
         android:weightSum="2"
         android:orientation="horizontal"

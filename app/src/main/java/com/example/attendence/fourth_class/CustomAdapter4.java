@@ -14,9 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.attendence.Fourth_Class;
 import com.example.attendence.R;
-import com.example.attendence.SecondClass;
 import com.example.attendence.common.Notes2;
 
 import java.util.ArrayList;

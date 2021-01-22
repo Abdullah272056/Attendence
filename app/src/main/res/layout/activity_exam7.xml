@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/layoutId"
-    tools:context=".ExamActivity7">
+    tools:context=".seventh_class.ExamActivity7">
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
